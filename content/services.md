@@ -12,15 +12,20 @@ featured = ""
 +++
 
 <style>
-h1{
+.h1{
   font-size: 210%;
   font-variant: bold;
 }
-h3,h4{
-  font-size: 100%;
+h2 {
+  font-size: 180%;
 }
 h3 {
+  font-size: 140%;
   text-decoration: underline;
+}
+h4 {
+  font-size: 110%;
+  font-variant: bold;
 }
 </style>
 
@@ -30,7 +35,7 @@ I have close to 15 years of experience in **Embedded Systems**, **ARM**, **ARM64
 # Training
  - [ARM](#arm)
     - [ARM v7 Introduction](#arm-v7-introduction)
-    - [ARM v7 Architecture & Advanced](#arm-v7-advanced)
+    - [ARM v7 Architecture & Advanced Concepts](#arm-v7-advanced-architecture)
     - [ARM v8 Architecture](#arm-v8-advanced)
  - [Linux](#linux)
     - [Linux Basics & Programming](#linux-basics-and-programming)
@@ -40,12 +45,16 @@ I have close to 15 years of experience in **Embedded Systems**, **ARM**, **ARM64
  - [Miscallaneous](#miscallaneous)
     - [Python Programming](#python-programming)
     - [Advanced C Programming](#advanced-c-programming)
+<br>
+<br>
+<br>
+<br>
 
-### ARM
+## ARM
 I offer state-of-the-art **ARM** training, hands-on and workshop based at client's locations
 Thare are introductory training and can be done in *1*, *2* or *3* day material. Depending on individual needs, the duration and content can be customized
 
-#### ARM v7 Introduction
+### ARM v7 Introduction
 - Introduction to ARM, ARM as a company
 - ARM History, background and naming convention
 - ARM Registers set
@@ -56,7 +65,7 @@ Thare are introductory training and can be done in *1*, *2* or *3* day material.
   - Miscallaneous
 - Programming in Assembly
 
-#### ARM v7 Advanced Architecture
+### ARM v7 Advanced Architecture
 In this module we will discuss the advanced concepts such as `virtualization ` ,  `memory management ` and `GICv3 ` interrupt handling.
 
 - Exception Handling
@@ -71,23 +80,34 @@ In this module we will discuss the advanced concepts such as `virtualization ` ,
 - V7 Virtualization enhancements
 - GICv3 Interrupt Handling
 
-#### ARM v8 Advanced Architecture
+### ARM v8 Advanced Architecture
+<br>
+<br>
+<br>
+<br>
 
+## Linux
 ### Linux Basics and Programming
 #### Introduction to Linux
 - Terminal and Shell
 - Command line
 - Process and process control
 - How your programs startup
+
 #### Advanced Linux Programming
 - Locking
 - IPC
 - MMAP, accessing hardware in userspace
 
-#### Kernel Programming and Drivers framework
+### Kernel Programming and Drivers framework
 Kernel Programming introduction and Introduction to device driver framework
 
-#### Kernel Internals
+### Kernel Internals
+
+<br>
+<br>
+<br>
+<br>
 
 ## Miscallaneous
 ### Python Programming

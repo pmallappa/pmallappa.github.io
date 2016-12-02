@@ -2,7 +2,6 @@
 	{{ $.Scratch.Set "shareNav" true }}
 	{{ partial "navbar" . }}
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald:700|Aref+Ruqaa|Bungee" rel="stylesheet">
 <style>
 /*adding some extras for demo purposes*/
 article {
@@ -32,9 +31,22 @@ aside {
 
 #wrap {
   width: 90%;
-  height: 90%;
+  height: 80%;
   margin: 0 auto;
 }
+#bottom {
+  top: 80%;
+  float: bottom;
+}
+li{
+line-height: 2.0;
+}
+
+.h9 {
+  font-family: 'oswald', sans-serif;
+  font-size: 900%;
+}
+	
 
 </style>
 </head>
@@ -42,20 +54,27 @@ aside {
     <div id="wrap">
       <h3>
       <article>
-<br>
+    <br>
+   <h1>Welcome</h1>
+   <h3>I am a software engineer<br>
+	 with nearly 15 years of experience
+     </h3>
       <ul style="list-style:none; columns: 2 50%; -moz-columns: 2 50%; -webkit-columns: 2 50%;">
-      <li><h3>C, Python, LaTeX, Go</h3></li>
-      <li><h3>Linux, QNX, Plan9, FreeBSD</h3></li>
-      <li><h3>Xen, KVM, Virtualization</h3></li>
-      <li><h3>Qemu, Gem5, Simics</li>
-      <li><h3>ARM, ARMv8, MIPS, RISCV</h3></li>
-      <li><h3>Git, ((((elisp))))</h3></li>
-      <li><h3>Shell Scripting</h3></li>
-      </ul>
+	 <br>
+      <h4>
+      <li>C, Python, LaTeX, Go</li>
+      <li>Linux, QNX, Plan9, FreeBSD</li>
+      <li>Xen, KVM, Virtualization</li>
+      <li>Qemu, Gem5, Simics</li>
+      <li>ARM, ARMv8, MIPS, RISCV</li>
+      <li>Git, ((((elisp))))</li>
+      <li>Shell Scripting</li>
+      </ul> </h4>
       </article>
      <aside>
-     Prem<br>Mallappa
+     <h9>PREM<br>MALLAPPA</h9>
      </aside>
+
     </div>
   </body>
 {{ partial "footer.html" . }}

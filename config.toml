@@ -1,4 +1,5 @@
 baseurl = "https://pmallappa.github.io"
+publishdir = "../publish"
 languageCode = "en-us"
 title = "Prem Mallappa"
 theme = "hugo-future-imperfect"
