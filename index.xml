@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prem Mallappa</title>
+    <link>https://pmallappa.github.io/index.xml</link>
+    <description>Recent content on Prem Mallappa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Dec 2016 23:05:23 +0530</lastBuildDate>
+    <atom:link href="https://pmallappa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>resume</title>
+      <link>https://pmallappa.github.io/resume/</link>
+      <pubDate>Thu, 01 Dec 2016 23:05:23 +0530</pubDate>
+      
+      <guid>https://pmallappa.github.io/resume/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Services</title>
+      <link>https://pmallappa.github.io/services/</link>
+      <pubDate>Thu, 01 Dec 2016 22:50:52 +0530</pubDate>
+      
+      <guid>https://pmallappa.github.io/services/</guid>
+      <description>
+
+&lt;style&gt;
+h1{
+  font-size: 210%;
+  font-variant: bold;
+}
+h3,h4{
+  font-size: 100%;
+}
+h3 {
+  text-decoration: underline;
+}
+&lt;/style&gt;
+
+&lt;p&gt;I offer consultation to startups and established corporations. I would like to work as an independent contractor for a particlar task.
+I have close to 15 years of experience in &lt;strong&gt;Embedded Systems&lt;/strong&gt;, &lt;strong&gt;ARM&lt;/strong&gt;, &lt;strong&gt;ARM64&lt;/strong&gt; and &lt;strong&gt;MIPS&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;training&#34;&gt;Training&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#arm&#34;&gt;ARM&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#arm-v7-introduction&#34;&gt;ARM v7 Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#arm-v7-advanced&#34;&gt;ARM v7 Architecture &amp;amp; Advanced&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#arm-v8-advanced&#34;&gt;ARM v8 Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#linux&#34;&gt;Linux&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#linux-basics-and-programming&#34;&gt;Linux Basics &amp;amp; Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#advanced-linux-programming&#34;&gt;Advanced Linux Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#kernel-programming-and-driver-framework&#34;&gt;Kernel Programming &amp;amp; Driver Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#kernel-internals&#34;&gt;Kernel Internals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#miscallaneous&#34;&gt;Miscallaneous&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#python-programming&#34;&gt;Python Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#advanced-c-programming&#34;&gt;Advanced C Programming&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;arm&#34;&gt;ARM&lt;/h3&gt;
+
+&lt;p&gt;I offer state-of-the-art &lt;strong&gt;ARM&lt;/strong&gt; training, hands-on and workshop based at client&amp;rsquo;s locations
+Thare are introductory training and can be done in &lt;em&gt;1&lt;/em&gt;, &lt;em&gt;2&lt;/em&gt; or &lt;em&gt;3&lt;/em&gt; day material. Depending on individual needs, the duration and content can be customized&lt;/p&gt;
+
+&lt;h4 id=&#34;arm-v7-introduction&#34;&gt;ARM v7 Introduction&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Introduction to ARM, ARM as a company&lt;/li&gt;
+&lt;li&gt;ARM History, background and naming convention&lt;/li&gt;
+&lt;li&gt;ARM Registers set&lt;/li&gt;
+&lt;li&gt;ARM Instructions
+
+&lt;ul&gt;
+&lt;li&gt;Data movment&lt;/li&gt;
+&lt;li&gt;Branching&lt;/li&gt;
+&lt;li&gt;Load Store&lt;/li&gt;
+&lt;li&gt;Miscallaneous&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Programming in Assembly&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;arm-v7-advanced-architecture&#34;&gt;ARM v7 Advanced Architecture&lt;/h4&gt;
+
+&lt;p&gt;In this module we will discuss the advanced concepts such as &lt;code&gt;virtualization&lt;/code&gt; ,  &lt;code&gt;memory management&lt;/code&gt; and &lt;code&gt;GICv3&lt;/code&gt; interrupt handling.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Exception Handling&lt;/li&gt;
+&lt;li&gt;Operating Modes&lt;/li&gt;
+&lt;li&gt;Switching between Modes&lt;/li&gt;
+&lt;li&gt;Operating system Concepts&lt;/li&gt;
+&lt;li&gt;Cache and Cache operation&lt;/li&gt;
+&lt;li&gt;System Control Co-processor&lt;/li&gt;
+&lt;li&gt;MMU Unit&lt;/li&gt;
+&lt;li&gt;Cache configuration, locking, invalidating and flushing&lt;/li&gt;
+&lt;li&gt;Booting up a v7 machine&lt;/li&gt;
+&lt;li&gt;V7 Virtualization enhancements&lt;/li&gt;
+&lt;li&gt;GICv3 Interrupt Handling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;arm-v8-advanced-architecture&#34;&gt;ARM v8 Advanced Architecture&lt;/h4&gt;
+
+&lt;h3 id=&#34;linux-basics-and-programming&#34;&gt;Linux Basics and Programming&lt;/h3&gt;
+
+&lt;h4 id=&#34;introduction-to-linux&#34;&gt;Introduction to Linux&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Terminal and Shell&lt;/li&gt;
+&lt;li&gt;Command line&lt;/li&gt;
+&lt;li&gt;Process and process control&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;How your programs startup&lt;/p&gt;
+
+&lt;h4 id=&#34;advanced-linux-programming&#34;&gt;Advanced Linux Programming&lt;/h4&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Locking&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;IPC&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;MMAP, accessing hardware in userspace&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;kernel-programming-and-drivers-framework&#34;&gt;Kernel Programming and Drivers framework&lt;/h4&gt;
+
+&lt;p&gt;Kernel Programming introduction and Introduction to device driver framework&lt;/p&gt;
+
+&lt;h4 id=&#34;kernel-internals&#34;&gt;Kernel Internals&lt;/h4&gt;
+
+&lt;h2 id=&#34;miscallaneous&#34;&gt;Miscallaneous&lt;/h2&gt;
+
+&lt;h3 id=&#34;python-programming&#34;&gt;Python Programming&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python programming concepts&lt;/li&gt;
+&lt;li&gt;Introduction to IDLE and command line based python applications&lt;/li&gt;
+&lt;li&gt;Syntax and writing Hello World&lt;/li&gt;
+&lt;li&gt;Introduction to functional programming&lt;/li&gt;
+&lt;li&gt;Writing small programs&lt;/li&gt;
+&lt;li&gt;importing other libraries&lt;/li&gt;
+&lt;li&gt;Control structure
+
+&lt;ul&gt;
+&lt;li&gt;If, if-else, try-except, loops and iterators&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Advanced Concepts
+
+&lt;ul&gt;
+&lt;li&gt;Interfacing with C&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Object Oriented programming&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;advanced-c-programming&#34;&gt;Advanced C Programming&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About ME</title>
+      <link>https://pmallappa.github.io/about/</link>
+      <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://pmallappa.github.io/about/</guid>
+      <description>&lt;p&gt;I am a experienced Linux Kernel developer. Having around 14 years of industry experience in&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Linux Kernel&lt;/li&gt;
+&lt;li&gt;Device Drivers&lt;/li&gt;
+&lt;li&gt;Embedded Systems&lt;/li&gt;
+&lt;li&gt;C, Python, Go, LaTeX&lt;/li&gt;
+&lt;li&gt;FreeBSD, Plan9&lt;/li&gt;
+&lt;li&gt;Virtualization and Hypervisors&lt;/li&gt;
+&lt;li&gt;Shell scripting, elisp&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My first night with hugo</title>
+      <link>https://pmallappa.github.io/blog/2016/11/30/my-first-night-with-hugo/</link>
+      <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://pmallappa.github.io/blog/2016/11/30/my-first-night-with-hugo/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-happens-in-there&#34;&gt;What happens in there&lt;/h2&gt;
+
+&lt;p&gt;Okay, Before it gets any weirder, &lt;a href=&#34;http://www.hugo.com&#34;&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/a&gt; is a blogging
+engine. Write a bunch of files in markdown syntax and &lt;strong&gt;Hugo&lt;/strong&gt; will render it
+for you. When all is done, and you are &lt;em&gt;satisfied&lt;/em&gt;, it can be taken to next
+step.&lt;/p&gt;
+
+&lt;h2 id=&#34;where-to-begin&#34;&gt;Where to begin&lt;/h2&gt;
+
+&lt;p&gt;In all the ocean of knowledge, an important question to ask is where the
+&lt;strong&gt;Hell&lt;/strong&gt; I start ?&lt;/p&gt;
+
+&lt;p&gt;There were so many blogging engines, With my initial encounter with &lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;,
+&lt;a href=&#34;http://www.octopress.org&#34;&gt;Octopress&lt;/a&gt; etc., I thought I may never start.&lt;/p&gt;
+
+&lt;p&gt;To my surprise, &lt;em&gt;Hugo&lt;/em&gt; came to rescue.&lt;/p&gt;
+
+&lt;h2 id=&#34;never-thought-this-would-happen&#34;&gt;Never thought this would happen&lt;/h2&gt;
+
+&lt;p&gt;It was a bliss and with a few command strokes my blog is up and running&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up&#34;&gt;Setting up&lt;/h2&gt;
+
+&lt;p&gt;Much of the information is presented in a better manner on hugo&amp;rsquo;s documents
+Please refer that. We discuss setting up a github pages (static content). My
+goal is to have a single repository that serves as fully deployed html files
+from a &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;Another branch say &lt;code&gt;master&lt;/code&gt; saves all the static contents of this site.&lt;/p&gt;
+
+&lt;h3 id=&#34;setting-up-hugo&#34;&gt;Setting up hugo&lt;/h3&gt;
+
+&lt;p&gt;As mentioned above, please refer Hugo&amp;rsquo;s documentation for this&lt;/p&gt;
+
+&lt;h3 id=&#34;setting-up-your-site&#34;&gt;Setting up your site&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;hugo new site &amp;lt;site&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &amp;lsquo;site&amp;rsquo; is the name of the site for your disposal.&lt;/p&gt;
+
+&lt;h3 id=&#34;setting-up-your-categories&#34;&gt;Setting up your categories&lt;/h3&gt;
+
+&lt;p&gt;It is better to categorize contents that one will write on their pages.&lt;/p&gt;
+
+&lt;h2 id=&#34;writing-your-first-blog&#34;&gt;Writing your first Blog&lt;/h2&gt;
+
+&lt;h2 id=&#34;changing-your-home-page&#34;&gt;Changing your home page&lt;/h2&gt;
+
+&lt;p&gt;My personal preference is to have a separate home page which doens&amp;rsquo;t right away
+thow the blog/ in the visitors face.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
