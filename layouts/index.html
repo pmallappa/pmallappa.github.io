@@ -1,0 +1,61 @@
+{{ partial "header.html" . }}
+	{{ $.Scratch.Set "shareNav" true }}
+	{{ partial "navbar" . }}
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700|Aref+Ruqaa|Bungee" rel="stylesheet">
+<style>
+/*adding some extras for demo purposes*/
+article {
+  float: left;
+  margin: 0 auto;
+  width: 35%;
+  font-family: 'oswald', sans-serif;
+  font-size:120%;
+  font-weight:400;
+  text-align: right;
+}
+h3 {
+  font-variant: normal;
+}
+
+aside {
+  float: right;
+  width: 55%;
+  color: gray;
+  margin: 0 auto;
+  font-family: 'oswald', sans-serif;
+  font-size: 900%;
+  font-weight: 800;
+  font-variant: small-caps;
+  line-height: 1.0;
+}
+
+#wrap {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+}
+
+</style>
+</head>
+  <body lang="en">
+    <div id="wrap">
+      <h3>
+      <article>
+<br>
+      <ul style="list-style:none; columns: 2 50%; -moz-columns: 2 50%; -webkit-columns: 2 50%;">
+      <li><h3>C, Python, LaTeX, Go</h3></li>
+      <li><h3>Linux, QNX, Plan9, FreeBSD</h3></li>
+      <li><h3>Xen, KVM, Virtualization</h3></li>
+      <li><h3>Qemu, Gem5, Simics</li>
+      <li><h3>ARM, ARMv8, MIPS, RISCV</h3></li>
+      <li><h3>Git, ((((elisp))))</h3></li>
+      <li><h3>Shell Scripting</h3></li>
+      </ul>
+      </article>
+     <aside>
+     Prem<br>Mallappa
+     </aside>
+    </div>
+  </body>
+{{ partial "footer.html" . }}
