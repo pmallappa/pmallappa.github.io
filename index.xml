@@ -27,15 +27,20 @@
       <description>
 
 &lt;style&gt;
-h1{
+.h1{
   font-size: 210%;
   font-variant: bold;
 }
-h3,h4{
-  font-size: 100%;
+h2 {
+  font-size: 180%;
 }
 h3 {
+  font-size: 140%;
   text-decoration: underline;
+}
+h4 {
+  font-size: 110%;
+  font-variant: bold;
 }
 &lt;/style&gt;
 
@@ -49,7 +54,7 @@ I have close to 15 years of experience in &lt;strong&gt;Embedded Systems&lt;/str
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#arm-v7-introduction&#34;&gt;ARM v7 Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#arm-v7-advanced&#34;&gt;ARM v7 Architecture &amp;amp; Advanced&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#arm-v7-advanced-architecture&#34;&gt;ARM v7 Architecture &amp;amp; Advanced Concepts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#arm-v8-advanced&#34;&gt;ARM v8 Architecture&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#linux&#34;&gt;Linux&lt;/a&gt;
@@ -64,16 +69,20 @@ I have close to 15 years of experience in &lt;strong&gt;Embedded Systems&lt;/str
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#python-programming&#34;&gt;Python Programming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#advanced-c-programming&#34;&gt;Advanced C Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#advanced-c-programming&#34;&gt;Advanced C Programming&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;arm&#34;&gt;ARM&lt;/h3&gt;
+&lt;h2 id=&#34;arm&#34;&gt;ARM&lt;/h2&gt;
 
 &lt;p&gt;I offer state-of-the-art &lt;strong&gt;ARM&lt;/strong&gt; training, hands-on and workshop based at client&amp;rsquo;s locations
 Thare are introductory training and can be done in &lt;em&gt;1&lt;/em&gt;, &lt;em&gt;2&lt;/em&gt; or &lt;em&gt;3&lt;/em&gt; day material. Depending on individual needs, the duration and content can be customized&lt;/p&gt;
 
-&lt;h4 id=&#34;arm-v7-introduction&#34;&gt;ARM v7 Introduction&lt;/h4&gt;
+&lt;h3 id=&#34;arm-v7-introduction&#34;&gt;ARM v7 Introduction&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Introduction to ARM, ARM as a company&lt;/li&gt;
@@ -90,7 +99,7 @@ Thare are introductory training and can be done in &lt;em&gt;1&lt;/em&gt;, &lt;e
 &lt;li&gt;Programming in Assembly&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;arm-v7-advanced-architecture&#34;&gt;ARM v7 Advanced Architecture&lt;/h4&gt;
+&lt;h3 id=&#34;arm-v7-advanced-architecture&#34;&gt;ARM v7 Advanced Architecture&lt;/h3&gt;
 
 &lt;p&gt;In this module we will discuss the advanced concepts such as &lt;code&gt;virtualization&lt;/code&gt; ,  &lt;code&gt;memory management&lt;/code&gt; and &lt;code&gt;GICv3&lt;/code&gt; interrupt handling.&lt;/p&gt;
 
@@ -108,7 +117,14 @@ Thare are introductory training and can be done in &lt;em&gt;1&lt;/em&gt;, &lt;e
 &lt;li&gt;GICv3 Interrupt Handling&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;arm-v8-advanced-architecture&#34;&gt;ARM v8 Advanced Architecture&lt;/h4&gt;
+&lt;h3 id=&#34;arm-v8-advanced-architecture&#34;&gt;ARM v8 Advanced Architecture&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
 
 &lt;h3 id=&#34;linux-basics-and-programming&#34;&gt;Linux Basics and Programming&lt;/h3&gt;
 
@@ -118,23 +134,27 @@ Thare are introductory training and can be done in &lt;em&gt;1&lt;/em&gt;, &lt;e
 &lt;li&gt;Terminal and Shell&lt;/li&gt;
 &lt;li&gt;Command line&lt;/li&gt;
 &lt;li&gt;Process and process control&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;How your programs startup&lt;/p&gt;
-
-&lt;h4 id=&#34;advanced-linux-programming&#34;&gt;Advanced Linux Programming&lt;/h4&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Locking&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;IPC&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;MMAP, accessing hardware in userspace&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;How your programs startup&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;kernel-programming-and-drivers-framework&#34;&gt;Kernel Programming and Drivers framework&lt;/h4&gt;
+&lt;h4 id=&#34;advanced-linux-programming&#34;&gt;Advanced Linux Programming&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Locking&lt;/li&gt;
+&lt;li&gt;IPC&lt;/li&gt;
+&lt;li&gt;MMAP, accessing hardware in userspace&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;kernel-programming-and-drivers-framework&#34;&gt;Kernel Programming and Drivers framework&lt;/h3&gt;
 
 &lt;p&gt;Kernel Programming introduction and Introduction to device driver framework&lt;/p&gt;
 
-&lt;h4 id=&#34;kernel-internals&#34;&gt;Kernel Internals&lt;/h4&gt;
+&lt;h3 id=&#34;kernel-internals&#34;&gt;Kernel Internals&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;miscallaneous&#34;&gt;Miscallaneous&lt;/h2&gt;
 
