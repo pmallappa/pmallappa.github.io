@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>services on Prem Mallappa</title>
+    <link>https://pmallappa.github.io/categories/services/index.xml</link>
+    <description>Recent content in services on Prem Mallappa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://pmallappa.github.io/categories/services/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Services</title>
+      <link>https://pmallappa.github.io/services/</link>
+      <pubDate>Thu, 01 Dec 2016 22:50:52 +0530</pubDate>
+      
+      <guid>https://pmallappa.github.io/services/</guid>
+      <description>
+
+&lt;style&gt;
+.h1{
+  font-size: 210%;
+  font-variant: bold;
+}
+h2 {
+  font-size: 180%;
+}
+h3 {
+  font-size: 140%;
+  text-decoration: underline;
+}
+h4 {
+  font-size: 110%;
+  font-variant: bold;
+}
+&lt;/style&gt;
+
+&lt;p&gt;I offer consultation to startups and established corporations. I would like to work as an independent contractor for a particlar task.
+I have close to 15 years of experience in &lt;strong&gt;Embedded Systems&lt;/strong&gt;, &lt;strong&gt;ARM&lt;/strong&gt;, &lt;strong&gt;ARM64&lt;/strong&gt; and &lt;strong&gt;MIPS&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;training&#34;&gt;Training&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#arm&#34;&gt;ARM&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#arm-v7-introduction&#34;&gt;ARM v7 Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#arm-v7-advanced-architecture&#34;&gt;ARM v7 Architecture &amp;amp; Advanced Concepts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#arm-v8-advanced&#34;&gt;ARM v8 Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#linux&#34;&gt;Linux&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#linux-basics-and-programming&#34;&gt;Linux Basics &amp;amp; Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#advanced-linux-programming&#34;&gt;Advanced Linux Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#kernel-programming-and-driver-framework&#34;&gt;Kernel Programming &amp;amp; Driver Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#kernel-internals&#34;&gt;Kernel Internals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#miscallaneous&#34;&gt;Miscallaneous&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#python-programming&#34;&gt;Python Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#advanced-c-programming&#34;&gt;Advanced C Programming&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;arm&#34;&gt;ARM&lt;/h2&gt;
+
+&lt;p&gt;I offer state-of-the-art &lt;strong&gt;ARM&lt;/strong&gt; training, hands-on and workshop based at client&amp;rsquo;s locations
+Thare are introductory training and can be done in &lt;em&gt;1&lt;/em&gt;, &lt;em&gt;2&lt;/em&gt; or &lt;em&gt;3&lt;/em&gt; day material. Depending on individual needs, the duration and content can be customized&lt;/p&gt;
+
+&lt;h3 id=&#34;arm-v7-introduction&#34;&gt;ARM v7 Introduction&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Introduction to ARM, ARM as a company&lt;/li&gt;
+&lt;li&gt;ARM History, background and naming convention&lt;/li&gt;
+&lt;li&gt;ARM Registers set&lt;/li&gt;
+&lt;li&gt;ARM Instructions
+
+&lt;ul&gt;
+&lt;li&gt;Data movment&lt;/li&gt;
+&lt;li&gt;Branching&lt;/li&gt;
+&lt;li&gt;Load Store&lt;/li&gt;
+&lt;li&gt;Miscallaneous&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Programming in Assembly&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;arm-v7-advanced-architecture&#34;&gt;ARM v7 Advanced Architecture&lt;/h3&gt;
+
+&lt;p&gt;In this module we will discuss the advanced concepts such as &lt;code&gt;virtualization&lt;/code&gt; ,  &lt;code&gt;memory management&lt;/code&gt; and &lt;code&gt;GICv3&lt;/code&gt; interrupt handling.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Exception Handling&lt;/li&gt;
+&lt;li&gt;Operating Modes&lt;/li&gt;
+&lt;li&gt;Switching between Modes&lt;/li&gt;
+&lt;li&gt;Operating system Concepts&lt;/li&gt;
+&lt;li&gt;Cache and Cache operation&lt;/li&gt;
+&lt;li&gt;System Control Co-processor&lt;/li&gt;
+&lt;li&gt;MMU Unit&lt;/li&gt;
+&lt;li&gt;Cache configuration, locking, invalidating and flushing&lt;/li&gt;
+&lt;li&gt;Booting up a v7 machine&lt;/li&gt;
+&lt;li&gt;V7 Virtualization enhancements&lt;/li&gt;
+&lt;li&gt;GICv3 Interrupt Handling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;arm-v8-advanced-architecture&#34;&gt;ARM v8 Advanced Architecture&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
+
+&lt;h3 id=&#34;linux-basics-and-programming&#34;&gt;Linux Basics and Programming&lt;/h3&gt;
+
+&lt;h4 id=&#34;introduction-to-linux&#34;&gt;Introduction to Linux&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Terminal and Shell&lt;/li&gt;
+&lt;li&gt;Command line&lt;/li&gt;
+&lt;li&gt;Process and process control&lt;/li&gt;
+&lt;li&gt;How your programs startup&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;advanced-linux-programming&#34;&gt;Advanced Linux Programming&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Locking&lt;/li&gt;
+&lt;li&gt;IPC&lt;/li&gt;
+&lt;li&gt;MMAP, accessing hardware in userspace&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;kernel-programming-and-drivers-framework&#34;&gt;Kernel Programming and Drivers framework&lt;/h3&gt;
+
+&lt;p&gt;Kernel Programming introduction and Introduction to device driver framework&lt;/p&gt;
+
+&lt;h3 id=&#34;kernel-internals&#34;&gt;Kernel Internals&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;miscallaneous&#34;&gt;Miscallaneous&lt;/h2&gt;
+
+&lt;h3 id=&#34;python-programming&#34;&gt;Python Programming&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python programming concepts&lt;/li&gt;
+&lt;li&gt;Introduction to IDLE and command line based python applications&lt;/li&gt;
+&lt;li&gt;Syntax and writing Hello World&lt;/li&gt;
+&lt;li&gt;Introduction to functional programming&lt;/li&gt;
+&lt;li&gt;Writing small programs&lt;/li&gt;
+&lt;li&gt;importing other libraries&lt;/li&gt;
+&lt;li&gt;Control structure
+
+&lt;ul&gt;
+&lt;li&gt;If, if-else, try-except, loops and iterators&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Advanced Concepts
+
+&lt;ul&gt;
+&lt;li&gt;Interfacing with C&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Object Oriented programming&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;advanced-c-programming&#34;&gt;Advanced C Programming&lt;/h3&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
