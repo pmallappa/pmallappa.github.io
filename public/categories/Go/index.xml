@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on Prem Mallappa</title>
+    <link>https://pmallappa.github.io/categories/go/index.xml</link>
+    <description>Recent content in go on Prem Mallappa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://pmallappa.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My first night with hugo</title>
+      <link>https://pmallappa.github.io/blog/2016/11/30/my-first-night-with-hugo/</link>
+      <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://pmallappa.github.io/blog/2016/11/30/my-first-night-with-hugo/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-happens-in-there&#34;&gt;What happens in there&lt;/h2&gt;
+
+&lt;p&gt;Okay, Before it gets any weirder, &lt;a href=&#34;http://www.hugo.com&#34;&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/a&gt; is a blogging
+engine. Write a bunch of files in markdown syntax and &lt;strong&gt;Hugo&lt;/strong&gt; will render it
+for you. When all is done, and you are &lt;em&gt;satisfied&lt;/em&gt;, it can be taken to next
+step.&lt;/p&gt;
+
+&lt;h2 id=&#34;where-to-begin&#34;&gt;Where to begin&lt;/h2&gt;
+
+&lt;p&gt;In all the ocean of knowledge, an important question to ask is where the
+&lt;strong&gt;Hell&lt;/strong&gt; I start ?&lt;/p&gt;
+
+&lt;p&gt;There were so many blogging engines, With my initial encounter with &lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;,
+&lt;a href=&#34;http://www.octopress.org&#34;&gt;Octopress&lt;/a&gt; etc., I thought I may never start.&lt;/p&gt;
+
+&lt;p&gt;To my surprise, &lt;em&gt;Hugo&lt;/em&gt; came to rescue.&lt;/p&gt;
+
+&lt;h2 id=&#34;never-thought-this-would-happen&#34;&gt;Never thought this would happen&lt;/h2&gt;
+
+&lt;p&gt;It was a bliss and with a few command strokes my blog is up and running&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up&#34;&gt;Setting up&lt;/h2&gt;
+
+&lt;p&gt;Much of the information is presented in a better manner on hugo&amp;rsquo;s documents
+Please refer that. We discuss setting up a github pages (static content). My
+goal is to have a single repository that serves as fully deployed html files
+from a &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;Another branch say &lt;code&gt;master&lt;/code&gt; saves all the static contents of this site.&lt;/p&gt;
+
+&lt;h3 id=&#34;setting-up-hugo&#34;&gt;Setting up hugo&lt;/h3&gt;
+
+&lt;p&gt;As mentioned above, please refer Hugo&amp;rsquo;s documentation for this&lt;/p&gt;
+
+&lt;h3 id=&#34;setting-up-your-site&#34;&gt;Setting up your site&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;hugo new site &amp;lt;site&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &amp;lsquo;site&amp;rsquo; is the name of the site for your disposal.&lt;/p&gt;
+
+&lt;h3 id=&#34;setting-up-your-categories&#34;&gt;Setting up your categories&lt;/h3&gt;
+
+&lt;p&gt;It is better to categorize contents that one will write on their pages.&lt;/p&gt;
+
+&lt;h2 id=&#34;writing-your-first-blog&#34;&gt;Writing your first Blog&lt;/h2&gt;
+
+&lt;h2 id=&#34;changing-your-home-page&#34;&gt;Changing your home page&lt;/h2&gt;
+
+&lt;p&gt;My personal preference is to have a separate home page which doens&amp;rsquo;t right away
+thow the blog/ in the visitors face.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
