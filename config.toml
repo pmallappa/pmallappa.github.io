@@ -1,5 +1,5 @@
 baseurl = "https://pmallappa.github.io"
-publishdir = "../publish"
+#publishdir = "../publish" # We'll remove this and use public folder
 languageCode = "en-us"
 title = "Prem Mallappa"
 theme = "hugo-future-imperfect"
