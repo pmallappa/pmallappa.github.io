@@ -20,14 +20,14 @@
                 </header>
             {{ end }}
             <ul class="icons">
-                {{ if .RSSLink }}
+               {{ if .Site.Params.socialAppearAtTop }}
+                   {{ partial "social" . }}
+               {{ end }}
+               {{ if .RSSLink }}
                     <li><a href="{{ .RSSLink }}" type="application/rss+xml"
                         target="_blank" title="RSS" class="fa fa-rss"></a></li>
                 {{ end }}
-                {{ if .Site.Params.socialAppearAtTop }}
-                    {{ partial "social" . }}
-                {{ end }}
-            </ul>
+	    </ul>
         </section>
 
     <!-- Posts List -->

@@ -92,6 +92,11 @@ googleAnalytics = ""
 [[menu.main]]
     name = "About"
     url = "/about"
+    weight = 6
+
+[[menu.main]]
+    name = "Quotes"
+    url = "/quotes"
     weight = 5
 
 # Insert your username and the icon will apear on the page as long as
@@ -115,7 +120,7 @@ googleAnalytics = ""
     wordpress       = ""
     tumblr          = ""
     xing            = ""
-    linkedin        = "prem_mallappa"
+    linkedin        = "pmallappa"
     slideshare      = ""
     stackoverflow   = ""
     reddit          = ""
