@@ -91,23 +91,67 @@ In this module we will discuss the advanced concepts such as `virtualization ` ,
 #### Introduction to Linux
 - Terminal and Shell
 - Command line
-- Process and process control
 - How your programs startup
+- Linux Filesystem
+- Shell scripting basics
 
 #### Advanced Linux Programming
-- Locking
-- IPC
-- MMAP, accessing hardware in userspace
+- Process and process control
+- File Management
+- Memory Management 
+	- MMAP, accessing hardware in userspace
+- Synchronization
+- IPC (Inter-Process Communication)
+- Compiling and debugging programs
 
-### Kernel Programming and Drivers framework
+### Kernel Programming and Driver framework
 Kernel Programming introduction and Introduction to device driver framework
+##### Prerequisites
+  - [Linux Basics & Programming](#linux-basics-and-programming)
+  - [Advanced Linux Programming](#advanced-linux-programming) 
+
+ - Kernel Module Vs Application Namespace,
+ - Basic Kernel Services, 
+ - Linux Kernel Code, Kernel Hello world,
+ - Loading/Unloading Modules, 
+ - Linux Kernel Tree, 
+ - Linux Source Code, 
+ - Linux Kernel Configuration.
+ - Writing a Simple Device Driver
+ 	- Insert/Remove driver
+ 	- Driver framework
+ - Kernel synchronization Machanisms
+ 	- Race condition
+	- Semaphore/mutex usage
+	- Deadlock and prevention
+ - Interrupt handling and tasklets 
+ - Wait queues and Kernel threads
 
 ### Kernel Internals
+This course is not for the faint hearted, this introduces to Linux kernel and its development of 25 years. Its also not recommended for the device driver enthusiasts as it deals with core kernel components.
 
-<br>
-<br>
-<br>
-<br>
+#### Prerequisites
+  - [Linux Basics & Programming](#linux-basics-and-programming)
+  - [Advanced Linux Programming](#advanced-linux-programming) 
+  - [Kernel Programming & Driver Framework](#kernel-programming-and-driver-framework)
+
+#### Contents
+ - Process and Its representation on Kernel
+	- task, struct and clone(), fork(), vfork()
+ - Kernel Synchronization
+	- Per CPU variables
+	- atomic operation, variables, spinlocks, rw-locks
+ - Kernel data-structures
+	- Trees, rb-tree, lists etc.
+ - Timing measurement in Linux
+	- How kernel keeps track of time
+	- tickless, hr-timer and jiffies etc..
+ - Memory management
+	- pagefaults and slab,slub,slob allocators
+ 	- page allocation and reclaimation
+	- page overcommiting, CMA (continous memory allocator)
+ - Linux virtual filesystem
+
 
 ## Miscallaneous
 ### Python Programming
@@ -118,10 +162,35 @@ Kernel Programming introduction and Introduction to device driver framework
  - Writing small programs
  - importing other libraries
  - Control structure
-    - If, if-else, try-except, loops and iterators
-    - 
+	- If, if-else, try-except, loops and iterators
+	- Iterators, Generators
  - Advanced Concepts
-    - Interfacing with C
+	- Interfacing with C
  - Object Oriented programming
 
+__Added Python development__
+
+ - Django Web App development
+ - Python Web framework
+	- routing
+	- templating
+	- data-managment
+
+
 ### Advanced C Programming
+#### Prerequisites
+ - Basic C Programming
+
+#### Contents
+ - Structure and representation
+ - Advanced usage of enums and error propagation
+ - Unix System programming
+ - IPC usage and examples programs
+ - Programming for 64-bit IA-32, IA-64 and ARM64, MIPS64 
+	- Things to take care of while programming for 64-bit architecture
+ - Pointers and pointer arithmetic
+ 	- Invalid and dangling pointers
+ - Data-type and conversion rules
+ - Function pointer and usage
+ - Pre-processors, tricks, traps-and-pitfalls
+ - STDIO library

@@ -55,7 +55,7 @@
 
 
 <meta itemprop="dateModified" content="2016-12-01T22:50:52&#43;05:30" />
-<meta itemprop="wordCount" content="324">
+<meta itemprop="wordCount" content="588">
 
 
 
@@ -295,7 +295,7 @@
             December 1, 2016</time>
         <span class="author">Prem Mallappa</span>
         
-            <p>2 minute read</p>
+            <p>3 minute read</p>
         
         
     </div>
@@ -420,28 +420,117 @@ Thare are introductory training and can be done in <em>1</em>, <em>2</em> or <em
 <ul>
 <li>Terminal and Shell</li>
 <li>Command line</li>
-<li>Process and process control</li>
 <li>How your programs startup</li>
+<li>Linux Filesystem</li>
+<li>Shell scripting basics</li>
 </ul>
 
 <h4 id="advanced-linux-programming">Advanced Linux Programming</h4>
 
 <ul>
-<li>Locking</li>
-<li>IPC</li>
+<li>Process and process control</li>
+<li>File Management</li>
+<li>Memory Management
+
+<ul>
 <li>MMAP, accessing hardware in userspace</li>
+</ul></li>
+<li>Synchronization</li>
+<li>IPC (Inter-Process Communication)</li>
+<li>Compiling and debugging programs</li>
 </ul>
 
-<h3 id="kernel-programming-and-drivers-framework">Kernel Programming and Drivers framework</h3>
+<h3 id="kernel-programming-and-driver-framework">Kernel Programming and Driver framework</h3>
 
 <p>Kernel Programming introduction and Introduction to device driver framework</p>
 
+<h5 id="prerequisites">Prerequisites</h5>
+
+<ul>
+<li><a href="#linux-basics-and-programming">Linux Basics &amp; Programming</a></li>
+
+<li><p><a href="#advanced-linux-programming">Advanced Linux Programming</a></p></li>
+
+<li><p>Kernel Module Vs Application Namespace,</p></li>
+
+<li><p>Basic Kernel Services,</p></li>
+
+<li><p>Linux Kernel Code, Kernel Hello world,</p></li>
+
+<li><p>Loading/Unloading Modules,</p></li>
+
+<li><p>Linux Kernel Tree,</p></li>
+
+<li><p>Linux Source Code,</p></li>
+
+<li><p>Linux Kernel Configuration.</p></li>
+
+<li><p>Writing a Simple Device Driver</p>
+
+<ul>
+<li>Insert/Remove driver</li>
+<li>Driver framework</li>
+</ul></li>
+
+<li><p>Kernel synchronization Machanisms</p>
+
+<ul>
+<li>Race condition</li>
+<li>Semaphore/mutex usage</li>
+<li>Deadlock and prevention</li>
+</ul></li>
+
+<li><p>Interrupt handling and tasklets</p></li>
+
+<li><p>Wait queues and Kernel threads</p></li>
+</ul>
+
 <h3 id="kernel-internals">Kernel Internals</h3>
 
-<p><br>
-<br>
-<br>
-<br></p>
+<p>This course is not for the faint hearted, this introduces to Linux kernel and its development of 25 years. Its also not recommended for the device driver enthusiasts as it deals with core kernel components.</p>
+
+<h4 id="prerequisites-1">Prerequisites</h4>
+
+<ul>
+<li><a href="#linux-basics-and-programming">Linux Basics &amp; Programming</a></li>
+<li><a href="#advanced-linux-programming">Advanced Linux Programming</a></li>
+<li><a href="#kernel-programming-and-driver-framework">Kernel Programming &amp; Driver Framework</a></li>
+</ul>
+
+<h4 id="contents">Contents</h4>
+
+<ul>
+<li>Process and Its representation on Kernel
+
+<ul>
+<li>task, struct and clone(), fork(), vfork()</li>
+</ul></li>
+<li>Kernel Synchronization
+
+<ul>
+<li>Per CPU variables</li>
+<li>atomic operation, variables, spinlocks, rw-locks</li>
+</ul></li>
+<li>Kernel data-structures
+
+<ul>
+<li>Trees, rb-tree, lists etc.</li>
+</ul></li>
+<li>Timing measurement in Linux
+
+<ul>
+<li>How kernel keeps track of time</li>
+<li>tickless, hr-timer and jiffies etc..</li>
+</ul></li>
+<li>Memory management
+
+<ul>
+<li>pagefaults and slab,slub,slob allocators</li>
+<li>page allocation and reclaimation</li>
+<li>page overcommiting, CMA (continous memory allocator)</li>
+</ul></li>
+<li>Linux virtual filesystem</li>
+</ul>
 
 <h2 id="miscallaneous">Miscallaneous</h2>
 
@@ -458,7 +547,7 @@ Thare are introductory training and can be done in <em>1</em>, <em>2</em> or <em
 
 <ul>
 <li>If, if-else, try-except, loops and iterators</li>
-<li></li>
+<li>Iterators, Generators</li>
 </ul></li>
 <li>Advanced Concepts
 
@@ -468,7 +557,49 @@ Thare are introductory training and can be done in <em>1</em>, <em>2</em> or <em
 <li>Object Oriented programming</li>
 </ul>
 
+<p><strong>Added Python development</strong></p>
+
+<ul>
+<li>Django Web App development</li>
+<li>Python Web framework
+
+<ul>
+<li>routing</li>
+<li>templating</li>
+<li>data-managment</li>
+</ul></li>
+</ul>
+
 <h3 id="advanced-c-programming">Advanced C Programming</h3>
+
+<h4 id="prerequisites-2">Prerequisites</h4>
+
+<ul>
+<li>Basic C Programming</li>
+</ul>
+
+<h4 id="contents-1">Contents</h4>
+
+<ul>
+<li>Structure and representation</li>
+<li>Advanced usage of enums and error propagation</li>
+<li>Unix System programming</li>
+<li>IPC usage and examples programs</li>
+<li>Programming for 64-bit IA-32, IA-64 and ARM64, MIPS64
+
+<ul>
+<li>Things to take care of while programming for 64-bit architecture</li>
+</ul></li>
+<li>Pointers and pointer arithmetic
+
+<ul>
+<li>Invalid and dangling pointers</li>
+</ul></li>
+<li>Data-type and conversion rules</li>
+<li>Function pointer and usage</li>
+<li>Pre-processors, tricks, traps-and-pitfalls</li>
+<li>STDIO library</li>
+</ul>
 
     </div>
 
