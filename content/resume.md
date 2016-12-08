@@ -105,7 +105,7 @@ enable = false
         position = "Principal Engineer"
         dates = "2014 - 2016"
         company = "Broadcom Communication Technologies"
-        details = "**Describe your role here** lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.\n\n Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        details = "Worked on MMU related issues in **XLP**, a multi-threaded MIPS64 implementation of Broadcom's Network Accelerating processor. Towards the end I was working on SMMUv3 (a IOMMU in ARM world) and on Vulcan (a 32-core, 4-thread) CPU based on ARM64 ISA v8.1, also worked on KVM w.r.t ARM64"
 
 [[jobs.list]]
         position = "Lead Software Engineer"
