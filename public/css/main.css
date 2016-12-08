@@ -3546,6 +3546,7 @@ body.is-menu-visible #wrapper {
 #sidebar {
     margin-right: 1em;
     min-width: 22%;
+    max-width: 25%;
     width: 22%;
 }
 

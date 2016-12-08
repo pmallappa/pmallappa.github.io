@@ -317,26 +317,6 @@ Thare are introductory training and can be done in &lt;em&gt;1&lt;/em&gt;, &lt;e
     </item>
     
     <item>
-      <title>About ME</title>
-      <link>https://pmallappa.github.io/about/</link>
-      <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://pmallappa.github.io/about/</guid>
-      <description>&lt;p&gt;I am a experienced Linux Kernel developer. Having around 14 years of industry experience in&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Linux Kernel&lt;/li&gt;
-&lt;li&gt;Device Drivers&lt;/li&gt;
-&lt;li&gt;Embedded Systems&lt;/li&gt;
-&lt;li&gt;C, Python, Go, LaTeX&lt;/li&gt;
-&lt;li&gt;FreeBSD, Plan9&lt;/li&gt;
-&lt;li&gt;Virtualization and Hypervisors&lt;/li&gt;
-&lt;li&gt;Shell scripting, elisp&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>My first night with hugo</title>
       <link>https://pmallappa.github.io/blog/2016/11/30/my-first-night-with-hugo/</link>
       <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
