@@ -90,11 +90,6 @@ googleAnalytics = ""
     weight = 4
 
 [[menu.main]]
-    name = "About"
-    url = "/about"
-    weight = 6
-
-[[menu.main]]
     name = "Quotes"
     url = "/quotes"
     weight = 5
