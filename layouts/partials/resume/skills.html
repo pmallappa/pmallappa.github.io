@@ -1,0 +1,14 @@
+            <section class="skills-section section">
+                <h1 class="section-title"><i class="fa {{ .Params.skills.icon }}"></i> {{ .Params.skills.title }}</h1>
+                <div class="skillset">
+				{{ range .Params.skills.list }}
+                    <div class="item">
+                        <h5 class="level-title">{{ .skill }}</h5>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="{{ .level }}">
+                            </div>                                      
+                        </div><!--//level-bar-->                                 
+                    </div><!--//item-->
+                {{ end }}
+                </div>  
+            </section><!--//skills-section-->

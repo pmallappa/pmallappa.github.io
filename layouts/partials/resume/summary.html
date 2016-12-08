@@ -1,0 +1,6 @@
+            <section class="section summary-section">
+                <h1 class="section-title"><i class="fa {{ .Params.summary.icon }}"></i> {{ .Params.summary.title }}</h1>
+                <div class="summary">
+                    <p>{{ with .Params.summary.summary }}{{ . | markdownify }}{{ end }}</p>
+                </div><!--//summary-->
+            </section><!--//section-->

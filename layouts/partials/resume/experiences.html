@@ -1,0 +1,19 @@
+            <section class="section experiences-section">
+                <h1 class="section-title"><i class="fa {{ .Params.experiences.icon }}"></i>{{ .Params.experiences.title }}</h1>
+                
+				{{ range .Params.jobs.list }}
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h2 class="job-title">{{ .position }}
+                           <!-- <div class="time">{{ .dates }}</div> --> </h2>
+                        </div><!--//upper-row-->
+                        <div class="company">{{ .company }}</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>{{ with .details }}{{ . | markdownify }}{{ end }}</p>
+                    </div><!--//details-->
+                </div><!--//item-->
+				{{ end }}
+                
+            </section><!--//section-->

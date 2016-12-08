@@ -1,0 +1,13 @@
+            <section class="section projects-section">
+                <h1 class="section-title"><i class="fa {{ .Params.projects.icon }}"></i> {{ .Params.projects.title }}</h1>
+                <div class="intro">
+                    <p>{{ with .Params.projects.intro }}{{ . | markdownify }}{{ end }}</p>
+                </div><!--//intro-->
+		{{ range .Params.projects.list }}
+                <div class="item">
+		<div class="meta">
+		<div class="upper-row">
+                    <h2 class="project-title"><a href="{{ .url }}">{{ .title }}</a></h2> <div class="project-tagline">{{ with .tagline }}{{ . | markdownify }}{{ end }}</div>
+                </div><!--//item-->
+				{{ end }}
+            </section><!--//section-->

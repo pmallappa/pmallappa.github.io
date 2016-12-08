@@ -1,0 +1,35 @@
+   <!-- Theme CSS -->
+{{ partial "header" . }}
+   {{ $.Scratch.Set "shareNav" true }}
+    {{ partial "navbar" . }}
+    {{ partial "share-menu" . }}
+<div id="main-wrapper">
+<div id="main1">
+<div id="main">
+<h1>RESUME</h1>
+    <article class="post"> 
+    {{ if .Params.summary.enable }}
+	{{ partial "resume/summary.html" . }} 
+    {{ end }}
+
+    {{ if .Params.experiences.enable }}
+    {{ partial "resume/experiences.html" . }}
+    {{ end }}
+
+    {{ if .Params.projects.enable }}
+    {{ partial "resume/projects.html" . }}
+    {{ end }}
+
+    {{ if .Params.skills.enable }}
+	{{ partial "resume/skills.html" . }}
+    {{ end }}
+</div>
+</div>
+</div>
+    {{ partial "resume/sidebar.html" . }}
+    {{ partial "sidebar.html" . }} 
+</div>
+    
+{{ partial "footer.html" . }}
+
+{{ partial "resume/scripts.html" . }}
