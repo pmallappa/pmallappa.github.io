@@ -120,15 +120,18 @@ summary h1 {
 }
 .sidebar-wrapper .container-block-title {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1.5em;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 15px;
+  color: white;
+   text-decoration: underline;
 }
 .sidebar-wrapper .degree {
   font-size: 14px;
   margin-top: 0;
   margin-bottom: 5px;
+  color: whitesmoke;
 }
 .sidebar-wrapper .education-container .item {
   margin-bottom: 15px;
