@@ -6,8 +6,297 @@
     <description>Recent content in Blogs on Prem Mallappa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Mar 2017 10:48:31 +0530</lastBuildDate>
     <atom:link href="https://pmallappa.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>XOR Sequence</title>
+      <link>https://pmallappa.github.io/blog/2017/03/09/xor-numbers/</link>
+      <pubDate>Thu, 09 Mar 2017 10:48:31 +0530</pubDate>
+      
+      <guid>https://pmallappa.github.io/blog/2017/03/09/xor-numbers/</guid>
+      <description>
+
+&lt;p&gt;Started as an an effort to teach programming to the fresh-grads, here . Not that this is the
+ultimate way to do it, rather one of the approach to a given problem.&lt;/p&gt;
+
+&lt;h1 id=&#34;the-problem&#34;&gt;The Problem&lt;/h1&gt;
+
+&lt;p&gt;It is stated in
+here &lt;a href=&#34;https://www.hackerrank.com/challenges/xor-se&#34;&gt;XOR-Sequence&lt;/a&gt; that given a
+sequence of array &amp;lsquo;A&amp;rsquo; of size N, whose contents are as follows.
+Assumed array index is &amp;lsquo;i&amp;rsquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-math&#34;&gt;A[0] = 0
+A[1] = 1 (A[0] ^ i, i = 1)
+A[2] = 3 (A[1] ^ i, i = 2)
+A[4] = 0 (A[2] ^ i, i = 3)
+....
+A[N] = &#39;&#39; (A[N-1] ^ i, i = N)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Given values &amp;rsquo;S&amp;rsquo; and &amp;lsquo;E&amp;rsquo;, for Start and End respectively, find out&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-math&#34;&gt;A[S] ^ A[S+1] ^ A[S+2] ^ .... ^ A[E-1] ^ A[E]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;let-the-computer-do-the-work&#34;&gt;Let the computer do the work&lt;/h1&gt;
+
+&lt;p&gt;In order to know what the sequence look like, I wrote a simple program, which
+generates given sequence to a known number. Say for eg 6, it will generate sequence upto i=6&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+import (&amp;quot;fmt&amp;quot;)
+func main() {
+	var n, lastXOR uint64
+	fmt.Scanf(&amp;quot;%d&amp;quot;, &amp;amp;n);
+	for i:=uint64(0) ; i &amp;lt; n; i++ {
+		fmt.Printf(&amp;quot;%2d, &amp;quot;, lastXOR^i)
+		lastXOR ^= i
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Please note this program may run for longer time if larger integers are given,
+but we get the essence of it just by running it for smaller number like &lt;code&gt;&amp;lt; 100&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ echo 28 | go run xorgen.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Voila ..&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt; 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24, 25, 26, 27  28
+ 0,  1,  3,  0,  4,  1,  7,  0,  8,  1, 11,  0, 12,  1, 15,  0, 16,  1, 19,  0, 20,  1, 23,  0, 24,  1, 27,  0, 28
+ ^               ^               ^               ^               ^               ^               ^               ^
+ |               |               |               |               |               |               |               |
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;first-implementation&#34;&gt;First Implementation&lt;/h1&gt;
+
+&lt;p&gt;Of course, my first implementation failed miserably with large input sequence.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func getXOR(start, end int) int {
+    var lastXOR int
+    for ; start &amp;lt; end; start++ {
+        lastXOR ^= start
+    }
+    return lastXOR
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For most of the test cases it didn&amp;rsquo;t even computed results to full extent, on my
+laptop it ran for 2 hours for an input sequence. Online system times out with a
+compute-intensive operation like above.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;19
+269656199  494630864
+130226563  341217047
+731964916  832420216
+542340130  797666540
+23301452   870008140
+380088525  890526489
+187177803  354216263
+615371739  904830084
+37808192   762275257
+269603062  408398609
+15763251   94286582
+602143487  683191883
+524044437  648225039
+10725691   939564919
+415709950  439717791
+29711842   652998599
+81933645   201678107
+254074327  383133442
+5665651    179364774
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Looks like there is definitely something we can do so that it is computed with &lt;code&gt;O(1)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;xor-patterns&#34;&gt;XOR patterns&lt;/h1&gt;
+
+&lt;p&gt;We have all learnt at one time or the other in our lives about Bitwise XOR operation&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;OP1&lt;/th&gt;
+&lt;th&gt;OP2&lt;/th&gt;
+&lt;th&gt;XOR&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Also we see a repeated pattern, if (i MOD 4) result of all the XOR operation is
+equal to &amp;lsquo;i&amp;rsquo;, Just to remind, &amp;lsquo;i&amp;rsquo; is the index of array
+In other words, at i,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;when (i MOD 4 == 0), A[i] == i
+when (i MOD 4 == 1), A[i] == 1
+when (i MOD 4 == 2), A[i] == i + 1
+when (i MOD 4 == 3), A[i] == 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Also when &lt;code&gt;i MOD 4 == 0&lt;/code&gt;, and&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-math&#34;&gt;i ^ i+1 ^ i+2 ^ i+3 = 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Given the above pattern, we can split the entire sequence into 4 integers
+sequence, starting at first multiple of 4 after &lt;code&gt;start&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We know that,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-math&#34;&gt;a ^ 0 = a
+a ^ a = 0
+a ^ b ^ c = (a ^ b) ^ c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For example, if &lt;code&gt;start=29&lt;/code&gt; and &lt;code&gt;end = 82&lt;/code&gt; we can split the entire sequence
+leaving out &lt;code&gt;29-31&lt;/code&gt;, and &lt;code&gt;80-82&lt;/code&gt; as they do not make up to the &lt;code&gt;4th&lt;/code&gt; number
+slot.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;32-35   -- A1
+36-39   -- A2
+40-43   -- A3 
+44-47   -- A4
+...
+76-79   -- A9
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hence we can write the sequence as (again leaving out &lt;code&gt;29-31&lt;/code&gt; and &lt;code&gt;80-82&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;A1 ^ A2 ^ A3 ^ A4 ^...^ A9&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;we can check that, each slot (&lt;code&gt;A1&lt;/code&gt;, &lt;code&gt;A2&lt;/code&gt; &amp;hellip;  here, XOR upto &lt;code&gt;2&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;32 ^ 33 ^ 34 ^ 35 = 2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And we know that each of &lt;code&gt;Ax&lt;/code&gt;is &lt;code&gt;2&lt;/code&gt; from above.&lt;/p&gt;
+
+&lt;p&gt;All we have to calculate is &lt;code&gt;A1 ^...^ A9&lt;/code&gt; is &lt;strong&gt;odd&lt;/strong&gt; or &lt;strong&gt;even&lt;/strong&gt; number of slots.
+Because, if we have odd number the result of &lt;code&gt;A1 ^ A2 ^ .... ^ (2*An + 1)&lt;/code&gt; is
+&lt;code&gt;2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally if there are even number of slots, it results to &lt;code&gt;0&lt;/code&gt; as &lt;code&gt;A1=2&lt;/code&gt; and &lt;code&gt;A2=2&lt;/code&gt;
+&lt;code&gt;A1 ^ A2 = 0&lt;/code&gt; every send term cancels the one before it.&lt;/p&gt;
+
+&lt;p&gt;In our example, we just have to calculate &lt;code&gt;A[29] ^ A[30] ^ A[31]&lt;/code&gt; and &lt;code&gt;A[80] ^
+A[81] ^ A[82]&lt;/code&gt;, each of the elements have fixed values from our very first
+program which implements crude way of XOR&amp;rsquo;ing.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;A[28] = 28
+A[29] = 1      &amp;lt;--+
+A[30] = 30        |- XOR
+A[31] = 0      &amp;lt;--+ 
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;analysis&#34;&gt;Analysis&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;O(1)&lt;/code&gt; means the code runs in constant time. In our above example, we see if we
+isolate the first and last slots, the in-between slots only contribute as &lt;code&gt;0&lt;/code&gt; or
+&lt;code&gt;2&lt;/code&gt; depending on if number slots are &lt;strong&gt;&lt;em&gt;even&lt;/em&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;em&gt;odd&lt;/em&gt;&lt;/strong&gt; respectively&lt;/p&gt;
+
+&lt;h1 id=&#34;the-code&#34;&gt;The Code&lt;/h1&gt;
+
+&lt;p&gt;Following code gets the last slot XORed&amp;rsquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func getLastXOR(start uint64) uint64 {
+	var lastXOR uint64 = 0
+	idx := start % 4
+	switch idx {
+	case 3:
+		lastXOR = 2
+	case 2:
+		lastXOR ^= (start + 1)
+		start--
+		fallthrough
+	case 1:
+		lastXOR ^= 1
+		start--
+		fallthrough
+	case 0:
+		lastXOR ^= start
+	}
+	return lastXOR
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This one calculates the first slot&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func getNextXOR(start uint64) uint64 {
+	var nextXOR uint64
+	idx := start % 4
+	switch idx {
+	case 0:
+		nextXOR = 2
+		start++
+	case 1:
+		nextXOR ^= 1
+		start++
+		fallthrough
+	case 2:
+		nextXOR ^= start + 1
+		start++
+		fallthrough
+	case 3:
+		nextXOR ^= 2
+	}
+
+	return nextXOR
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This one calculates the number of slots if odd or even and adjust the &lt;code&gt;start&lt;/code&gt; to
+next available multiple of &lt;code&gt;4&lt;/code&gt;. As well as adjust the &lt;code&gt;end&lt;/code&gt; to previous availble multiple of &lt;code&gt;4&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func calculate(start, end uint64) uint64 {
+	newstart := start
+	if start%4 != 0 {
+		newstart = start + 4 - start%4
+	}
+	newend := end - end%4
+	diff := newend - newstart
+	div := diff / 4 % 2
+	if div != 0 { // even slots
+		return getNextXOR(start) ^ getLastXOR(end)
+	}
+	// odd number of slots
+	return getNextXOR(start) ^ getLastXOR(end) ^ 2
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;=== OVER AND OUT ===&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>My first night with hugo</title>
