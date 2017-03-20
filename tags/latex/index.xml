@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latex on Prem Mallappa</title>
+    <link>https://pmallappa.github.io/tags/latex/index.xml</link>
+    <description>Recent content in latex on Prem Mallappa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://pmallappa.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Beamer custom class</title>
+      <link>https://pmallappa.github.io/blog/2017/03/11/beamer-not-beamer/</link>
+      <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pmallappa.github.io/blog/2017/03/11/beamer-not-beamer/</guid>
+      <description>
+
+&lt;h1 id=&#34;what-is-beamer&#34;&gt;What is Beamer&lt;/h1&gt;
+
+&lt;p&gt;Beamer is a presentation making tool using LaTeX. Now, one may ask&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is LaTeX ?&lt;/strong&gt; &lt;br /&gt;
+In short, its a document typeset system.&lt;/p&gt;
+
+&lt;p&gt;LaTeX(Created by computer hacker &lt;a href=&#34;https://en.wikipedia.org/wiki/Leslie_Lamport&#34;&gt;&lt;strong&gt;Leslie B. Lamport&lt;/strong&gt;&lt;/a&gt;) is a set of macros on top of the &lt;em&gt;raw&lt;/em&gt; TeX (A very powerful typesetting
+system created by &lt;a href=&#34;https://en.wikipedia.org/wiki/Donald_Knuth&#34;&gt;&lt;strong&gt;Sir Don Knuth&lt;/strong&gt;&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;h1 id=&#34;using-metropolis-template&#34;&gt;Using Metropolis template&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\usetheme{metropolis}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;some-macros&#34;&gt;Some macros&lt;/h1&gt;
+
+&lt;p&gt;Here we are re-defining the minted environment not to report errors when it
+cannot parse.&lt;/p&gt;
+
+&lt;p&gt;And using includegraphics to include image which keeps the aspect ratio.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\AtBeginEnvironment{minted}{\renewcommand{\fcolorbox}[4][]{#4}}
+\AtBeginSection[]{\begin{frame}&amp;lt;beamer&amp;gt;\frametitle{Topic}\tableofcontents[currentsection]\end{frame}}
+\LetLtxMacro{\OldIncludegraphics}{\includegraphics}
+\renewcommand{\includegraphics}[2][]{\OldIncludegraphics[height=0.8\textheight,keepaspectratio, #1]{#2}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;the-header&#34;&gt;The header&lt;/h1&gt;
+
+&lt;p&gt;Use the metropolis theme to construct the pages, here we are selecting a 16:9
+aspect ratio to beamer.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\documentclass[presentation,t,aspectratio=169,allowframebreaks,10pt]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\tolerance=1000
+\usepackage[outputdir=build/]{minted}
+\usepackage{xcolor}
+\usepackage[english]{babel}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{Confidential}
+\SetWatermarkScale{3}
+\SetWatermarkFontSize{2cm}
+\titlegraphic{\hfill \includegraphics[height=1.5cm]{images/VISHAARGA-logo.png}}
+\institute[INST]{Vishaarga Software (P) Ltd. \\\url{http://www.vishaarga.com}}
+\usepackage{vspl-beamer-template}
+
+\author{Prem Mallappa}
+\date{\today}
+\title{Advanced \\ C Programming}
+
+\usepackage{multicol}
+\usetheme[sectionpage=none, subsectionpage=progressbar]{metropolis} % Use metropolis theme 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;style&#34;&gt;Style&lt;/h1&gt;
+
+&lt;h2 id=&#34;defining-the-document-colors&#34;&gt;Defining the document colors&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\definecolor{vsplblue}{HTML}{00a1e5}
+\definecolor{vsplbggray}{HTML}{efefef}
+\definecolor{vsplRed}{RGB}{255,  92, 168}
+\definecolor{vsplGreen}{RGB}{90, 168,   0}
+\definecolor{vsplBlue}{RGB}{0, 152, 233}
+\definecolor{vsplYellow}{RGB}{242, 147,  24}
+\colorlet{vsplViolet}{vsplRed!50!vsplBlue}
+\colorlet{vsplBrown}{vsplRed!50!vsplGreen}
+\colorlet{vsplOrange}{vsplRed!50!vsplYellow}
+\colorlet{vsplCyan}{vsplGreen!50!vsplBlue}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now set the document colors using the above definitions&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\setbeamercolor{section in toc}{fg=vsplblue,bg=vsplbggray}
+\setbeamercolor{subsection in toc}{fg=vsplblue,bg=vsplbggray}
+\setbeamercolor{alerted text}{fg=vsplblue!80!gray}
+\setbeamercolor*{palette primary}{fg=vsplblue!60!black,bg=gray!30!white}
+\setbeamercolor*{palette secondary}{fg=vsplblue!70!black,bg=gray!15!white}
+\setbeamercolor*{palette tertiary}{bg=vsplblue!80!black,fg=gray!10!white}
+\setbeamercolor*{palette quaternary}{fg=vsplblue,bg=gray!5!white}
+
+\setbeamercolor*{sidebar}{fg=vsplblue,bg=gray!15!white}
+\setbeamercolor{progress bar}{fg=vsplYellow}
+
+\setbeamercolor*{palette sidebar primary}{fg=vsplblue!10!black}
+\setbeamercolor*{palette sidebar secondary}{fg=white}
+\setbeamercolor*{palette sidebar tertiary}{fg=vsplblue!50!black}
+\setbeamercolor*{palette sidebar quaternary}{fg=gray!10!white}
+
+%\setbeamercolor*{titlelike}{parent=palette primary}
+\setbeamercolor{titlelike}{parent=palette primary,fg=vsplblue}
+\setbeamercolor{frametitle}{bg=vsplbggray,fg=vsplblue}
+\setbeamercolor{frametitle right}{bg=gray!60!white}
+
+\setbeamercolor{background canvas}{bg=vsplbggray}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;fonts&#34;&gt;Fonts&lt;/h2&gt;
+
+&lt;p&gt;I have mainly used OSWALD font for headings, and &lt;em&gt;Merriweather&lt;/em&gt; for normal font.&lt;/p&gt;
+
+&lt;h2 id=&#34;let-the-fonts-rule&#34;&gt;Let the fonts rule&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\defaultfontfeatures{Ligatures=TeX} % makes this a feature of all selected fonts
+
+\newfontfamily{\titleFont}[%
+		Path = fonts/oswald/, %
+		UprightFont = *-Regular, %
+		ItalicFont = *-RegularItalic, %
+		BoldFont = *-Bold,
+]{Oswald}
+\newenvironment{titlefont}{\titleFont}{\par}
+\DeclareTextFontCommand{\texttitleFont}{\titleFont}
+
+\setmainfont[%
+	Path= fonts/merriweather/,%
+	UprightFont = *-Regular,%
+	ItalicFont = *-Italic,%
+	BoldFont = *-Bold,%
+	SmallCapsFont = *-Regular,%
+]{MerriweatherSans}
+
+\setsansfont[%
+	Path= ./fonts/merriweather/,%
+	UprightFont = *-Regular,%
+	ItalicFont = *-Italic,%
+	BoldFont = *-Bold,%
+	SmallCapsFont = *-Regular,
+]{Merriweather}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;set-the-fonts&#34;&gt;Set the fonts&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\setmonofont{Fira Mono} % sets the monospace font
+
+\setbeamerfont{title}{size=\Huge,family=\titleFont}
+\setbeamerfont{section title}{size=\LARGE,family=\titleFont}
+\setbeamerfont{frametitle}{size=\LARGE,series=\mdseries,family=\titleFont}
+
+\defbeamertemplate{section in toc}{mine stupid}{%
+	{\LARGE\titleFont %
+	\inserttocsection\par}}
+\setbeamertemplate{section in toc}[mine stupid]
+
+\defbeamertemplate{subsection in toc}{mine stupid}{%
+	{\normalsize\titleFont %
+	\inserttocsubsection\par}}
+\setbeamertemplate{subsection in toc}[mine stupid]
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;finally-the-subsectionpage&#34;&gt;Finally the subsectionpage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\AtBeginSubsection[]
+{
+  \begin{frame}[plain, t]
+	\begin{multicols}{2}
+	\vspace*{0.3\textheight}
+	{\color{vsplBlue}{\LARGE\titleFont\insertsection}}
+	\begin{minipage}{.9\linewidth}
+		{\color{vsplYellow}\hrule width \hsize height 1pt} \kern .5mm %
+		%{\color{vsplBlue}\hrule width \hsize height 1pt} \kern .5mm %
+		%{\color{vsplGreen}\hrule width \hsize height 1pt}
+    %\insertprogressbar
+	\end{minipage}%
+	\vfill
+	\pagebreak
+       \tableofcontents[%currentsection,
+	       currentsubsection, 
+         %hideothersubsections, 
+         sectionstyle=hide,
+         subsectionstyle=show/shaded,
+       ]
+	\vfill
+	\end{multicols}
+  \end{frame}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;the-result&#34;&gt;The result&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;../images/beamer-first.png&#34; alt=&#34;Beamer cover page&#34; title=&#34;Beamer First Page&#34; /&gt; &lt;img src=&#34;../images/beamer-second.png&#34; alt=&#34;Beamer cover page&#34; title=&#34;Beamer Index Page&#34; /&gt; &lt;img src=&#34;../images/beamer-content.png&#34; alt=&#34;Beamer cover page&#34; title=&#34;Content Page&#34; /&gt; &lt;img src=&#34;../images/beamer-content-2.png&#34; alt=&#34;split-page&#34; title=&#34;Split page&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

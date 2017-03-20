@@ -1,0 +1,12 @@
++++
+author = "Prem Mallappa"
+categories = ["latex", "beamer"]
+description = "Vishaarga latex beamer class"
+linktitle = ""
+featured = ""
+featuredpath = ""
+featuredalt = ""
+type = "post"
+draft = true
+title = "Making Beamer not look like Beamer"
++++

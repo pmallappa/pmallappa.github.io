@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>crypto on Prem Mallappa</title>
+    <link>https://pmallappa.github.io/categories/crypto/index.xml</link>
+    <description>Recent content in crypto on Prem Mallappa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://pmallappa.github.io/categories/crypto/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Novice guide to Cryptography and Privacy</title>
+      <link>https://pmallappa.github.io/articles/2016/11/29/Cryptography-101/</link>
+      <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://pmallappa.github.io/articles/2016/11/29/Cryptography-101/</guid>
+      <description>
+
+&lt;h1 id=&#34;secrets&#34;&gt;Secrets&lt;/h1&gt;
+
+&lt;p&gt;Hiding information from intruders was used as tactics from dawn of civilization.
+Earlier days of humanity more and more of the Kings and Queens have used lame
+form of encryption just to hide their information from the carriers and other
+traitors.&lt;/p&gt;
+
+&lt;p&gt;Given the internet and pretty much anyone with an access can look into your
+information; it has evidently became important &lt;em&gt;privacy&lt;/em&gt; is the at most
+important thing on the Internet.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Alice&lt;/strong&gt; and &lt;strong&gt;Bob&lt;/strong&gt; invented cryptography, &lt;strong&gt;Just KIDDING&lt;/strong&gt; all most all the
+texts, presentations, blogs and articles talk about these two people wanting to
+exchange some secret messages. To have local touch we take names of mythical
+creations of &lt;strong&gt;Rama&lt;/strong&gt; and &lt;strong&gt;seeta&lt;/strong&gt;, I am not going to say anything different,
+but present to you with things that I have understood.&lt;/p&gt;
+
+&lt;p&gt;Everyone has secrets, so does &lt;strong&gt;Rama&lt;/strong&gt; and &lt;strong&gt;Seeta&lt;/strong&gt;. How do the communicate
+with each other via written media, even if someone get their hands on the secret
+message.&lt;/p&gt;
+
+&lt;h1 id=&#34;computer-security&#34;&gt;Computer Security&lt;/h1&gt;
+
+&lt;p&gt;Computer security in this article vastly refers to the various levels and
+dimensions of all the security involved online. To elaborate, Securing the
+physical computer to login password to encrypted disk, encrypted driver,
+encrypted folder, encrypted file to encrypted email. In this short-book we
+concentrate on the encrypted email part.&lt;/p&gt;
+
+&lt;h1 id=&#34;e-mail-security&#34;&gt;E-mail security.&lt;/h1&gt;
+
+&lt;p&gt;E-mail as it stands today was invented in sixties, at the time the network is
+limited to a single organization (usually defence) and no one else would have
+access to this network as a person has to have physical access.&lt;/p&gt;
+
+&lt;p&gt;Once the small network started to grow (what is today commonly refered to as the
+&lt;strong&gt;Internet&lt;/strong&gt; (with a I)), people started to realize the e-mail is often sent on
+the network as a clear text message. Anyone who can tap into the physical
+network could see the email sent from one person to another.&lt;/p&gt;
+
+&lt;p&gt;This is a obvious security concern, and what lead to the inventions of keys.
+Using these keys the &lt;em&gt;cleartext&lt;/em&gt; is converted into &lt;em&gt;ciphertext&lt;/em&gt;. The ciphertext
+is not guaranteed to have same lenght of the original message.&lt;/p&gt;
+
+&lt;p&gt;This process of converting from cleartext to ciphertext is known as
+&lt;strong&gt;encryption&lt;/strong&gt;. The process of converting back from ciphertext to cleartext is
+known as &lt;strong&gt;decryption&lt;/strong&gt;. There are two types of keys in use&lt;/p&gt;
+
+&lt;h3 id=&#34;symmetric-keys&#34;&gt;Symmetric keys&lt;/h3&gt;
+
+&lt;p&gt;Same key is used to encrypt and decrypt messages. The problem with this kind of
+encryption is that, if a person &lt;strong&gt;A&lt;/strong&gt; gets hold of key belonging to &lt;strong&gt;B&lt;/strong&gt;, which &lt;strong&gt;B&lt;/strong&gt;
+is not intended to. &lt;strong&gt;A&lt;/strong&gt; can decrypt all the messages that were sent to &lt;strong&gt;B&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;asymmetric-keys&#34;&gt;Asymmetric keys&lt;/h3&gt;
+
+&lt;p&gt;A pair of keys are used, commonly refered to as &lt;strong&gt;private&lt;/strong&gt; key and &lt;strong&gt;public&lt;/strong&gt; key.
+A &lt;em&gt;public key&lt;/em&gt; is available to public and anyone can use this key to send email
+to a person to whom this key belongs. And the receiving party uses his/her
+&lt;em&gt;private key&lt;/em&gt; to decrypt the message.&lt;/p&gt;
+
+&lt;h2 id=&#34;sample-graph&#34;&gt;Sample graph&lt;/h2&gt;
+
+&lt;h1 id=&#34;pgp-pretty-good-privacy&#34;&gt;PGP - Pretty Good Privacy&lt;/h1&gt;
+
+&lt;p&gt;It became evidently clear from the beginning that &lt;em&gt;symmetric&lt;/em&gt; encryption would
+not offer a better infrastructure in terms of security. All the concentration
+was directed to &lt;em&gt;asymmetric&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;birth-of-pgp&#34;&gt;Birth of PGP&lt;/h2&gt;
+
+&lt;h2 id=&#34;terminologies&#34;&gt;Terminologies&lt;/h2&gt;
+
+&lt;h3 id=&#34;confidentiality&#34;&gt;Confidentiality&lt;/h3&gt;
+
+&lt;p&gt;The way asymmetric encryption is used in maintaining confidentiality (i.e. the
+privacy of your precious documents) goes something like this: you generate a
+‘keypair’ (a pair of keys such that documents encrypted with one can be
+decrypted with the other, and vice versa). One of these is your public key, the
+other is your private key. So, you share your public key with the world, and
+keep your private key, well, private. People who want to send you an encrypted
+e-mail find your public key, write the e-mail, encrypt it using the public key
+and send it to you. You, on receiving the e-mail, whip out your private key,
+decrypt the ciphertext and read it. This is how confidentiality is obtained with
+OpenPGP, and it’s relatively simple.&lt;/p&gt;
+
+&lt;p&gt;In actual fact, it doesn’t quite work like this. As it happens, and quite
+unfortunately so, asymmetric encryption has a few drawbacks. It is quite
+computationally intensive, and some algorithms can produce ciphertext up to
+twice the size of the original text. For these reasons, a technique known as
+hybrid encryption is employed. Rather than just encrypting a document with your
+public key, a unique, random session key is generated for that document. This is
+also sometimes referred to as a nonce (number used once). The session key needs
+to be completely random, essentially ‘unguessable’; this is why having a good
+source of randomness (a.k.a. entropy) is very important in system security.&lt;/p&gt;
+
+&lt;p&gt;The document is encrypted symmetrically with that session key, and then the
+session key is encrypted with your public key. This will probably be much
+shorter than the document itself, so the computational load of asymmetric
+encryption is lightened significantly. The encrypted session key is attached to
+the symmetrically-encrypted document, and the session key discarded forever.
+Upon receiving the encrypted document, you use your private key to decrypt the
+session key, and then use the session key to decrypt the entire document.&lt;/p&gt;
+
+&lt;h3 id=&#34;authenticity&#34;&gt;Authenticity&lt;/h3&gt;
+
+&lt;p&gt;One of the other uses of asymmetric encryption is for verifying the authenticity
+of data. For example, how do I know that this e-mail was actually sent to me
+from Joe Bloggs and not some impostor? We can take advantage of the fact that,
+if one key can decrypt a piece of ciphertext, the other key must necessarily
+have encrypted it. First, the sender will take the e-mail and construct a hash
+using a cryptographic hash function. This function must have several properties:&lt;/p&gt;
+
+&lt;p&gt;It should be impractical to find two distinct messages with the same hash. It
+should be impractical to obtain the original message given a hash (a CHF is a
+one-way function). It should be easy to compute the hash value for any given
+message. The sender then takes that hash and his/her own secret key, and encrypt
+the hash with the secret key. This encrypted hash, known as the signature, is
+bundled along with the message when it is sent. The recipient can then take the
+signature, the original message, and the sender’s public key, and attempt to
+decrypt the signature using the public key. The recipient will hash the message
+themselves, and compare the decrypted signature to the hash of the message. If
+equal, the recipient can know for certain that the message was created by
+someone with a certain private key (without knowing the key themselves). This is
+how authenticity is obtained using OpenPGP.&lt;/p&gt;
+
+&lt;p&gt;It also helps to enforce data integrity, since the hash check will fail if the
+document has been changed in transit, so either data corruption or malicious
+intent will be detected.&lt;/p&gt;
+
+&lt;p&gt;This is usually used in tandem with encryption, providing confidentiality and
+integrity, but it’s also pretty useful for things like software releases, where
+the maintainer will sign the release file with his/her private key. You’ll
+download the release file and the corresponding .sig or .asc file, and verify
+that the package was downloaded intact and that it was published by the bona
+fide maintainer.&lt;/p&gt;
+
+&lt;h3 id=&#34;keyservers&#34;&gt;Keyservers&lt;/h3&gt;
+
+&lt;p&gt;Obviously, if you have your public/private keypair, you’ll want to somehow
+publish the public key somewhere where everyone can access it. Keyservers are a
+relatively simple way to do so. A keyserver is literally just a repository of
+public keys; I’ll show you later how to push to and fetch from a keyserver,
+since this is an important way of keeping your keyring (i.e. the public keys of
+others you have saved locally) up-to-date, and also keeping others’ keyrings
+up-to-date (such as when you make a change to your key).&lt;/p&gt;
+
+&lt;p&gt;WEB OF TRUST
+One of the most important concepts in OpenPGP is that of a Web of
+Trust. Let’s say Alice decides to generate a keypair using your identity (name
+and e-mail address). How are people to decide which belongs to who? Not only
+might someone send you e-mail encrypted for Alice, rendering you unable to read
+it, but Alice could also read that e-mail, constituting a major breach of
+security (not to mention a serious inconvenience). Alice could also sign
+documents, tricking recipients into thinking that you created them.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, using the concept of signing as detailed above, you can sign a
+public key, as if to say ‘I trust this key—owner relationship’. The more keys
+sign that key, the more that key becomes ‘trusted’. Eventually, you will have
+what is known as a ‘Web of Trust’; where key A is signed by key B and C, key B
+is signed by keys A and D, and key C is signed by keys A, B and D, for example.
+The set of keys and signatures makes up the Web of Trust. You can determine
+whether an identity is to be trusted or not by following the chain of trusted
+friends. This way, anyone trying to pose as a user will not be able to get much
+trust; you’ll always go with the key that works out as most trusted.&lt;/p&gt;
+
+&lt;p&gt;I’ll give an example. Let’s say you and Bob are best friends. You trust him
+completely, so you’ve signed his key. Bob has a friend called Chris, who he
+trusts completely, so he has signed his key. If Chris sends you a signed e-mail,
+you’re very likely to believe that signature indeed belongs to Chris, because
+the authenticity of the key with which it is signed has itself been attested to
+by your best friend Bob (and you can verify that by checking Bob’s signature
+against his public key). It can get confusing for even relatively small
+networks, but fortunately a simple computer algorithm can calculate a ‘trust
+level’ for a given signature, based on following the sequence of connections of
+trust linking you to that signature.&lt;/p&gt;
+
+&lt;p&gt;You might also be happy to know that OpenPGP is a good reason to have a party.
+At key-signing parties, groups of people get together and exchange their key
+fingerprints (since each OpenPGP key has a unique identifier); the morning
+after, everyone goes online and signs the keys they accepted the night before.&lt;/p&gt;
+
+&lt;h1 id=&#34;gpg-gnu-privacy-gaurd&#34;&gt;GPG - Gnu Privacy Gaurd&lt;/h1&gt;
+
+&lt;h2 id=&#34;introduction-to-gpg&#34;&gt;Introduction to GPG&lt;/h2&gt;
+
+&lt;p&gt;There are 3 main flavors of GnuPG:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1.4 (AKA gpg) - Old - Super stable (11 years old) &amp;amp; limited features&lt;/li&gt;
+&lt;li&gt;2.0 (AKA gpg2) - Stable - Most people use this for personal encryption&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It isrecommended by the GnuPG project version to use the Stable GPG-2 release
+(2.0). I&amp;rsquo;ve also included instructions for GnuPG2.1 because I use it personally
+and find the new features useful.&lt;/p&gt;
+
+&lt;h2 id=&#34;terminologies-1&#34;&gt;Terminologies&lt;/h2&gt;
+
+&lt;h3 id=&#34;passphrase&#34;&gt;Passphrase&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Password&lt;/em&gt; is a word, as the name indicates its an &amp;lsquo;elongated&amp;rsquo; password.
+According to research, a phrase or a sentence makes it hard to crack a secret key.&lt;/p&gt;
+
+&lt;h3 id=&#34;subkeys&#34;&gt;Subkeys&lt;/h3&gt;
+
+&lt;p&gt;Subkeys are quite a subtle but powerful concept. The problem with the keypair is
+this: what happens when a key is compromised? You’ll have to revoke your old
+keypair (a process which involves you verifying that you are the owner of the
+key, after which it will be marked as revoked), thus losing your entire Web of
+Trust, and then re-generate a key and publish that. Clearly not a very good
+situation to be in.&lt;/p&gt;
+
+&lt;p&gt;OpenPGP uses a concept known as a subkey to mitigate this problem. Rather than
+have a single keypair, you’ll have a ‘master’ keypair which acts as your
+identity, and a ‘subkey’ pair which does the actual *cryption. If for some
+reason a subkey pair becomes compromised (i.e. someone finds out your
+passphrase), you can revoke just that subkey and create a new one, without
+losing your identity or WoT.&lt;/p&gt;
+
+&lt;p&gt;Types of Subkeys&lt;/p&gt;
+
+&lt;h4 id=&#34;master-key&#34;&gt;Master Key&lt;/h4&gt;
+
+&lt;h4 id=&#34;signing-key&#34;&gt;Signing Key&lt;/h4&gt;
+
+&lt;h4 id=&#34;encryption-key&#34;&gt;Encryption Key&lt;/h4&gt;
+
+&lt;h4 id=&#34;authentication-key&#34;&gt;Authentication Key&lt;/h4&gt;
+
+&lt;h3 id=&#34;signing-the-key&#34;&gt;Signing the Key&lt;/h3&gt;
+
+&lt;p&gt;This is about authorizing a key that its a trusted one. This is particularly
+useful in WoT(Web of Trust)&lt;/p&gt;
+
+&lt;h3 id=&#34;trusting-the-key&#34;&gt;Trusting the Key&lt;/h3&gt;
+
+&lt;p&gt;Trust level indicates how to use a key to encrypt/decrypt&lt;/p&gt;
+
+&lt;h1 id=&#34;configuring-your-own-setup&#34;&gt;Configuring your own setup&lt;/h1&gt;
+
+&lt;p&gt;I recommend that, GnuPG2.1 to be used for all the operation unless there is
+physically impossible to get hold of this verison&lt;/p&gt;
+
+&lt;h2 id=&#34;preliminary&#34;&gt;Preliminary&lt;/h2&gt;
+
+&lt;p&gt;Before we dive into the details of GNUPG and possibly corrupt your existing
+installation, we create a separate directory for our current installation, and
+you can overwrite your configuration if necessary create a new directory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;umask 077
+echo $SHELL
+export GNUPGHOME=/tmp/book/gnupg
+mkdir -p ${GNUPGHOME}
+
+# Now setup all the variables
+export username=&#39;FooFirst BarLast&#39;
+export userid=foo
+export useremail=&#39;foo@bar.com&#39;
+export algo=8  # this belongs to RSA with custom capabilities
+export keylen=4000
+export passphrase=&#39;FooIsBar&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;list-all-secret-keys&#34;&gt;List all Secret Keys&lt;/h2&gt;
+
+&lt;p&gt;There should be none to start with, so below command may just print version
+and exit.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --list-secret-keys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;list-all-public-keys&#34;&gt;List All Public keys&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --list-public-keys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;generate-a-secret-public-key-pair&#34;&gt;Generate a Secret-Public key-pair&lt;/h2&gt;
+
+&lt;p&gt;Key can be generated either by interactive approach or by using
+batch mode file. A later case is discussed below,&lt;/p&gt;
+
+&lt;h3 id=&#34;batch-mode&#34;&gt;batch mode&lt;/h3&gt;
+
+&lt;p&gt;create a file &lt;span class=&#34;underline&#34;&gt;pgp_batch.txt&lt;/span&gt;
+with following details&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo %echo Generating a basic OpenPGP key
+Key-Type      : RSA
+Key-Length    : 4000
+Subkey-Type   : ELG-E
+Subkey-Length : 2528
+Name-Real     : FooFirst BarLast
+Name-Comment  : The Hoe
+Name-Email    : joe@foobar.com
+Expire-Date   : 0
+Passphrase    : Joes passphrase is easy
+%pubring foo.pub
+%secring foo.sec
+# Do a commit here, so that we can later print &amp;quot;done&amp;quot; :-)
+%commit
+%echo done
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;to-generate-key-interactively-use-the-following&#34;&gt;To generate key interactively use the following&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --full-gen-key
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;generate-sub-keys&#34;&gt;Generate Sub-keys&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --list-keys
+
+export mykeyid=`gpg --list-sigs | awk &#39;/sig/ {print $2}&#39; | tail -1`
+echo $mykeyid
+
+echo $mykeyid
+
+0x95DC1AC8BB0C0132
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;and-signing-key&#34;&gt;and Signing  key&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;echo -e &amp;quot;addkey\n8\nE\nQ\n2048\n10y\nsave\n&amp;quot; | \
+    gpg2 --expert --passphrase &amp;quot;FooIsBar&amp;quot; \
+         --command-fd 0 --pinentry-mode loopback \
+         --yes --edit-key 0x95DC1AC8BB0C0132
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;create-an-encryption-key&#34;&gt;Create an Encryption key&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;echo -e &amp;quot;addkey\n8\nS\nQ\n2048\n10y\nsave\n&amp;quot; | \
+    gpg2 --expert --passphrase &amp;quot;FooIsBar&amp;quot; --command-fd 0 \
+         --pinentry-mode loopback \
+         --yes --edit-key 0x95DC1AC8BB0C0132
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;create-an-authentication-key&#34;&gt;Create an Authentication Key&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;echo -e &amp;quot;addkey\n8\nS\nE\nA\nQ\n2048\n10y\nsave\n&amp;quot; | \
+    gpg2 --expert --passphrase &amp;quot;FooIsBar&amp;quot; --command-fd 0 \
+         --pinentry-mode loopback \
+         --yes --edit-key 0x95DC1AC8BB0C0132
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;verify&#34;&gt;Verify&lt;/h3&gt;
+
+&lt;p&gt;Finally verify using &lt;em&gt;-&amp;amp;#x00ad;list-keys&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --list-keys
+
+/tmp/book/gnupg/pubring.kbx
+---------------------------
+pub   rsa4000/0x95DC1AC8BB0C0132 2016-07-06 [C] [expires: 2026-07-04]
+      Key fingerprint = EC02 6C19 09D1 8382 692B  C67A 95DC 1AC8 BB0C 0132
+sub   rsa2048/0x480097ADB8D11747 2016-07-06 [A] [expires: 2026-07-04]
+sub   rsa2048/0xD250AFC4FA53A8C4 2016-07-06 [E] [expires: 2026-07-04]
+sub   rsa2048/0xE866BCB7F357DA42 2016-07-06 [S] [expires: 2026-07-04]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;create-gpg-config&#34;&gt;Create GPG Config&lt;/h2&gt;
+
+&lt;p&gt;Now its time to create the &lt;span class=&#34;underline&#34;&gt;gpg.conf&lt;/span&gt;. Users are encouraged to blindly copy
+paste the following. Understanding this in detail would take its own time.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cat &amp;gt; ${GNUPGHOME}/gpg.conf &amp;lt;&amp;lt;EOF
+no-emit-version
+no-comments
+keyid-format 0xlong
+with-fingerprint
+list-options show-uid-validity
+verify-options show-uid-validity
+use-agent
+keyserver hkps://hkps.pool.sks-keyservers.net
+# or less secure: keyserver hkp://pool.sks-keyservers.net
+keyserver-options no-honor-keyserver-url
+keyserver-options include-revoked
+personal-cipher-preferences AES256 AES192 AES CAST5
+personal-digest-preferences SHA512 SHA384 SHA256 SHA224
+cert-digest-algo SHA512
+default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+EOF
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;testing-your-setup&#34;&gt;Testing your setup&lt;/h2&gt;
+
+&lt;h3 id=&#34;test-signing&#34;&gt;Test Signing&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &#39;hello&#39;    | \
+gpg2 --armor --clearsign -r foo -q \
+--passphrase &amp;quot;FooIsBar&amp;quot; --pinentry-mode loopback | \
+gpg2 --verify -q
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gpg: Signature made Thu 07 Jul 2016 01:17:56 AM IST
+gpg:                using RSA key 0xE866BCB7F357DA42
+gpg: Good signature from &amp;ldquo;FooFirst BarLast &lt;a href=&#34;mailto:foo@bar.com&#34;&gt;foo@bar.com&lt;/a&gt;&amp;rdquo; [ultimate]
+Primary key fingerprint: EC02 6C19 09D1 8382 692B  C67A 95DC 1AC8 BB0C 0132
+     Subkey fingerprint: BCD4 8411 1DA5 AE45 AED9  78AE E866 BCB7 F357 DA42&lt;/p&gt;
+
+&lt;h3 id=&#34;test-encrypt-decrypt&#34;&gt;Test encrypt/decrypt&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &#39;sekrats!&#39; | \
+gpg2 --armor --encrypt -r foo --passphrase &#39;FooIsBar&#39; | \
+gpg2 --decrypt --passphrase &#39;FooIsBar&#39; -q
+
+&amp;gt; sekrats!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;miscalaneous-topics&#34;&gt;Miscalaneous Topics&lt;/h1&gt;
+
+&lt;h2 id=&#34;creating-revoke-keys&#34;&gt;Creating Revoke keys&lt;/h2&gt;
+
+&lt;h3 id=&#34;generate-a-revokation-key-for-both-keys&#34;&gt;Generate a revokation key for both keys&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --out revoke-728716EC.asc --gen-revoke 728716EC
+#
+gpg --full-gen-key
+#
+gpg --out revoke-DE1CB2BF.asc --gen-revoke DE1CB2BF
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;see-how-many-keys-are-there&#34;&gt;See how many keys are there&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --list-keys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;adding-photo-to-your-pgp-key&#34;&gt;Adding Photo to your PGP key&lt;/h2&gt;
+
+&lt;h2 id=&#34;generating-ssh-keys-using-pgp-key&#34;&gt;Generating SSH keys using PGP key&lt;/h2&gt;
+
+&lt;p&gt;Enable SSH support in GnuPG Agent by adding the corresponding option in the
+agent configuration file &lt;span class=&#34;underline&#34;&gt;~/.gnupg/gpg-agent.conf&lt;/span&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;enable-ssh-support
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;While GnuPG programs can start the GnuPG Agent on demand, starting explicitly
+the agent is necessary to ensure that the agent is running when a SSH client
+needs it. The two lines below, to be inserted into a ~/.xprofile script, are
+sufficient: gpg-connect-agent /bye&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With the GPG agent running, you can start using it with your existing SSH keys,
+exactly like you would use ssh-agent. For example, to load your default
+~/.ssh/id_rsa key into the agent, just run as usual: $ ssh-add Using an OpenPGP
+key as a SSH key Create an authentication subkey Let’s assume you already have
+an OpenPGP key such as the following (note the &amp;#x2013;expert flag, which will enable
+advanced key generation options):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg2 --expert --edit-key alice
+
+pub  rsa4096/CB2F38F25B491A54
+     created: 2014-12-31  expires: 2017-12-30  usage: SC
+     trust: ultimate      validity: ultimate
+sub  rsa2048/04BB7F8FDEC5E5D9
+     created: 2014-12-31  expires: 2015-12-31  usage: S
+sub  rsa2048/BBB6B86627C2D43A
+     created: 2014-12-31  expires: 2015-12-31  usage: E
+[ultimate] (1). Alice &amp;lt;alice@example.org&amp;gt;
+This is a 4096-bit master key with a 2048-bit subkey for encryption and a 2048-bit subkey for signing. We will add a new 2048-bit subkey for authentication purposes:
+gpg&amp;gt; addkey
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+   (7) DSA (set your own capabilities)
+   (8) RSA (set your own capabilities)
+  (10) ECC (sign only)
+  (11) ECC (set your own capabilities)
+  (12) ECC (encrypt only)
+  (13) Existing key
+Your selection?
+Select (8) RSA (set your own capabilities):
+Possible actions for a RSA key: Sign Encrypt Authenticate
+Current allowed actions: Sign Encrypt
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection?
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Select successively (S), (E), and (A) to remove the signing and encryption
+capabilities and enable the authentication capability.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Possible actions for a RSA key: Sign Encrypt Authenticate
+Current allowed actions: Authenticate
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection?
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once the only allowed action is Authenticate, select (Q) Finished to exit this
+sub-menu. The remaining of the procedure is like any other key generation:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &amp;lt;n&amp;gt;  = key expires in n days
+      &amp;lt;n&amp;gt;w = key expires in n weeks
+      &amp;lt;n&amp;gt;m = key expires in n months
+      &amp;lt;n&amp;gt;y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Thu 31 Dec 2015 02:02:56 PM CEST
+Is this correct? (y/N) y
+Really create? (y/N) y
+
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+pub  rsa4096/CB2F38F25B491A54
+     created: 2014-12-31  expires: 2017-12-30  usage: SC
+     trust: ultimate      validity: ultimate
+sub  rsa2048/04BB7F8FDEC5E5D9
+     created: 2014-12-31  expires: 2015-12-31  usage: S
+sub  rsa2048/BBB6B86627C2D43A
+     created: 2014-12-31  expires: 2015-12-31  usage: E
+sub  rsa2048/7D2233B8833E70AF
+     created: 2014-12-31  expires: 2015-12-31  usage: A
+[ultimate] (1). Alice &amp;lt;alice@example.org&amp;gt;
+
+gpg&amp;gt; save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using the authentication subkey To tell the agent that the authentication subkey
+can be used with SSH, extract the keygrip of that subkey:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg2 --with-keygrip -k alice
+pub   rsa4096/CB2F38F25B491A54 2014-12-31 [SC] [expires: 2017-12-30]
+      Keygrip = D4DF0C35D3E22FA6AC37DA2E54FB03F73616A3CB
+uid               [ultimate] Alice &amp;lt;alice@example.org&amp;gt;
+sub   rsa2048/04BB7F8FDEC5E5D9 2014-12-31 [S] [expires: 2015-12-31]
+      Keygrip = 21B2EDF018D7CAF0B45644FDB753DD42307C4425
+sub   rsa2048/BBB6B86627C2D43A 2014-12-31 [E] [expires: 2015-12-31]
+      Keygrip = 2E149DA9C5E46E0DECC6A17EFD8B5FB1DF1E1BAB
+sub   rsa2048/7D2233B8833E70AF 2014-12-31 [A] [expires: 2015-12-31]
+      Keygrip = ECF4591CC28EC303BB12D1E866C8B8AFFB675C7D
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As can be seen from last few lines the key marked with &lt;span class=&#34;underline&#34;&gt;[A]&lt;/span&gt; is the auth key
+and write it into the &lt;span class=&#34;underline&#34;&gt;~/.gnupg/sshcontrol&lt;/span&gt; file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# List of allowed ssh keys.  Only keys present in this file are used
+# in the SSH protocol.  The ssh-add tool may add new entries to this
+[…]
+ECF4591CC28EC303BB12D1E866C8B8AFFB675C7D
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You may then verify that the key is indeed available for SSH by querying the
+agent for available identities:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ssh-add -l
+2048 e3:40:d5:eb:ef:b1:3a:37:87:3d:a8:44:1d:81:ed:6a (none) (RSA)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, extract the public key from the agent in a form suitable for inclusion
+into a &lt;span class=&#34;underline&#34;&gt;~/.ssh/authorized_keys&lt;/span&gt; file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ssh-add -L
+ssh-rsa AAAAB3NzaC1yc2EAA[…truncated output…]KhJHfdIcCMRF (none)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;un-categorized-topics&#34;&gt;Un-categorized topics&lt;/h1&gt;
+
+&lt;h2 id=&#34;entropy&#34;&gt;Entropy&lt;/h2&gt;
+
+&lt;p&gt;A measurement randomness. Though the universe is said to be truly random, more
+often than not its &lt;em&gt;NOT&lt;/em&gt;. The reason the universe is random is a subject in its own, but in computer world&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

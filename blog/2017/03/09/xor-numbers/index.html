@@ -1,0 +1,955 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>XOR Sequence</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.18-DEV" />
+        
+
+
+        
+            <meta name="author" content="Prem Mallappa">
+        
+        
+            <meta name="description" content="Online coding questions">
+        
+
+        
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="XOR Sequence"/>
+<meta name="twitter:description" content="Online coding questions"/>
+
+
+
+        <meta property="og:title" content="XOR Sequence" />
+<meta property="og:description" content="Online coding questions" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pmallappa.github.io/blog/2017/03/09/xor-numbers/" />
+
+
+<meta property="og:updated_time" content="2017-03-09T10:48:31&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="XOR Sequence">
+<meta itemprop="description" content="Online coding questions">
+
+
+<meta itemprop="dateModified" content="2017-03-09T10:48:31&#43;05:30" />
+<meta itemprop="wordCount" content="1073">
+
+
+
+<meta itemprop="keywords" content="Coding,Crypto,beamer,latex,algo,coding,latex," />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="/css/google-font.css" />
+            <link rel="stylesheet" href="/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="/css/main.css" />
+            <link rel="stylesheet" href="/css/add-on.css" />
+            <link rel="stylesheet" href="/css/monokai-sublime.css">
+            <link rel="stylesheet" href="/css/resume/styles.css"> 
+        
+
+        
+
+	
+
+        
+        
+        
+            
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h1><a href="/">Prem Mallappa</i></a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/blog">
+                        
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/articles">
+                        Articles
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/resume">
+                        Resume
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/services">
+                        Services
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/quotes">
+                        Quotes
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="q" value="site:https://pmallappa.github.io">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:https://pmallappa.github.io">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/blog">
+                            <h3>
+                                
+                                    <i class="fa fa-newspaper-o">&nbsp;</i>
+                                
+                                Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/articles">
+                            <h3>
+                                
+                                Articles
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/resume">
+                            <h3>
+                                
+                                Resume
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/services">
+                            <h3>
+                                
+                                Services
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/quotes">
+                            <h3>
+                                
+                                Quotes
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="https://pmallappa.github.io/blog/2017/03/11/beamer-not-beamer/"><p>Beamer custom class</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://pmallappa.github.io/blog/2017/03/09/xor-numbers/"><p>XOR Sequence</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="https://pmallappa.github.io/blog/2016/11/30/my-first-night-with-hugo/"><p>My first night with hugo</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="https://pmallappa.github.io/blog/2017/03/09/xor-numbers/">XOR Sequence</a></h1>
+            
+        
+        
+            <p>Online coding questions</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2017-03-09'>
+            March 9, 2017</time>
+        <span class="author">Prem Mallappa</span>
+        
+            <p>6 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+        </ul>
+    </section>
+    
+
+    <div id="content">
+        
+
+<p>Started as an an effort to teach programming to the fresh-grads, here . Not that this is the
+ultimate way to do it, rather one of the approach to a given problem.</p>
+
+<h1 id="the-problem">The Problem</h1>
+
+<p>It is stated in
+here <a href="https://www.hackerrank.com/challenges/xor-se">XOR-Sequence</a> that given a
+sequence of array &lsquo;A&rsquo; of size N, whose contents are as follows.
+Assumed array index is &lsquo;i&rsquo;.</p>
+
+<pre><code class="language-math">A[0] = 0
+A[1] = 1 (A[0] ^ i, i = 1)
+A[2] = 3 (A[1] ^ i, i = 2)
+A[4] = 0 (A[2] ^ i, i = 3)
+....
+A[N] = '' (A[N-1] ^ i, i = N)
+</code></pre>
+
+<p>Given values &rsquo;S&rsquo; and &lsquo;E&rsquo;, for Start and End respectively, find out</p>
+
+<pre><code class="language-math">A[S] ^ A[S+1] ^ A[S+2] ^ .... ^ A[E-1] ^ A[E]
+</code></pre>
+
+<h1 id="let-the-computer-do-the-work">Let the computer do the work</h1>
+
+<p>In order to know what the sequence look like, I wrote a simple program, which
+generates given sequence to a known number. Say for eg 6, it will generate sequence upto i=6</p>
+
+<pre><code class="language-go">package main
+import (&quot;fmt&quot;)
+func main() {
+	var n, lastXOR uint64
+	fmt.Scanf(&quot;%d&quot;, &amp;n);
+	for i:=uint64(0) ; i &lt; n; i++ {
+		fmt.Printf(&quot;%2d, &quot;, lastXOR^i)
+		lastXOR ^= i
+	}
+}
+</code></pre>
+
+<p>Please note this program may run for longer time if larger integers are given,
+but we get the essence of it just by running it for smaller number like <code>&lt; 100</code>.</p>
+
+<pre><code class="language-sh">$ echo 28 | go run xorgen.go
+</code></pre>
+
+<p>Voila ..</p>
+
+<pre><code class="language-sh"> 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24, 25, 26, 27  28
+ 0,  1,  3,  0,  4,  1,  7,  0,  8,  1, 11,  0, 12,  1, 15,  0, 16,  1, 19,  0, 20,  1, 23,  0, 24,  1, 27,  0, 28
+ ^               ^               ^               ^               ^               ^               ^               ^
+ |               |               |               |               |               |               |               |
+
+</code></pre>
+
+<h1 id="first-implementation">First Implementation</h1>
+
+<p>Of course, my first implementation failed miserably with large input sequence.</p>
+
+<pre><code class="language-go">func getXOR(start, end int) int {
+    var lastXOR int
+    for ; start &lt; end; start++ {
+        lastXOR ^= start
+    }
+    return lastXOR
+}
+</code></pre>
+
+<p>For most of the test cases it didn&rsquo;t even computed results to full extent, on my
+laptop it ran for 2 hours for an input sequence. Online system times out with a
+compute-intensive operation like above.</p>
+
+<pre><code class="language-sh">19
+269656199  494630864
+130226563  341217047
+731964916  832420216
+542340130  797666540
+23301452   870008140
+380088525  890526489
+187177803  354216263
+615371739  904830084
+37808192   762275257
+269603062  408398609
+15763251   94286582
+602143487  683191883
+524044437  648225039
+10725691   939564919
+415709950  439717791
+29711842   652998599
+81933645   201678107
+254074327  383133442
+5665651    179364774
+</code></pre>
+
+<p>Looks like there is definitely something we can do so that it is computed with <code>O(1)</code></p>
+
+<h1 id="xor-patterns">XOR patterns</h1>
+
+<p>We have all learnt at one time or the other in our lives about Bitwise XOR operation</p>
+
+<table>
+<thead>
+<tr>
+<th>OP1</th>
+<th>OP2</th>
+<th>XOR</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+<p>Also we see a repeated pattern, if (i MOD 4) result of all the XOR operation is
+equal to &lsquo;i&rsquo;, Just to remind, &lsquo;i&rsquo; is the index of array
+In other words, at i,</p>
+
+<pre><code>when (i MOD 4 == 0), A[i] == i
+when (i MOD 4 == 1), A[i] == 1
+when (i MOD 4 == 2), A[i] == i + 1
+when (i MOD 4 == 3), A[i] == 0
+</code></pre>
+
+<p>Also when <code>i MOD 4 == 0</code>, and</p>
+
+<pre><code class="language-math">i ^ i+1 ^ i+2 ^ i+3 = 2
+</code></pre>
+
+<p>Given the above pattern, we can split the entire sequence into 4 integers
+sequence, starting at first multiple of 4 after <code>start</code></p>
+
+<p>We know that,</p>
+
+<pre><code class="language-math">a ^ 0 = a
+a ^ a = 0
+a ^ b ^ c = (a ^ b) ^ c
+</code></pre>
+
+<p>For example, if <code>start=29</code> and <code>end = 82</code> we can split the entire sequence
+leaving out <code>29-31</code>, and <code>80-82</code> as they do not make up to the <code>4th</code> number
+slot.</p>
+
+<pre><code>32-35   -- A1
+36-39   -- A2
+40-43   -- A3 
+44-47   -- A4
+...
+76-79   -- A9
+</code></pre>
+
+<p>Hence we can write the sequence as (again leaving out <code>29-31</code> and <code>80-82</code>)</p>
+
+<p><code>A1 ^ A2 ^ A3 ^ A4 ^...^ A9</code></p>
+
+<p>we can check that, each slot (<code>A1</code>, <code>A2</code> &hellip;  here, XOR upto <code>2</code>)</p>
+
+<p><code>32 ^ 33 ^ 34 ^ 35 = 2</code></p>
+
+<p>And we know that each of <code>Ax</code>is <code>2</code> from above.</p>
+
+<p>All we have to calculate is <code>A1 ^...^ A9</code> is <strong>odd</strong> or <strong>even</strong> number of slots.
+Because, if we have odd number the result of <code>A1 ^ A2 ^ .... ^ (2*An + 1)</code> is
+<code>2</code></p>
+
+<p>Finally if there are even number of slots, it results to <code>0</code> as <code>A1=2</code> and <code>A2=2</code>
+<code>A1 ^ A2 = 0</code> every send term cancels the one before it.</p>
+
+<p>In our example, we just have to calculate <code>A[29] ^ A[30] ^ A[31]</code> and <code>A[80] ^
+A[81] ^ A[82]</code>, each of the elements have fixed values from our very first
+program which implements crude way of XOR&rsquo;ing.</p>
+
+<pre><code>A[28] = 28
+A[29] = 1      &lt;--+
+A[30] = 31        |- XOR
+A[31] = 0      &lt;--+ 
+...
+</code></pre>
+
+<h1 id="analysis">Analysis</h1>
+
+<p><code>O(1)</code> means the code runs in constant time. In our above example, we see if we
+isolate the first and last slots, the in-between slots only contribute as <code>0</code> or
+<code>2</code> depending on if number slots are <strong><em>even</em></strong> or <strong><em>odd</em></strong> respectively</p>
+
+<h1 id="the-code">The Code</h1>
+
+<p>Following code gets the last slot XORed&rsquo;</p>
+
+<pre><code class="language-go">func getLastXOR(start uint64) uint64 {
+	var lastXOR uint64 = 0
+	idx := start % 4
+	switch idx {
+	case 3:
+		lastXOR = 2
+	case 2:
+		lastXOR ^= (start + 1)
+		start--
+		fallthrough
+	case 1:
+		lastXOR ^= 1
+		start--
+		fallthrough
+	case 0:
+		lastXOR ^= start
+	}
+	return lastXOR
+}
+</code></pre>
+
+<p>This one calculates the first slot</p>
+
+<pre><code class="language-go">func getNextXOR(start uint64) uint64 {
+	var nextXOR uint64
+	idx := start % 4
+	switch idx {
+	case 0:
+		nextXOR = 2
+		start++
+	case 1:
+		nextXOR ^= 1
+		start++
+		fallthrough
+	case 2:
+		nextXOR ^= start + 1
+		start++
+		fallthrough
+	case 3:
+		nextXOR ^= 2
+	}
+
+	return nextXOR
+}
+</code></pre>
+
+<p>This one calculates the number of slots if odd or even and adjust the <code>start</code> to
+next available multiple of <code>4</code>. As well as adjust the <code>end</code> to previous availble multiple of <code>4</code>.</p>
+
+<pre><code class="language-go">func calculate(start, end uint64) uint64 {
+	newstart := start
+	if start%4 != 0 {
+		newstart = start + 4 - start%4
+	}
+	newend := end - end%4
+	diff := newend - newstart
+	div := diff / 4 % 2
+	if div != 0 { // even slots
+		return getNextXOR(start) ^ getLastXOR(end)
+	}
+	// odd number of slots
+	return getNextXOR(start) ^ getLastXOR(end) ^ 2
+}
+
+</code></pre>
+
+<p><strong>=== OVER AND OUT ===</strong></p>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/coding'>Coding</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="https://pmallappa.github.io/blog/2016/11/30/my-first-night-with-hugo/"
+                class="button big previous">My first night with hugo</a></li>
+    
+
+    
+        <li><a href="https://pmallappa.github.io/blog/2017/03/11/beamer-not-beamer/"
+                class="button big next">Beamer custom class</a></li>
+    
+</ul>
+
+
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <img src="/images/prem-pp.png" class="intro-circle" width="50%" alt="Prem Mallappa" />
+                
+            
+            
+                <header>
+                    <h2>Prem Mallappa</h2>
+                    <p>WHERE TECH meets SENSE</p>
+                </header>
+            
+            <ul class="icons">
+               
+                   
+<li><a href="//github.com/pmallappa" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+<li><a href="//bitbucket.com/prem.mallappa" target="_blank" title="Bitbucket" class="fa fa-bitbucket"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/pmallappa" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//plus.google.com/+prem.mallappa" target="_blank" title="Google+" class="fa fa-google-plus"></a></li>
+
+
+
+
+
+
+
+<li><a href="mailto:prem.mallappa@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+
+               
+               
+	    </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://pmallappa.github.io/blog/2017/03/11/beamer-not-beamer/">Beamer custom class</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-03-11'>
+                                    March 11, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://pmallappa.github.io/blog/2017/03/09/xor-numbers/">XOR Sequence</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-03-09'>
+                                    March 9, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="https://pmallappa.github.io/blog/2016/11/30/my-first-night-with-hugo/">My first night with hugo</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2016-11-29'>
+                                    November 29, 2016</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/coding/">Coding</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/crypto/">Crypto</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/beamer/">beamer</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/latex/">latex</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>A Linux kernel developer, technology evangalist</p>
+
+            <ul class="actions">
+                <li><a href="/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/pmallappa" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+<li><a href="//bitbucket.com/prem.mallappa" target="_blank" title="Bitbucket" class="fa fa-bitbucket"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/pmallappa" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//plus.google.com/+prem.mallappa" target="_blank" title="Google+" class="fa fa-google-plus"></a></li>
+
+
+
+
+
+
+
+<li><a href="mailto:prem.mallappa@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Prem Mallappa. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported by <a href="//github.com/jpescador" target="_blank">Julio Pescador</a>. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+            <script src="/js/jquery.min.js"></script>
+            <script src="/js/skel.min.js"></script>
+            <script src="/js/util.js"></script>
+            <script src="/js/main.js"></script>
+            <script src="/js/backToTop.js"></script>
+            <script src="/js/highlight.pack.js"></script>
+        
+
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+
