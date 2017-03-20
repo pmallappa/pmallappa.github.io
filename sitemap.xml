@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pmallappa.github.io/blog/2017/03/11/beamer-not-beamer/</loc>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/blog/2017/03/09/xor-numbers/</loc>
+    <lastmod>2017-03-09T10:48:31+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pmallappa.github.io/resume/</loc>
     <lastmod>2016-12-01T23:05:23+05:30</lastmod>
   </url>
@@ -17,8 +27,23 @@
   </url>
   
   <url>
-    <loc>https://pmallappa.github.io/blog/</loc>
+    <loc>https://pmallappa.github.io/articles/2016/11/29/Cryptography-101/</loc>
     <lastmod>2016-11-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/quotes/first/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/articles/</loc>
+    <lastmod>2016-11-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/blog/</loc>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -29,19 +54,59 @@
   
   <url>
     <loc>https://pmallappa.github.io/</loc>
-    <lastmod>2016-12-01T23:05:23+05:30</lastmod>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://pmallappa.github.io/categories/go/</loc>
+    <loc>https://pmallappa.github.io/quotes/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/tags/algo/</loc>
+    <lastmod>2017-03-09T10:48:31+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/categories/beamer/</loc>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/tags/coding/</loc>
+    <lastmod>2017-03-09T10:48:31+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/categories/coding/</loc>
+    <lastmod>2017-03-09T10:48:31+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/categories/crypto/</loc>
     <lastmod>2016-11-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://pmallappa.github.io/categories/services/</loc>
-    <lastmod>2016-12-01T22:50:52+05:30</lastmod>
+    <loc>https://pmallappa.github.io/tags/latex/</loc>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pmallappa.github.io/categories/latex/</loc>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
