@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "Prem Mallappa"
 theme = "personal"
 
+# Pagination configuration
+[pagination]
+  pagerSize = 20
+
 # Content configuration
 [markup]
   [markup.goldmark]

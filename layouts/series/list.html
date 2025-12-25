@@ -1,16 +1,21 @@
 {{ define "main" }}
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
-  <header class="mb-12 relative z-0">
-    <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" style="background: transparent;">
+  <header class="mb-32" style="background: transparent;">
+    <h1 class="text-4xl font-bold mb-4" style="color: #4a9eff; background: transparent;">{{ .Title }}</h1>
     {{ if .Content }}
-      <div class="prose prose-lg prose-gray max-w-none mb-8 text-gray-600">
+      <div class="prose prose-lg prose-gray max-w-none mb-8" style="color: #4C566A; background: transparent;">
         {{ .Content }}
       </div>
     {{ end }}
   </header>
 
+  <!-- Spacer to ensure clear separation -->
+  <div class="h-16"></div>
+  <div class="h-16"></div>
+
+  {{ $seriesPages := where .Site.RegularPages "Type" "series" }}
   <div class="space-y-6 relative z-0">
-    {{ range .Paginator.Pages }}
+    {{ range $seriesPages }}
     <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
       <div class="flex items-start justify-between">
         <div class="flex-1">
