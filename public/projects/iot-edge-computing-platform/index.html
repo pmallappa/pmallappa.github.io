@@ -1,14 +1,352 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Distributed IoT Edge Computing Platform | Praveen Mallappa</title><meta name=description content="Personal website of Praveen Mallappa - Technology and Farming insights"><link rel=stylesheet href=/css/styles.min.2294efe9d4c8f53beea78ae1e51a5d92b75e3da777e665a7313879a216036c99.css integrity="sha256-IpTv6dTI9Tvup4rh5RpdkrdePad35mWnMTh5ohYDbJk="><script defer src=https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js></script><link rel=icon href=/favicon.ico></head><body class="bg-gray-50 text-gray-900 font-sans leading-relaxed"><header class="bg-white shadow-sm border-b"><nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-16"><div class=flex-shrink-0><a href=/ class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">Praveen Mallappa</a></div><div class="hidden md:block"><div class="ml-10 flex items-baseline space-x-8"><a href=/ class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home
-</a><a href=/blog/ class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Blog
-</a><a href=/projects/ class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Projects
-</a><a href=/resume/ class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Resume</a></div></div><div class=md:hidden x-data="{ open: false }"><button @click="open = !open" class="text-gray-600 hover:text-gray-900">
-<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button><div x-show=open @click.away="open = false" class="absolute top-16 right-4 bg-white shadow-lg rounded-lg py-2 w-48 z-50"><a href=/ class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">Home
-</a><a href=/blog/ class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">Blog
-</a><a href=/projects/ class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">Projects
-</a><a href=/resume/ class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">Resume</a></div></div></div></nav></header><main><article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><header class=mb-8><div class="flex items-center mb-4"><span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full mr-2">technology</span></div><h1 class="text-4xl font-bold text-gray-900 leading-tight mb-4">Distributed IoT Edge Computing Platform</h1><div class="flex items-center text-gray-600 text-sm mb-4"><time datetime=2024-01-14>January 14, 2024</time>
-<span class=mx-3>·</span>
-<span>2 min read</span></div><p class="text-lg text-gray-600 leading-relaxed">High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination.</p><div class="flex flex-wrap gap-2 mt-4"><span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">iot</span>
-<span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">edge-computing</span>
-<span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">rust</span>
-<span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">microservices</span>
-<span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">kubernetes</span></div></header><div class="prose prose-lg prose-gray max-w-none"><h2 id=project-overview>Project Overview</h2><p>The Distributed IoT Edge Computing Platform addresses the growing need for real-time processing and decision-making at the network edge. Built with Rust for maximum performance and reliability, this platform enables autonomous coordination between IoT devices while minimizing latency and bandwidth usage.</p><div class="project-status bg-white border rounded-lg p-4 my-6 shadow-sm"><div class="flex items-center justify-between mb-3"><h4 class="text-lg font-semibold text-gray-900">Project Status</h4><span class="px-3 py-1 rounded-full text-sm font-medium border bg-green-100 text-green-800 border-green-200">Active</span></div><div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm"><div class=text-center><div class="text-gray-500 font-medium">Version</div><div class="text-gray-900 font-semibold">v2.1.0</div></div><div class=text-center><div class="text-gray-500 font-medium">Contributors</div><div class="text-gray-900 font-semibold">8</div></div><div class=text-center><div class="text-gray-500 font-medium">GitHub Stars</div><div class="text-gray-900 font-semibold">247</div></div><div class=text-center><div class="text-gray-500 font-medium">Last Update</div><div class="text-gray-900 font-semibold">2024-01-14</div></div></div></div><div class="callout border-l-4 p-4 rounded-r-lg border-green-200 bg-green-50 text-green-800 my-6"><div class="flex items-start"><div class=flex-shrink-0><svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414.0l4-4z" clip-rule="evenodd"/></svg></div><div class="ml-3 flex-1"><h4 class="font-semibold mb-2">Performance Metrics</h4><div class="prose prose-sm max-w-none"><ul><li><strong>Sub-millisecond latency</strong> for local decision making</li><li><strong>99.9% uptime</strong> across distributed edge nodes</li><li><strong>80% bandwidth reduction</strong> through edge processing</li><li><strong>1M+ events/second</strong> processing capacity per node</li></ul></div></div></div></div><h2 id=architecture-overview>Architecture Overview</h2><h3 id=core-components>Core Components</h3><ol><li><strong>Edge Runtime</strong> - High-performance Rust runtime for device coordination</li><li><strong>ML Inference Engine</strong> - TensorFlow Lite integration for edge AI</li><li><strong>Event Processing Pipeline</strong> - Real-time stream processing with Kafka</li><li><strong>Device Registry</strong> - Dynamic device discovery and configuration</li><li><strong>Consensus Manager</strong> - Distributed coordination between edge nodes</li></ol><h2 id=results--impact>Results & Impact</h2><h3 id=production-deployment-stats>Production Deployment Stats</h3><ul><li><strong>Deployed across</strong>: 15 manufacturing facilities</li><li><strong>Managing</strong>: 50,000+ IoT devices</li><li><strong>Processing</strong>: 2.5 billion events/month</li><li><strong>Cost savings</strong>: 40% reduction in cloud processing costs</li><li><strong>Reliability</strong>: 99.95% uptime maintained</li><li><strong>Response time</strong>: 85% reduction in critical alert response</li></ul><h3 id=open-source-community>Open Source Community</h3><div class="callout border-l-4 p-4 rounded-r-lg border-blue-200 bg-blue-50 text-blue-800 my-6"><div class="flex items-start"><div class=flex-shrink-0><svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10A8 8 0 112 10a8 8 0 0116 0zm-7-4A1 1 0 119 6a1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg></div><div class="ml-3 flex-1"><h4 class="font-semibold mb-2">Community Contributions</h4><div class="prose prose-sm max-w-none"><ul><li><strong>Contributors</strong>: 8 active developers</li><li><strong>GitHub Stars</strong>: 247 (growing 15% monthly)</li><li><strong>Production Users</strong>: 12 companies across manufacturing, agriculture, and smart cities</li><li><strong>Docker Pulls</strong>: 10K+ downloads</li></ul></div></div></div></div><h2 id=contributing>Contributing</h2><p>The project welcomes contributions! Key areas where help is needed:</p><ol><li><strong>Protocol Adapters</strong>: MQTT, CoAP, LoRaWAN integrations</li><li><strong>ML Models</strong>: Pre-trained models for common IoT use cases</li><li><strong>Documentation</strong>: Deployment guides and tutorials</li><li><strong>Testing</strong>: Edge case scenarios and stress testing</li></ol><div class="callout border-l-4 p-4 rounded-r-lg border-green-200 bg-green-50 text-green-800 my-6"><div class="flex items-start"><div class=flex-shrink-0><svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414.0l4-4z" clip-rule="evenodd"/></svg></div><div class="ml-3 flex-1"><h4 class="font-semibold mb-2">Get Involved</h4><div class="prose prose-sm max-w-none"><ul><li><strong>Repository</strong>: <a href=https://github.com/pmallappa/iot-edge-platform>github.com/pmallappa/iot-edge-platform</a></li><li><strong>Discussions</strong>: <a href=https://github.com/pmallappa/iot-edge-platform/discussions>GitHub Discussions</a></li><li><strong>Discord</strong>: <a href=https://discord.gg/iot-edge-platform>Join our community</a></li><li><strong>Roadmap</strong>: <a href=https://github.com/pmallappa/iot-edge-platform/projects/1>Project roadmap</a></li></ul></div></div></div></div><hr><p><em>Tech Stack</em>: Rust, Kubernetes, gRPC, Apache Kafka, TensorFlow Lite, Prometheus<br><em>Project Type</em>: Open Source<br><em>Status</em>: Active Development<br><em>Category</em>: Technology > IoT</p></div><footer class="mt-12 pt-8 border-t border-gray-200"><div class=mb-8><h3 class="text-lg font-semibold text-gray-900 mb-4">Related Articles</h3><div class="grid gap-4 sm:grid-cols-3"><a href=/blog/rust-memory-patterns/ class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"><h4 class="font-medium text-gray-900 mb-2">Rust Memory Management Patterns</h4><p class="text-sm text-gray-600 line-clamp-2">Advanced memory safety techniques in Rust for systems programming, exploring ownership, lifetimes, and zero-cost abstractions.</p></a><a href=/blog/iot-precision-agriculture/ class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"><h4 class="font-medium text-gray-900 mb-2">IoT Sensors in Precision Agriculture</h4><p class="text-sm text-gray-600 line-clamp-2">Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture.</p></a></div></div></footer></article></main><footer class="bg-white border-t mt-16"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><div class="text-center text-gray-600"><p>&copy; 2025 Praveen Mallappa. All rights reserved.</p></div></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distributed IoT Edge Computing Platform | Prem Mallappa</title>
+  <meta name="description" content="Personal website of Prem Mallappa - Technology and Farming insights">
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/styles.css">
+  
+  
+  
+  <link rel="stylesheet" href="/css/hugobricks-base.css">
+  <link rel="stylesheet" href="/css/hugobricks-header-footer.css">
+  
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  
+  
+  
+  
+  
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed pt-16">
+  <header class="bg-white shadow-sm border-b fixed top-0 left-0 right-0 z-50">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+            Prem Mallappa
+          </a>
+        </div>
+        
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            
+              <a href="/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                Home
+              </a>
+            
+              <a href="/articles/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                Articles
+              </a>
+            
+              <a href="/series/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                Series
+              </a>
+            
+              <a href="/projects/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                Projects
+              </a>
+            
+              <a href="/resume/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                Resume
+              </a>
+            
+          </div>
+        </div>
+        
+        
+        <div class="md:hidden" x-data="{ open: false }">
+          <button @click="open = !open" class="text-gray-600 hover:text-gray-900 z-50 relative">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          
+          
+          <div x-show="open" @click.away="open = false" class="fixed top-16 right-4 bg-white shadow-lg rounded-lg py-2 w-48 z-50 border border-gray-200">
+            
+              <a href="/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                Home
+              </a>
+            
+              <a href="/articles/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                Articles
+              </a>
+            
+              <a href="/series/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                Series
+              </a>
+            
+              <a href="/projects/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                Projects
+              </a>
+            
+              <a href="/resume/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                Resume
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    
+<article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
+  
+  <header class="mb-12">
+    <div class="flex items-center mb-4">
+      <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full font-medium">
+        open_source
+      </span>
+      
+      <span class="ml-3 px-2 py-1 text-sm rounded bg-yellow-100 text-yellow-800">
+        ongoing
+      </span>
+      
+    </div>
+    
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Distributed IoT Edge Computing Platform</h1>
+    
+    
+    <div class="flex items-center text-gray-600 text-sm mb-6">
+      <time datetime="2024-01-14">January 14, 2024</time>
+      
+        <span class="mx-2">•</span>
+        <a href="https://github.com/pmallappa/iot-edge-platform" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">
+          GitHub →
+        </a>
+      
+    </div>
+    
+    
+    
+    <div class="mb-6">
+      <h3 class="text-sm font-semibold text-gray-700 mb-2">Tech Stack:</h3>
+      <div class="flex flex-wrap gap-2">
+        
+          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">Rust</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">Kubernetes</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">gRPC</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">Apache Kafka</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">TensorFlow Lite</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">Prometheus</span>
+        
+      </div>
+    </div>
+    
+  </header>
+
+  
+  <div class="prose prose-lg prose-gray max-w-none mb-12">
+    <h2 id="project-overview">Project Overview</h2>
+<p>The Distributed IoT Edge Computing Platform addresses the growing need for real-time processing and decision-making at the network edge. Built with Rust for maximum performance and reliability, this platform enables autonomous coordination between IoT devices while minimizing latency and bandwidth usage.</p>
+
+
+
+
+
+
+
+
+
+<div class="project-status bg-white border rounded-lg p-4 my-6 shadow-sm">
+  <div class="flex items-center justify-between mb-3">
+    <h4 class="text-lg font-semibold text-gray-900">Project Status</h4>
+    <span class="px-3 py-1 rounded-full text-sm font-medium border bg-green-100 text-green-800 border-green-200">
+      Active
+    </span>
+  </div>
+  
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+    
+    <div class="text-center">
+      <div class="text-gray-500 font-medium">Version</div>
+      <div class="text-gray-900 font-semibold">v2.1.0</div>
+    </div>
+    
+    
+    
+    <div class="text-center">
+      <div class="text-gray-500 font-medium">Contributors</div>
+      <div class="text-gray-900 font-semibold">8</div>
+    </div>
+    
+    
+    
+    <div class="text-center">
+      <div class="text-gray-500 font-medium">GitHub Stars</div>
+      <div class="text-gray-900 font-semibold">247</div>
+    </div>
+    
+    
+    
+    <div class="text-center">
+      <div class="text-gray-500 font-medium">Last Update</div>
+      <div class="text-gray-900 font-semibold">2024-01-14</div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="callout border-l-4 p-4 rounded-r-lg border-green-200 bg-green-50 text-green-800 my-6">
+  <div class="flex items-start">
+    <div class="flex-shrink-0">
+      
+        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+      
+    </div>
+    <div class="ml-3 flex-1">
+      
+        <h4 class="font-semibold mb-2">Performance Metrics</h4>
+      
+      <div class="prose prose-sm max-w-none">
+        <ul>
+<li><strong>Sub-millisecond latency</strong> for local decision making</li>
+<li><strong>99.9% uptime</strong> across distributed edge nodes</li>
+<li><strong>80% bandwidth reduction</strong> through edge processing</li>
+<li><strong>1M+ events/second</strong> processing capacity per node</li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="architecture-overview">Architecture Overview</h2>
+<h3 id="core-components">Core Components</h3>
+<ol>
+<li><strong>Edge Runtime</strong> - High-performance Rust runtime for device coordination</li>
+<li><strong>ML Inference Engine</strong> - TensorFlow Lite integration for edge AI</li>
+<li><strong>Event Processing Pipeline</strong> - Real-time stream processing with Kafka</li>
+<li><strong>Device Registry</strong> - Dynamic device discovery and configuration</li>
+<li><strong>Consensus Manager</strong> - Distributed coordination between edge nodes</li>
+</ol>
+<h2 id="results--impact">Results &amp; Impact</h2>
+<h3 id="production-deployment-stats">Production Deployment Stats</h3>
+<ul>
+<li><strong>Deployed across</strong>: 15 manufacturing facilities</li>
+<li><strong>Managing</strong>: 50,000+ IoT devices</li>
+<li><strong>Processing</strong>: 2.5 billion events/month</li>
+<li><strong>Cost savings</strong>: 40% reduction in cloud processing costs</li>
+<li><strong>Reliability</strong>: 99.95% uptime maintained</li>
+<li><strong>Response time</strong>: 85% reduction in critical alert response</li>
+</ul>
+<h3 id="open-source-community">Open Source Community</h3>
+
+
+
+
+
+
+
+<div class="callout border-l-4 p-4 rounded-r-lg border-blue-200 bg-blue-50 text-blue-800 my-6">
+  <div class="flex items-start">
+    <div class="flex-shrink-0">
+      
+        <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+      
+    </div>
+    <div class="ml-3 flex-1">
+      
+        <h4 class="font-semibold mb-2">Community Contributions</h4>
+      
+      <div class="prose prose-sm max-w-none">
+        <ul>
+<li><strong>Contributors</strong>: 8 active developers</li>
+<li><strong>GitHub Stars</strong>: 247 (growing 15% monthly)</li>
+<li><strong>Production Users</strong>: 12 companies across manufacturing, agriculture, and smart cities</li>
+<li><strong>Docker Pulls</strong>: 10K+ downloads</li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="contributing">Contributing</h2>
+<p>The project welcomes contributions! Key areas where help is needed:</p>
+<ul>
+<li><strong>Protocol Adapters</strong>: MQTT, CoAP, LoRaWAN integrations</li>
+<li><strong>ML Models</strong>: Pre-trained models for common IoT use cases</li>
+<li><strong>Documentation</strong>: Deployment guides and tutorials</li>
+<li><strong>Testing</strong>: Edge case scenarios and stress testing</li>
+</ul>
+
+
+
+
+
+
+
+<div class="callout border-l-4 p-4 rounded-r-lg border-green-200 bg-green-50 text-green-800 my-6">
+  <div class="flex items-start">
+    <div class="flex-shrink-0">
+      
+        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+      
+    </div>
+    <div class="ml-3 flex-1">
+      
+        <h4 class="font-semibold mb-2">Get Involved</h4>
+      
+      <div class="prose prose-sm max-w-none">
+        <ul>
+<li><strong>Repository</strong>: <a href="https://github.com/pmallappa/iot-edge-platform">github.com/pmallappa/iot-edge-platform</a></li>
+<li><strong>Discussions</strong>: <a href="https://github.com/pmallappa/iot-edge-platform/discussions">GitHub Discussions</a></li>
+<li><strong>Discord</strong>: <a href="https://discord.gg/iot-edge-platform">Join our community</a></li>
+<li><strong>Roadmap</strong>: <a href="https://github.com/pmallappa/iot-edge-platform/projects/1">Project roadmap</a></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<p><em>Tech Stack</em>: Rust, Kubernetes, gRPC, Apache Kafka, TensorFlow Lite, Prometheus<br>
+<em>Project Type</em>: Open Source<br>
+<em>Status</em>: Active Development<br>
+<em>Category</em>: Technology &gt; IoT</p>
+
+  </div>
+
+  
+  
+  
+  
+</article>
+
+  </main>
+
+  <footer class="bg-white border-t mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center text-gray-600">
+        <p>&copy; 2025 Prem Mallappa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

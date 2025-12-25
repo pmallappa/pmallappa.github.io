@@ -3,8 +3,7 @@ title: "IoT Sensors in Precision Agriculture"
 date: 2024-01-10
 draft: false
 tags: ["farming", "iot", "sensors", "sustainability", "precision-agriculture"]
-categories: ["farming"]
-series: ["Smart Farming"]
+categories: ["technology"]
 summary: "Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture."
 ---
 

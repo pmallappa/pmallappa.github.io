@@ -1,0 +1,138 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12" style="background: transparent;">
+  
+  <!-- Header -->
+  <header class="mb-8" style="background: transparent;">
+    <div class="flex items-center mb-4">
+      {{ if .Params.series }}
+        {{ $seriesName := index .Params.series 0 }}
+        {{ $seriesPages := where .Site.Pages "Type" "series" }}
+        {{ $seriesPage := "" }}
+        {{ range $seriesPages }}
+          {{ if eq .Title $seriesName }}
+            {{ $seriesPage = . }}
+          {{ end }}
+        {{ end }}
+        {{ if $seriesPage }}
+          <a href="{{ $seriesPage.RelPermalink }}" class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full mr-2 font-medium hover:bg-purple-200 transition-colors">Series: {{ $seriesName }}</a>
+        {{ else }}
+          <span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full mr-2 font-medium">Series: {{ $seriesName }}</span>
+        {{ end }}
+        {{ if .Params.part }}
+          <span class="bg-purple-600 text-white text-sm px-3 py-1 rounded-full font-bold">Part {{ .Params.part }}</span>
+        {{ end }}
+      {{ else if .Params.categories }}
+        {{ range first 2 .Params.categories }}
+          <span class="text-xs px-3 py-1 rounded-full mr-2" style="background-color: #8FBCBB; color: #2E3440;">{{ . }}</span>
+        {{ end }}
+      {{ end }}
+    </div>
+    
+    <h1 class="text-4xl font-bold mb-4" style="color: #4a9eff; background: transparent;">{{ .Title }}</h1>
+    
+    <!-- Metadata -->
+    <div class="flex items-center text-gray-600 text-sm mb-6">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ if .ReadingTime }}
+        <span class="mx-2">•</span>
+        <span>{{ .ReadingTime }} min read</span>
+      {{ end }}
+      {{ if .Params.author }}
+        <span class="mx-2">•</span>
+        <span>{{ .Params.author }}</span>
+      {{ end }}
+    </div>
+    
+    <!-- Tags -->
+    {{ if .Params.tags }}
+    <div class="flex flex-wrap gap-2 mb-6">
+      {{ range .Params.tags }}
+        <a href="/tags/{{ . | urlize }}" class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded hover:bg-gray-200 transition-colors">
+          {{ . }}
+        </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  <!-- Additional spacer needed due to header overlap issue -->
+  <div class="h-16"></div>
+  <div class="h-16"></div>
+  <div class="h-16"></div>
+
+  <!-- Content -->
+  <div class="prose prose-lg prose-gray max-w-none mb-12">
+    {{ .Content }}
+  </div>
+
+  <!-- Series Navigation (if part of a series) -->
+  {{ if .Params.series }}
+  {{ $currentSeries := index .Params.series 0 }}
+  {{ $currentPart := .Params.part }}
+  {{ $allSeriesArticles := where .Site.RegularPages "Params.series" "intersect" .Params.series }}
+  {{ $sortedArticles := sort $allSeriesArticles "Params.part" "asc" }}
+  
+  <nav class="border-t border-gray-200 pt-6 mt-12">
+    <div class="flex justify-between">
+      {{ $prevArticle := "" }}
+      {{ $nextArticle := "" }}
+      {{ range $index, $article := $sortedArticles }}
+        {{ if eq $article.Params.part $currentPart }}
+          {{ if gt $index 0 }}
+            {{ $prevArticle = index $sortedArticles (sub $index 1) }}
+          {{ end }}
+          {{ if lt $index (sub (len $sortedArticles) 1) }}
+            {{ $nextArticle = index $sortedArticles (add $index 1) }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      
+      {{ if $prevArticle }}
+      <a href="{{ $prevArticle.RelPermalink }}" class="flex-1 pr-4 text-left group">
+        <span class="text-sm text-gray-500">← Previous</span>
+        <p class="text-gray-900 font-medium group-hover:text-blue-600">
+          {{ if $prevArticle.Params.part }}<span class="text-purple-600">Part {{ $prevArticle.Params.part }}:</span> {{ end }}{{ $prevArticle.Title }}
+        </p>
+      </a>
+      {{ else }}
+      <div class="flex-1"></div>
+      {{ end }}
+      
+      {{ if $nextArticle }}
+      <a href="{{ $nextArticle.RelPermalink }}" class="flex-1 pl-4 text-right group">
+        <span class="text-sm text-gray-500">Next →</span>
+        <p class="text-gray-900 font-medium group-hover:text-blue-600">
+          {{ if $nextArticle.Params.part }}<span class="text-purple-600">Part {{ $nextArticle.Params.part }}:</span> {{ end }}{{ $nextArticle.Title }}
+        </p>
+      </a>
+      {{ else }}
+      <div class="flex-1"></div>
+      {{ end }}
+    </div>
+  </nav>
+  {{ else }}
+  <!-- Regular Navigation (for non-series articles) -->
+  <nav class="border-t border-gray-200 pt-6 mt-12">
+    <div class="flex justify-between">
+      {{ if .PrevInSection }}
+      <a href="{{ .PrevInSection.RelPermalink }}" class="flex-1 pr-4 text-left">
+        <span class="text-sm text-gray-500">← Previous</span>
+        <p class="text-gray-900 font-medium hover:text-blue-600">{{ .PrevInSection.Title }}</p>
+      </a>
+      {{ else }}
+      <div class="flex-1"></div>
+      {{ end }}
+      
+      {{ if .NextInSection }}
+      <a href="{{ .NextInSection.RelPermalink }}" class="flex-1 pl-4 text-right">
+        <span class="text-sm text-gray-500">Next →</span>
+        <p class="text-gray-900 font-medium hover:text-blue-600">{{ .NextInSection.Title }}</p>
+      </a>
+      {{ else }}
+      <div class="flex-1"></div>
+      {{ end }}
+    </div>
+  </nav>
+  {{ end }}
+</article>
+{{ end }}

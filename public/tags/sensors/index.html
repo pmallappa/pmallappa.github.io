@@ -1,12 +1,162 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Sensors | Praveen Mallappa</title><meta name=description content="Personal website of Praveen Mallappa - Technology and Farming insights"><link rel=stylesheet href=/css/styles.min.2294efe9d4c8f53beea78ae1e51a5d92b75e3da777e665a7313879a216036c99.css integrity="sha256-IpTv6dTI9Tvup4rh5RpdkrdePad35mWnMTh5ohYDbJk="><script defer src=https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js></script><link rel=icon href=/favicon.ico></head><body class="bg-gray-50 text-gray-900 font-sans leading-relaxed"><header class="bg-white shadow-sm border-b"><nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-16"><div class=flex-shrink-0><a href=/ class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">Praveen Mallappa</a></div><div class="hidden md:block"><div class="ml-10 flex items-baseline space-x-8"><a href=/ class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home
-</a><a href=/blog/ class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Blog
-</a><a href=/projects/ class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Projects
-</a><a href=/resume/ class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Resume</a></div></div><div class=md:hidden x-data="{ open: false }"><button @click="open = !open" class="text-gray-600 hover:text-gray-900">
-<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button><div x-show=open @click.away="open = false" class="absolute top-16 right-4 bg-white shadow-lg rounded-lg py-2 w-48 z-50"><a href=/ class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">Home
-</a><a href=/blog/ class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">Blog
-</a><a href=/projects/ class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">Projects
-</a><a href=/resume/ class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">Resume</a></div></div></div></nav></header><main><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><header class=mb-8><h1 class="text-4xl font-bold text-gray-900 mb-4">Sensors</h1></header><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow"><div class=p-6><div class="flex items-center mb-3"><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">farming</span></div><h2 class="text-xl font-semibold text-gray-900 mb-3"><a href=/blog/iot-precision-agriculture/ class="hover:text-blue-600 transition-colors">IoT Sensors in Precision Agriculture</a></h2><p class="text-gray-600 text-sm mb-4 line-clamp-3">Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture.</p><div class="flex flex-wrap gap-1 mb-4"><span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">farming</span>
-<span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">iot</span>
-<span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">sensors</span>
-<span class="text-gray-500 text-xs">+2 more</span></div><div class="flex items-center justify-between text-sm text-gray-500"><time datetime=2024-01-10>Jan 10, 2024</time>
-<span>3 min read</span></div></div></article></div></div></main><footer class="bg-white border-t mt-16"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><div class="text-center text-gray-600"><p>&copy; 2025 Praveen Mallappa. All rights reserved.</p></div></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensors | Prem Mallappa</title>
+  <meta name="description" content="Personal website of Prem Mallappa - Technology and Farming insights">
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/styles.css">
+  
+  
+  
+  <link rel="stylesheet" href="/css/hugobricks-base.css">
+  <link rel="stylesheet" href="/css/hugobricks-header-footer.css">
+  
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  
+  
+  
+  
+  
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed pt-16">
+  <header class="bg-white shadow-sm border-b fixed top-0 left-0 right-0 z-50">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+            Prem Mallappa
+          </a>
+        </div>
+        
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            
+              <a href="/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                Home
+              </a>
+            
+              <a href="/articles/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                Articles
+              </a>
+            
+              <a href="/series/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                Series
+              </a>
+            
+              <a href="/projects/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                Projects
+              </a>
+            
+              <a href="/resume/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                Resume
+              </a>
+            
+          </div>
+        </div>
+        
+        
+        <div class="md:hidden" x-data="{ open: false }">
+          <button @click="open = !open" class="text-gray-600 hover:text-gray-900 z-50 relative">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          
+          
+          <div x-show="open" @click.away="open = false" class="fixed top-16 right-4 bg-white shadow-lg rounded-lg py-2 w-48 z-50 border border-gray-200">
+            
+              <a href="/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                Home
+              </a>
+            
+              <a href="/articles/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                Articles
+              </a>
+            
+              <a href="/series/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                Series
+              </a>
+            
+              <a href="/projects/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                Projects
+              </a>
+            
+              <a href="/resume/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                Resume
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Sensors</h1>
+    
+  </header>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+      <div class="p-6">
+        
+        <div class="flex items-center mb-3">
+          
+            
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
+            
+          
+        </div>
+        
+        
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">
+          <a href="/articles/iot-precision-agriculture/" class="hover:text-blue-600 transition-colors">IoT Sensors in Precision Agriculture</a>
+        </h2>
+        
+        
+        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="flex items-center justify-between text-sm text-gray-500">
+          <time datetime="2024-01-10">Jan 10, 2024</time>
+          
+            <span>3 min read</span>
+          
+        </div>
+      </div>
+    </article>
+    
+  </div>
+
+  
+  
+</div>
+
+  </main>
+
+  <footer class="bg-white border-t mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center text-gray-600">
+        <p>&copy; 2025 Prem Mallappa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

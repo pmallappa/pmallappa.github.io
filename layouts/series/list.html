@@ -1,0 +1,60 @@
+{{ define "main" }}
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
+  <header class="mb-12 relative z-0">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
+    {{ if .Content }}
+      <div class="prose prose-lg prose-gray max-w-none mb-8 text-gray-600">
+        {{ .Content }}
+      </div>
+    {{ end }}
+  </header>
+
+  <div class="space-y-6 relative z-0">
+    {{ range .Paginator.Pages }}
+    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+      <div class="flex items-start justify-between">
+        <div class="flex-1">
+          <!-- Series Badge -->
+          <div class="flex items-center mb-3">
+            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full font-medium">
+              Series
+            </span>
+            {{ if .Params.article_count }}
+            <span class="ml-2 text-sm text-gray-500">{{ .Params.article_count }} articles</span>
+            {{ end }}
+          </div>
+          
+          <!-- Title -->
+          <h2 class="text-2xl font-semibold text-gray-900 mb-3">
+            <a href="{{ .RelPermalink }}" class="hover:text-blue-600 transition-colors">{{ .Title }}</a>
+          </h2>
+          
+          <!-- Summary -->
+          <p class="text-gray-600 mb-4">{{ .Summary }}</p>
+          
+          <!-- Topics/Categories -->
+          {{ if .Params.categories }}
+          <div class="flex flex-wrap gap-2 mb-4">
+            {{ range .Params.categories }}
+              <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">{{ . }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+          
+          <!-- Metadata -->
+          <div class="flex items-center text-sm text-gray-500">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            {{ if .Params.status }}
+              <span class="ml-4">Status: {{ .Params.status }}</span>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+
+  <!-- Pagination -->
+  {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}

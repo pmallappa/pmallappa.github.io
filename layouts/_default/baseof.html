@@ -15,14 +15,23 @@
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   {{ end }}
   
+  <!-- HugoBricks CSS -->
+  <link rel="stylesheet" href="{{ "css/hugobricks-base.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/hugobricks-header-footer.css" | relURL }}">
+  
   <!-- Alpine.js -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  
+  <!-- Homepage specific styles -->
+  {{ if .IsHome }}
+    <link rel="stylesheet" href="/css/home.css">
+  {{ end }}
   
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
-  <header class="bg-white shadow-sm border-b">
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed pt-16{{ if .IsHome }} home{{ end }}">
+  <header class="bg-white shadow-sm border-b fixed top-0 left-0 right-0 z-50">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex-shrink-0">
@@ -43,14 +52,14 @@
         
         <!-- Mobile menu button -->
         <div class="md:hidden" x-data="{ open: false }">
-          <button @click="open = !open" class="text-gray-600 hover:text-gray-900">
+          <button @click="open = !open" class="text-gray-600 hover:text-gray-900 z-50 relative">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
           
           <!-- Mobile menu -->
-          <div x-show="open" @click.away="open = false" class="absolute top-16 right-4 bg-white shadow-lg rounded-lg py-2 w-48 z-50">
+          <div x-show="open" @click.away="open = false" class="fixed top-16 right-4 bg-white shadow-lg rounded-lg py-2 w-48 z-50 border border-gray-200">
             {{ range .Site.Menus.main }}
               <a href="{{ .URL }}" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
                 {{ .Name }}

@@ -2,6 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Nord Color Palette */
+:root {
+  /* Polar Night */
+  --nord-polar-night-1: #2E3440;
+  --nord-polar-night-2: #3B4252;
+  --nord-polar-night-3: #434C5E;
+  --nord-polar-night-4: #4C566A;
+  
+  /* Snow Storm */
+  --nord-snow-storm-1: #D8DEE9;
+  --nord-snow-storm-2: #E5E9F0;
+  --nord-snow-storm-3: #ECEFF4;
+  
+  /* Frost */
+  --nord-frost-1: #8FBCBB;
+  --nord-frost-2: #88C0D0;
+  --nord-frost-3: #81A1C1;
+  --nord-frost-4: #5E81AC;
+  
+  /* Aurora */
+  --nord-aurora-red: #BF616A;
+  --nord-aurora-orange: #D08770;
+  --nord-aurora-yellow: #EBCB8B;
+  --nord-aurora-green: #A3BE8C;
+  --nord-aurora-purple: #B48EAD;
+  
+  /* Custom brand colors */
+  --brand-blue: #4a9eff;
+}
+
+/* Nord-themed utility classes */
+.nord-heading-primary {
+  color: var(--brand-blue) !important;
+}
+
+.nord-heading-secondary {
+  color: var(--nord-polar-night-1) !important;
+}
+
+.nord-text-primary {
+  color: var(--nord-polar-night-1) !important;
+}
+
+.nord-text-secondary {
+  color: var(--nord-polar-night-4) !important;
+}
+
+.nord-text-link {
+  color: var(--nord-polar-night-3) !important;
+}
+
+.nord-text-link:hover {
+  opacity: 0.8;
+}
+
+.nord-badge-category {
+  background-color: var(--nord-frost-1) !important;
+  color: var(--nord-polar-night-1) !important;
+}
+
+.nord-badge-tag {
+  background-color: var(--nord-snow-storm-1) !important;
+  color: var(--nord-polar-night-1) !important;
+}
+
 /* Custom component styles */
 @layer components {
   /* Callout components */

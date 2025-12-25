@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Farming on Praveen Mallappa</title><link>https://pmallappa.github.io/tags/farming/</link><description>Recent content in Farming on Praveen Mallappa</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pmallappa.github.io/tags/farming/index.xml" rel="self" type="application/rss+xml"/><item><title>IoT Sensors in Precision Agriculture</title><link>https://pmallappa.github.io/blog/iot-precision-agriculture/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/blog/iot-precision-agriculture/</guid><description>Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Farming on Prem Mallappa</title>
+    <link>http://localhost:1313/tags/farming/</link>
+    <description>Recent content in Farming on Prem Mallappa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/farming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IoT Sensors in Precision Agriculture</title>
+      <link>http://localhost:1313/articles/iot-precision-agriculture/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/iot-precision-agriculture/</guid>
+      <description>Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture.</description>
+    </item>
+  </channel>
+</rss>

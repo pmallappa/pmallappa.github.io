@@ -2,7 +2,10 @@
 title: "Modern Systems Architecture"
 date: 2024-01-15
 draft: false
+type: "series"
 series_overview: true
+article_count: 12
+status: "ongoing"
 summary: "Comprehensive guide to designing and building scalable, resilient distributed systems using modern architecture patterns and technologies."
 tags: ["architecture", "distributed-systems", "scalability", "microservices"]
 categories: ["technology"]

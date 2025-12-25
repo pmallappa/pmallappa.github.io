@@ -136,7 +136,7 @@
          :html-head "<link rel=\"stylesheet\" href=\"/static/css/main.css\" />
 <script src=\"/static/js/main.js\" defer></script>
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
-<meta name=\"description\" content=\"Personal website of Praveen Mallappa - Technology and Farming insights\" />"
+<meta name="description" content="Personal website of Prem Mallappa - Technology and Farming insights" />
          
          :html-preamble
          "<header class=\"site-header\">
@@ -169,7 +169,7 @@
                 <a href=\"/resume/\">Resume</a> |
                 <a href=\"/sitemap.html\">Sitemap</a>
               </nav>
-              <p>© 2024 Praveen Mallappa. Built with Emacs Org-mode and love.</p>
+              <p>© 2024 Prem Mallappa. Built with Emacs Org-mode and love.</p>
               <p>Last updated: %d</p>
             </div>
           </footer>"

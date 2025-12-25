@@ -1,30 +1,138 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Praveen Mallappa</title><link>https://pmallappa.github.io/</link><description>Recent content on Praveen Mallappa</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pmallappa.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://pmallappa.github.io/about/</link><pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/about/</guid><description>&lt;h1 id="about-praveen-mallappa"&gt;About Praveen Mallappa&lt;/h1&gt;
-
-
-
-
-
-
-
-&lt;div class="callout border-l-4 p-4 rounded-r-lg border-blue-200 bg-blue-50 text-blue-800 my-6"&gt;
- &lt;div class="flex items-start"&gt;
- &lt;div class="flex-shrink-0"&gt;
- 
- &lt;svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20"&gt;
- &lt;path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/&gt;
- &lt;/svg&gt;
- 
- &lt;/div&gt;
- &lt;div class="ml-3 flex-1"&gt;
- 
- &lt;h4 class="font-semibold mb-2"&gt;Professional Summary&lt;/h4&gt;
- 
- &lt;div class="prose prose-sm max-w-none"&gt;
- &lt;strong&gt;Experienced technology leader&lt;/strong&gt; with 12+ years in distributed systems, cloud infrastructure, and full-stack development. &lt;strong&gt;Passionate farmer&lt;/strong&gt; exploring sustainable agriculture through precision technology and data-driven practices.
- &lt;/div&gt;
- &lt;/div&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id="professional-experience"&gt;Professional Experience&lt;/h2&gt;
-&lt;h3 id="senior-software-architect--techcorp-2019---present"&gt;Senior Software Architect | TechCorp (2019 - Present)&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Leading distributed systems architecture&lt;/strong&gt; for enterprise-scale applications serving 10M+ users daily.&lt;/p&gt;</description></item><item><title>Microservices Patterns and Practices</title><link>https://pmallappa.github.io/series/microservices-patterns-and-practices/</link><pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/series/microservices-patterns-and-practices/</guid><description>Deep dive into microservices architecture patterns, implementation strategies, and operational best practices for building distributed systems at scale.</description></item><item><title>Modern Systems Architecture</title><link>https://pmallappa.github.io/series/modern-systems-architecture/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/series/modern-systems-architecture/</guid><description>Comprehensive guide to designing and building scalable, resilient distributed systems using modern architecture patterns and technologies.</description></item><item><title>Distributed IoT Edge Computing Platform</title><link>https://pmallappa.github.io/projects/iot-edge-computing-platform/</link><pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/projects/iot-edge-computing-platform/</guid><description>High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination.</description></item><item><title>Rust Memory Management Patterns</title><link>https://pmallappa.github.io/blog/rust-memory-patterns/</link><pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/blog/rust-memory-patterns/</guid><description>Advanced memory safety techniques in Rust for systems programming, exploring ownership, lifetimes, and zero-cost abstractions.</description></item><item><title>IoT Sensors in Precision Agriculture</title><link>https://pmallappa.github.io/blog/iot-precision-agriculture/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/blog/iot-precision-agriculture/</guid><description>Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture.</description></item><item><title>Building Efficient Kernel Modules</title><link>https://pmallappa.github.io/blog/kernel-modules-performance/</link><pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/blog/kernel-modules-performance/</guid><description>Deep dive into high-performance Linux kernel development, covering module design, memory management, and optimization techniques.</description></item><item><title>Engineering Soil Microbiomes for Sustainable Agriculture</title><link>https://pmallappa.github.io/blog/soil-microbiome-engineering/</link><pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/blog/soil-microbiome-engineering/</guid><description>Explore how engineered soil microbiomes can improve crop yields, reduce chemical inputs, and promote sustainable farming practices.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prem Mallappa</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Prem Mallappa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying and Optimizing Hugo Sites for Production</title>
+      <link>http://localhost:1313/articles/hugo-deployment-optimization/</link>
+      <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/hugo-deployment-optimization/</guid>
+      <description>Deploy your Hugo site to GitHub Pages with optimization, performance tuning, and CI/CD automation.</description>
+    </item>
+    <item>
+      <title>Advanced Hugo Features - Multi-Landing Pages and Custom Types</title>
+      <link>http://localhost:1313/articles/hugo-advanced-features/</link>
+      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/hugo-advanced-features/</guid>
+      <description>Explore advanced Hugo capabilities including multiple landing pages, custom content types, and complex navigation.</description>
+    </item>
+    <item>
+      <title>Styling Hugo Sites with Tailwind CSS</title>
+      <link>http://localhost:1313/articles/hugo-tailwind-styling/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/hugo-tailwind-styling/</guid>
+      <description>Integrate Tailwind CSS with Hugo for modern, utility-first styling and responsive design.</description>
+    </item>
+    <item>
+      <title>Building Custom Templates and Layouts in Hugo</title>
+      <link>http://localhost:1313/articles/hugo-custom-templates/</link>
+      <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/hugo-custom-templates/</guid>
+      <description>Master Hugo&amp;rsquo;s template system to create custom layouts for different content types and sections.</description>
+    </item>
+    <item>
+      <title>Content Organization Strategies for Hugo Sites</title>
+      <link>http://localhost:1313/articles/hugo-content-organization/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/hugo-content-organization/</guid>
+      <description>Learn how to organize content effectively in Hugo using sections, taxonomies, and front matter for scalable site architecture.</description>
+    </item>
+    <item>
+      <title>Building Modern Static Sites with Hugo</title>
+      <link>http://localhost:1313/series/hugo-static-sites/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/hugo-static-sites/</guid>
+      <description>Comprehensive guide to building high-performance static websites using Hugo, from setup to deployment, including advanced templating and content organization strategies.</description>
+    </item>
+    <item>
+      <title>Getting Started with Hugo - Installation and First Site</title>
+      <link>http://localhost:1313/articles/hugo-getting-started/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/hugo-getting-started/</guid>
+      <description>Learn how to install Hugo and create your first static website, understanding the basic project structure and configuration.</description>
+    </item>
+    <item>
+      <title>Personal Portfolio &amp; Blog - pmallappa.github.io</title>
+      <link>http://localhost:1313/projects/github-site/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/github-site/</guid>
+      <description>Modern static website built with Hugo, featuring dual landing pages for technology portfolio and farming content, with custom layouts and Tailwind CSS styling.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;about-prem-mallappa&#34;&gt;About Prem Mallappa&lt;/h1&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;div class=&#34;callout border-l-4 p-4 rounded-r-lg border-blue-200 bg-blue-50 text-blue-800 my-6&#34;&gt;&#xA;  &lt;div class=&#34;flex items-start&#34;&gt;&#xA;    &lt;div class=&#34;flex-shrink-0&#34;&gt;&#xA;      &#xA;        &lt;svg class=&#34;w-5 h-5 text-blue-500&#34; fill=&#34;currentColor&#34; viewBox=&#34;0 0 20 20&#34;&gt;&#xA;          &lt;path fill-rule=&#34;evenodd&#34; d=&#34;M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z&#34; clip-rule=&#34;evenodd&#34;/&gt;&#xA;        &lt;/svg&gt;&#xA;      &#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;ml-3 flex-1&#34;&gt;&#xA;      &#xA;        &lt;h4 class=&#34;font-semibold mb-2&#34;&gt;Professional Summary&lt;/h4&gt;&#xA;      &#xA;      &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;        &lt;strong&gt;Experienced technology leader&lt;/strong&gt; with 12+ years in distributed systems, cloud infrastructure, and full-stack development. &lt;strong&gt;Passionate farmer&lt;/strong&gt; exploring sustainable agriculture through precision technology and data-driven practices.&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;professional-experience&#34;&gt;Professional Experience&lt;/h2&gt;&#xA;&lt;h3 id=&#34;senior-software-architect--techcorp-2019---present&#34;&gt;Senior Software Architect | TechCorp (2019 - Present)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Leading distributed systems architecture&lt;/strong&gt; for enterprise-scale applications serving 10M+ users daily.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microservices Patterns and Practices</title>
+      <link>http://localhost:1313/series/microservices-patterns-and-practices/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/microservices-patterns-and-practices/</guid>
+      <description>Deep dive into microservices architecture patterns, implementation strategies, and operational best practices for building distributed systems at scale.</description>
+    </item>
+    <item>
+      <title>Modern Systems Architecture</title>
+      <link>http://localhost:1313/series/modern-systems-architecture/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/modern-systems-architecture/</guid>
+      <description>Comprehensive guide to designing and building scalable, resilient distributed systems using modern architecture patterns and technologies.</description>
+    </item>
+    <item>
+      <title>Distributed IoT Edge Computing Platform</title>
+      <link>http://localhost:1313/projects/iot-edge-computing-platform/</link>
+      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/iot-edge-computing-platform/</guid>
+      <description>High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination.</description>
+    </item>
+    <item>
+      <title>Rust Memory Management Patterns</title>
+      <link>http://localhost:1313/articles/rust-memory-patterns/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/rust-memory-patterns/</guid>
+      <description>Advanced memory safety techniques in Rust for systems programming, exploring ownership, lifetimes, and zero-cost abstractions.</description>
+    </item>
+    <item>
+      <title>IoT Sensors in Precision Agriculture</title>
+      <link>http://localhost:1313/articles/iot-precision-agriculture/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/iot-precision-agriculture/</guid>
+      <description>Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture.</description>
+    </item>
+    <item>
+      <title>Building Efficient Kernel Modules</title>
+      <link>http://localhost:1313/articles/kernel-modules-performance/</link>
+      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/kernel-modules-performance/</guid>
+      <description>Deep dive into high-performance Linux kernel development, covering module design, memory management, and optimization techniques.</description>
+    </item>
+    <item>
+      <title>Engineering Soil Microbiomes for Sustainable Agriculture</title>
+      <link>http://localhost:1313/articles/soil-microbiome-engineering/</link>
+      <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/soil-microbiome-engineering/</guid>
+      <description>Explore how engineered soil microbiomes can improve crop yields, reduce chemical inputs, and promote sustainable farming practices.</description>
+    </item>
+    <item>
+      <title>cta</title>
+      <link>http://localhost:1313/bricks/cta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/bricks/cta/</guid>
+      <description>&lt;h2 id=&#34;ready-to-build-something-amazing&#34;&gt;Ready to Build Something Amazing?&lt;/h2&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s collaborate on your next project! With 23 years of experience in enterprise software development and modern technologies, I can help bring your vision to life.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/contact/&#34;&gt;Get in touch&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>features</title>
+      <link>http://localhost:1313/bricks/features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/bricks/features/</guid>
+      <description>&lt;h2 id=&#34;my-technical-expertise&#34;&gt;My Technical Expertise&lt;/h2&gt;&#xA;&lt;p&gt;Bringing 23 years of experience in enterprise software development, full-stack solutions, and modern cloud architectures to deliver exceptional results.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/icons/material-symbols/200/rounded/code.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;full-stack-development&#34;&gt;Full-Stack Development&lt;/h3&gt;&#xA;&lt;p&gt;Expert in Java, Spring Boot, React, Node.js, and modern web technologies. Building scalable applications from backend APIs to responsive frontends with clean, maintainable code.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/icons/material-symbols/200/rounded/cloud.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;cloud-architecture&#34;&gt;Cloud Architecture&lt;/h3&gt;&#xA;&lt;p&gt;Designing and implementing cloud-native solutions on AWS, Azure, and GCP. Expertise in microservices, containerization with Docker/Kubernetes, and serverless architectures.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

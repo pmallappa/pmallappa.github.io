@@ -1,41 +1,26 @@
 ---
-title: "Praveen Mallappa"
-description: "Systems Engineer & Agricultural Technologist exploring the intersection of technology and agriculture"
+title: "Prem Mallappa"
+description: "Full-Stack Developer & Technical Leader with 23+ years of experience in enterprise software development"
 ---
-
-<section class="hero-section">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center py-20">
-      <h1 class="hero-title">Praveen Mallappa</h1>
-      <p class="hero-subtitle">Systems Engineer & Agricultural Technologist</p>
-      <p class="hero-description">
-        Exploring the intersection of technology and agriculture through 
-        systems programming, distributed architectures, and sustainable farming practices.
-      </p>
-      <div class="hero-links">
-        <a href="/blog/" class="btn-primary">Read Blog</a>
-        <a href="/projects/" class="btn-secondary">View Projects</a>
-        <a href="/resume/" class="btn-outline">Resume</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 ## Welcome
 
-I'm a systems engineer with a passion for both technology and agriculture. This site is where I share insights about:
+I'm a seasoned software architect and technical leader with over two decades of experience building scalable enterprise solutions.
 
-- **Technology**: Systems programming, kernel development, distributed systems, and performance optimization
-- **Farming**: Precision agriculture, IoT sensors, sustainable practices, and agricultural technology
+## Expertise Areas
 
-## Recent Writing
+- **Technology**: Full-stack development, cloud architecture, distributed systems, and performance optimization
+- **Leadership**: Technical team management, architectural decisions, and mentoring developers
+- **Enterprise Focus**: Large-scale applications, microservices, and system integration
+
+## Recent Highlights
 
 ### Technology
-- [Building Efficient Kernel Modules](/blog/kernel-modules-performance/) - Deep dive into high-performance Linux kernel development
-- [Distributed System Design Patterns](/blog/distributed-patterns/) - Practical patterns for building resilient systems
-- [Real-time Data Processing Architectures](/blog/realtime-processing/) - Lessons from high-throughput systems
+- Building scalable cloud-native applications with modern frameworks
+- Implementing microservices architectures and API design
+- Leading digital transformation initiatives
 
-### Farming
-- [IoT Sensors in Precision Agriculture](/blog/iot-precision-agriculture/) - How smart sensors transform modern farming
-- [Sustainable Farming with Technology](/blog/sustainable-tech-farming/) - Balancing productivity and environmental stewardship
-- [Automated Irrigation Systems](/blog/automated-irrigation/) - Building efficient water management solutions
+### Leadership
+- Managing cross-functional development teams
+- Driving architectural decisions and best practices
+- Mentoring junior developers and fostering growth

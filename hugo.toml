@@ -1,6 +1,6 @@
 baseURL = "https://pmallappa.github.io"
 languageCode = "en-us"
-title = "Praveen Mallappa"
+title = "Prem Mallappa"
 theme = "personal"
 
 # Content configuration
@@ -21,22 +21,31 @@ theme = "personal"
     url = "/"
     weight = 10
   [[menu.main]]
-    name = "Blog"
-    url = "/blog/"
+    name = "Articles"
+    url = "/articles/"
     weight = 20
+  [[menu.main]]
+    name = "Series"
+    url = "/series/"
+    weight = 30
   [[menu.main]]
     name = "Projects"
     url = "/projects/"
-    weight = 30
+    weight = 40
   [[menu.main]]
     name = "Resume"
     url = "/resume/"
-    weight = 40
+    weight = 50
+  # Farming section is accessible at /farming/ but hidden from main menu
+  # [[menu.main]]
+  #   name = "Farming"
+  #   url = "/farming/"
+  #   weight = 60
 
 # Site parameters
 [params]
-  description = "Personal website of Praveen Mallappa - Technology and Farming insights"
-  author = "Praveen Mallappa"
+  description = "Personal website of Prem Mallappa - Technology and Farming insights"
+  author = "Prem Mallappa"
   email = "your-email@example.com"
   github = "pmallappa"
   linkedin = "pmallappa"
@@ -59,7 +68,7 @@ theme = "personal"
 
 # Output formats
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]
 
 # Build configuration

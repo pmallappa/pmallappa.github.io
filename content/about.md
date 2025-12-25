@@ -5,7 +5,7 @@ draft: false
 layout: single
 ---
 
-# About Praveen Mallappa
+# About Prem Mallappa
 
 {{< callout type="info" title="Professional Summary" >}}
 **Experienced technology leader** with 12+ years in distributed systems, cloud infrastructure, and full-stack development. **Passionate farmer** exploring sustainable agriculture through precision technology and data-driven practices.

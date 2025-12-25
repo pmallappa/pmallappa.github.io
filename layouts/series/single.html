@@ -1,0 +1,97 @@
+{{ define "main" }}
+<article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
+  <!-- Header -->
+  <header class="mb-12">
+    <div class="flex items-center mb-4">
+      <span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full font-medium">Series</span>
+      {{ if .Params.article_count }}
+        <span class="ml-3 text-gray-600">{{ .Params.article_count }} articles</span>
+      {{ end }}
+    </div>
+    
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
+    
+    <!-- Metadata -->
+    <div class="flex items-center text-gray-600 text-sm mb-6">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ if .Params.status }}
+        <span class="mx-2">•</span>
+        <span class="capitalize">{{ .Params.status }}</span>
+      {{ end }}
+    </div>
+    
+    <!-- Summary -->
+    {{ if .Summary }}
+    <div class="text-xl text-gray-700 mb-6">
+      {{ .Summary }}
+    </div>
+    {{ end }}
+  </header>
+
+  <!-- Content -->
+  <div class="prose prose-lg prose-gray max-w-none mb-12">
+    {{ .Content }}
+  </div>
+
+  <!-- Articles in this Series -->
+  {{ $series := .Title }}
+  {{ $relatedArticles := where .Site.RegularPages "Params.series" "intersect" (slice $series) }}
+  {{ $sortedArticles := sort $relatedArticles "Params.part" "asc" }}
+  {{ if $sortedArticles }}
+  <section class="mt-12 border-t border-gray-200 pt-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Articles in this Series</h2>
+    <div class="space-y-4">
+      {{ range $sortedArticles }}
+      <div class="bg-white border-l-4 border-l-purple-500 rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+        <div class="flex items-start justify-between">
+          <div class="flex-1">
+            {{ if .Params.part }}
+            <div class="flex items-center gap-3 mb-3">
+              <span class="bg-purple-600 text-white text-sm font-bold px-3 py-1 rounded">Part {{ .Params.part }}</span>
+            </div>
+            {{ end }}
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              <a href="{{ .RelPermalink }}" class="hover:text-blue-600">{{ .Title }}</a>
+            </h3>
+            <p class="text-gray-600 text-sm mb-3">{{ .Summary }}</p>
+            <div class="text-sm text-gray-500">
+              {{ .Date.Format "Jan 2, 2006" }} • {{ .ReadingTime }} min read
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ else }}
+  <section class="mt-12 border-t border-gray-200 pt-8">
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+      <p class="text-gray-700">Articles for this series are currently being written. Check back soon!</p>
+    </div>
+  </section>
+  {{ end }}
+  
+  <!-- Series Navigation -->
+  <nav class="border-t border-gray-200 pt-6 mt-12">
+    <div class="flex justify-between">
+      {{ if .PrevInSection }}
+      <a href="{{ .PrevInSection.RelPermalink }}" class="flex-1 pr-4 text-left group">
+        <span class="text-sm text-gray-500">← Previous Series</span>
+        <p class="text-gray-900 font-medium group-hover:text-purple-600">{{ .PrevInSection.Title }}</p>
+      </a>
+      {{ else }}
+      <div class="flex-1"></div>
+      {{ end }}
+      
+      {{ if .NextInSection }}
+      <a href="{{ .NextInSection.RelPermalink }}" class="flex-1 pl-4 text-right group">
+        <span class="text-sm text-gray-500">Next Series →</span>
+        <p class="text-gray-900 font-medium group-hover:text-purple-600">{{ .NextInSection.Title }}</p>
+      </a>
+      {{ else }}
+      <div class="flex-1"></div>
+      {{ end }}
+    </div>
+  </nav>
+</article>
+{{ end }}

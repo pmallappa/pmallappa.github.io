@@ -2,7 +2,10 @@
 title: "Microservices Patterns and Practices"
 date: 2024-01-20
 draft: false
+type: "series"
 series_overview: true
+article_count: 15
+status: "ongoing"
 summary: "Deep dive into microservices architecture patterns, implementation strategies, and operational best practices for building distributed systems at scale."
 tags: ["microservices", "distributed-systems", "architecture", "scalability"]
 categories: ["technology"]

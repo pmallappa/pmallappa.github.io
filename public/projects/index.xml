@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on Praveen Mallappa</title><link>https://pmallappa.github.io/projects/</link><description>Recent content in Projects on Praveen Mallappa</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pmallappa.github.io/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>Distributed IoT Edge Computing Platform</title><link>https://pmallappa.github.io/projects/iot-edge-computing-platform/</link><pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/projects/iot-edge-computing-platform/</guid><description>High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Prem Mallappa</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Prem Mallappa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Portfolio &amp; Blog - pmallappa.github.io</title>
+      <link>http://localhost:1313/projects/github-site/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/github-site/</guid>
+      <description>Modern static website built with Hugo, featuring dual landing pages for technology portfolio and farming content, with custom layouts and Tailwind CSS styling.</description>
+    </item>
+    <item>
+      <title>Distributed IoT Edge Computing Platform</title>
+      <link>http://localhost:1313/projects/iot-edge-computing-platform/</link>
+      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/iot-edge-computing-platform/</guid>
+      <description>High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination.</description>
+    </item>
+  </channel>
+</rss>

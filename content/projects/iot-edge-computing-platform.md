@@ -2,10 +2,14 @@
 title: "Distributed IoT Edge Computing Platform"
 date: 2024-01-14
 draft: false
+type: "projects"
 tags: ["iot", "edge-computing", "rust", "microservices", "kubernetes"]
 categories: ["technology"]
 summary: "High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination."
 project_type: "open_source"
+status: "ongoing"
+series_count: 3
+github: "https://github.com/pmallappa/iot-edge-platform"
 repository: "https://github.com/pmallappa/iot-edge-platform"
 live_demo: "https://edge-demo.pmallappa.dev"
 tech_stack: ["Rust", "Kubernetes", "gRPC", "Apache Kafka", "TensorFlow Lite", "Prometheus"]
@@ -64,10 +68,10 @@ The Distributed IoT Edge Computing Platform addresses the growing need for real-
 
 The project welcomes contributions! Key areas where help is needed:
 
-1. **Protocol Adapters**: MQTT, CoAP, LoRaWAN integrations
-2. **ML Models**: Pre-trained models for common IoT use cases
-3. **Documentation**: Deployment guides and tutorials
-4. **Testing**: Edge case scenarios and stress testing
+- **Protocol Adapters**: MQTT, CoAP, LoRaWAN integrations
+- **ML Models**: Pre-trained models for common IoT use cases
+- **Documentation**: Deployment guides and tutorials
+- **Testing**: Edge case scenarios and stress testing
 
 {{< callout type="success" title="Get Involved" >}}
 - **Repository**: [github.com/pmallappa/iot-edge-platform](https://github.com/pmallappa/iot-edge-platform)

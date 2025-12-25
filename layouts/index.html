@@ -1,76 +1,57 @@
 {{ define "main" }}
-  {{ .Content }}
+<div class="landing-container">
+  <!-- Large background text -->
+  <div class="background-text">PREM<br>MALLAPPA</div>
   
-  <!-- Recent Posts Section -->
-  {{ $posts := where site.RegularPages "Type" "blog" | first 6 }}
-  {{ if $posts }}
-  <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-900 mb-8">Recent Writing</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {{ range $posts }}
-        <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-          <div class="p-6">
-            <div class="flex items-center mb-2">
-              {{ range .Params.categories }}
-                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">{{ . }}</span>
-              {{ end }}
-            </div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-              <a href="{{ .RelPermalink }}" class="hover:text-blue-600 transition-colors">{{ .Title }}</a>
-            </h3>
-            <p class="text-gray-600 text-sm mb-4 line-clamp-3">{{ .Summary }}</p>
-            <div class="flex items-center text-sm text-gray-500">
-              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-              <span class="mx-2">·</span>
-              <span>{{ .ReadingTime }} min read</span>
-            </div>
-          </div>
-        </article>
-        {{ end }}
+  <!-- Main content area -->
+  <div class="main-content">
+    <!-- Left side content -->
+    <div class="left-content">
+      <h1 class="welcome-title">WELCOME</h1>
+      <p class="intro-text">I AM A SOFTWARE ENGINEER WITH</p>
+      
+      <div class="experience-section">
+        <span class="experience-number">23</span>
+        <span class="experience-label">YEARS OF EXPERIENCE</span>
       </div>
     </div>
-  </section>
-  {{ end }}
-
-  <!-- Projects Section -->
-  {{ $projects := where site.RegularPages "Type" "projects" | first 4 }}
-  {{ if $projects }}
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-900 mb-8">Recent Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {{ range $projects }}
-        <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-          <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
-                {{ .Params.project_type | default "project" }}
-              </span>
-              {{ if .Params.repository }}
-                <a href="{{ .Params.repository }}" class="text-gray-400 hover:text-gray-600">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/>
-                  </svg>
-                </a>
-              {{ end }}
-            </div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">
-              <a href="{{ .RelPermalink }}" class="hover:text-blue-600 transition-colors">{{ .Title }}</a>
-            </h3>
-            <p class="text-gray-600 text-sm mb-4 line-clamp-3">{{ .Summary }}</p>
-            {{ if .Params.tech_stack }}
-            <div class="flex flex-wrap gap-1 mb-3">
-              {{ range first 4 .Params.tech_stack }}
-                <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">{{ . }}</span>
-              {{ end }}
-            </div>
-            {{ end }}
-          </div>
-        </article>
-        {{ end }}
-      </div>
+    
+    <!-- Right side - Skills Section -->
+    <div class="skills-section">
+      <div class="skill-line">C, PYTHON, LATEX, GO</div>
+      <div class="skill-line">LINUX, QNX, PLAN9, FREEBSD</div>
+      <div class="skill-line">XEN, KVM, VIRTUALIZATION</div>
+      <div class="skill-line">QEMU, GEM5, SIMICS</div>
+      <div class="skill-line">ARM, ARMV8, MIPS, RISCV</div>
+      <div class="skill-line">GIT, ((((ELISP))))</div>
+      <div class="skill-line">SHELL SCRIPTING</div>
     </div>
-  </section>
-  {{ end }}
+  </div>
+  
+  <!-- Centered Social Links -->
+  <div class="social-container">
+    <div class="social-links">
+      <a href="http://github.com/pmallappa" target="_blank" rel="noopener" title="GitHub">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.52.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+      <a href="http://bitbucket.com/prem.mallappa" target="_blank" rel="noopener" title="Bitbucket">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M.778 1.213a.768.768 0 00-.768.892l3.263 19.81c.084.499.515.868 1.022.873H19.95a.772.772 0 00.77-.646l3.27-20.03a.768.768 0 00-.768-.891zM14.52 15.53H9.522L8.17 8.466h7.561z"/>
+        </svg>
+      </a>
+      <a href="http://linkedin.com/in/pmallappa" target="_blank" rel="noopener" title="LinkedIn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+      <a href="mailto:prem.mallappa@gmail.com" title="Email">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.583l9.615-6.762h.749A1.636 1.636 0 0124 5.457z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
 {{ end }}

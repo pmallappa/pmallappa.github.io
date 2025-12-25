@@ -1,5 +1,5 @@
 #+TITLE: Personal Website
-#+AUTHOR: Praveen Mallappa
+#+AUTHOR: Prem Mallappa
 #+DATE: 2024-01-15
 #+HTML_HEAD: <link rel="stylesheet" href="/static/css/main.css" />
 #+OPTIONS: toc:nil num:nil
@@ -9,7 +9,7 @@
 <section class="hero-section">
   <div class="container">
     <div class="hero-content">
-      <h1 class="hero-title">Praveen Mallappa</h1>
+      <h1 class="hero-title">Prem Mallappa</h1>
       <p class="hero-subtitle">Systems Engineer & Agricultural Technologist</p>
       <p class="hero-description">
         Exploring the intersection of technology and agriculture through 

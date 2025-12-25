@@ -3,8 +3,7 @@ title: "Engineering Soil Microbiomes for Sustainable Agriculture"
 date: 2024-01-06
 draft: false
 tags: ["soil-health", "microbiome", "sustainable-farming", "biotechnology"]
-categories: ["farming"]
-series: ["Sustainable Agriculture"]
+categories: ["technology"]
 summary: "Explore how engineered soil microbiomes can improve crop yields, reduce chemical inputs, and promote sustainable farming practices."
 ---
 
