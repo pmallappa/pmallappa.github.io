@@ -1,0 +1,21 @@
+{{/*
+  Reusable section header partial
+  Usage: {{ partial "section-header.html" . }}
+*/}}
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" style="background: transparent;">
+  <header class="mb-16" style="background: transparent;">
+    <h1 class="text-4xl font-bold mb-4" style="color: #4a9eff; background: transparent;">{{ .Title }}</h1>
+    {{ if .Content }}
+      <div class="prose prose-lg prose-gray mb-8" style="color: #4C566A; background: transparent; word-break: break-word; overflow-wrap: anywhere; max-width: 100%;">
+        {{ .Content }}
+      </div>
+    {{ end }}
+  </header>
+
+  <!-- Bottom spacer for fixed header clearance -->
+  <!-- Content spacers -->
+  <div class="h-16"></div>
+  <div class="h-16"></div>
+
+  <div class="space-y-8">

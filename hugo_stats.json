@@ -64,7 +64,6 @@
       "border-blue-200",
       "border-gray-200",
       "border-green-200",
-      "border-green-500",
       "border-l-4",
       "border-l-purple-500",
       "border-t",
@@ -132,6 +131,7 @@
       "mb-0",
       "mb-1",
       "mb-12",
+      "mb-16",
       "mb-2",
       "mb-3",
       "mb-32",
@@ -207,7 +207,6 @@
       "text-4xl",
       "text-blue-500",
       "text-blue-600",
-      "text-blue-700",
       "text-blue-800",
       "text-center",
       "text-gray-500",
@@ -237,7 +236,6 @@
       "w-5",
       "w-6",
       "welcome-title",
-      "z-0",
       "z-50"
     ],
     "ids": [

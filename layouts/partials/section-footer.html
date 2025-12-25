@@ -1,0 +1,7 @@
+{{/* Section Footer Partial - Handles pagination */}}
+  {{ if gt .Paginator.TotalPages 1 }}
+    <div class="flex justify-center mt-8">
+      {{ template "_internal/pagination.html" . }}
+    </div>
+  {{ end }}
+</div>

@@ -1,61 +1,8 @@
 {{ define "main" }}
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" style="background: transparent;">
-  <header class="mb-32" style="background: transparent;">
-    <h1 class="text-4xl font-bold mb-4" style="color: #4a9eff; background: transparent;">{{ .Title }}</h1>
-    {{ if .Content }}
-      <div class="prose prose-lg prose-gray max-w-none mb-8" style="color: #4C566A; background: transparent;">
-        {{ .Content }}
-      </div>
-    {{ end }}
-  </header>
+{{ partial "section-header.html" . }}
 
-  <!-- Spacer to ensure clear separation -->
-  <div class="h-16"></div>
-  <!-- Spacer to ensure clear separation -->
-  <div class="h-16"></div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {{ range .Paginator.Pages }}
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow overflow-visible">
-      <div class="p-6 pt-6">
-        <!-- Categories/Tags -->
-        <div class="flex items-center mb-0 mt-0">
-          {{ if .Params.categories }}
-            {{ range first 2 .Params.categories }}
-              <span class="text-xs px-2 py-1 rounded-full mr-2" style="background-color: #8FBCBB; color: #2E3440;">{{ . }}</span>
-            {{ end }}
-          {{ end }}
-        </div>
-        
-        <!-- Title -->
-        <h2 class="text-xl font-semibold mb-1 mt-2" style="color: #2E3440;">
-          <a href="{{ .RelPermalink }}" class="hover:opacity-80 transition-opacity" style="color: #434C5E;">{{ .Title }}</a>
-        </h2>
-        
-        <!-- Summary -->
-        <p class="text-sm mb-4 line-clamp-3" style="color: #4C566A;">{{ .Summary }}</p>
-        
-        <!-- Tags -->
-        {{ if .Params.tags }}
-        <div class="flex flex-wrap gap-1 mb-4">
-          {{ range first 3 .Params.tags }}
-            <span class="text-xs px-2 py-1 rounded" style="background-color: #D8DEE9; color: #2E3440;">{{ . }}</span>
-          {{ end }}
-          {{ if gt (len .Params.tags) 3 }}
-            <span class="text-xs" style="color: #4C566A;">+{{ sub (len .Params.tags) 3 }} more</span>
-          {{ end }}
-        </div>
-        {{ end }}
-        
-        <!-- Metadata -->
-        <div class="flex items-center justify-between text-sm" style="color: #4C566A;">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-          {{ if .ReadingTime }}
-            <span>{{ .ReadingTime }} min read</span>
-          {{ end }}
-        </div>
-      </div>
-    </article>
+      {{ partial "brick_article_card.html" . }}
     {{ end }}
   </div>
 

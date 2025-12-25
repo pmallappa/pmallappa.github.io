@@ -1,0 +1,17 @@
+{{/* 
+  Section page wrapper - handles common layout for list pages
+  Provides proper spacing from fixed header and consistent styling
+  Usage: Wrap your section content with {{ partial "section-wrapper-start.html" . }} and {{ partial "section-wrapper-end.html" . }}
+*/}}
+<div class="section-page-wrapper">
+  <div class="section-header-spacer"></div>
+  <header class="section-header">
+    <h1 class="section-title">{{ .Title }}</h1>
+    {{ if .Content }}
+      <div class="section-description">
+        {{ .Content }}
+      </div>
+    {{ end }}
+  </header>
+  <div class="section-content-spacer"></div>
+  <div class="section-content">
