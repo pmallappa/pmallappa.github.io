@@ -1,0 +1,43 @@
+#+TITLE: {{ARTICLE_TITLE}}
+#+AUTHOR: Praveen Mallappa
+#+DATE: {{{time(%Y-%m-%d)}}}
+#+HTML_HEAD: <link rel="stylesheet" href="/static/css/main.css" />
+#+OPTIONS: toc:t num:nil
+#+TAGS: technology programming
+
+* Introduction
+
+Brief introduction to the topic, what the reader will learn, and why it matters.
+
+* Main Content
+
+** Section 1
+Your main content here with proper structure.
+
+** Section 2
+Continue with additional sections as needed.
+
+* Code Examples
+
+#+BEGIN_SRC python
+# Example code snippet
+def example_function():
+    """This is an example function."""
+    return "Hello, World!"
+#+END_SRC
+
+* Conclusion
+
+Key takeaways and next steps for readers.
+
+* Further Reading
+
+- [[link-to-related-article][Related Article Title]]
+- [[https://external-resource.com][External Resource]]
+
+---
+
+*Tags:* technology, programming
+*Category:* Technology
+*Series:* (if part of a series)
+*Updated:* {{{time(%Y-%m-%d)}}}

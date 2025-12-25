@@ -1,0 +1,24 @@
+#+TITLE: Author Bio Component
+#+OPTIONS: toc:nil num:nil
+
+#+ATTR_HTML: :class author-bio
+#+BEGIN_EXPORT html
+<div class="author-bio">
+  <div class="author-avatar">
+    <img src="/static/images/avatar.jpg" alt="Praveen Mallappa" />
+  </div>
+  <div class="author-info">
+    <h3 class="author-name">Praveen Mallappa</h3>
+    <p class="author-title">Systems Engineer & Agricultural Technologist</p>
+    <p class="author-description">
+      I explore the intersection of technology and agriculture, focusing on 
+      systems programming, distributed architectures, and sustainable farming practices.
+    </p>
+    <div class="author-links">
+      <a href="https://github.com/pmallappa" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/pmallappa" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:your-email@example.com">Email</a>
+    </div>
+  </div>
+</div>
+#+END_EXPORT

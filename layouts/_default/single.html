@@ -1,0 +1,82 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <!-- Article Header -->
+  <header class="mb-8">
+    <div class="flex items-center mb-4">
+      {{ range .Params.categories }}
+        <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full mr-2">{{ . }}</span>
+      {{ end }}
+    </div>
+    
+    <h1 class="text-4xl font-bold text-gray-900 leading-tight mb-4">{{ .Title }}</h1>
+    
+    <div class="flex items-center text-gray-600 text-sm mb-4">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      <span class="mx-3">·</span>
+      <span>{{ .ReadingTime }} min read</span>
+      {{ if .Params.series }}
+        <span class="mx-3">·</span>
+        <span>Part of {{ index .Params.series 0 }} series</span>
+      {{ end }}
+    </div>
+    
+    {{ if .Params.summary }}
+    <p class="text-lg text-gray-600 leading-relaxed">{{ .Params.summary }}</p>
+    {{ end }}
+    
+    <!-- Tags -->
+    {{ if .Params.tags }}
+    <div class="flex flex-wrap gap-2 mt-4">
+      {{ range .Params.tags }}
+        <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">{{ . }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg prose-gray max-w-none">
+    {{ .Content }}
+  </div>
+
+  <!-- Article Footer -->
+  <footer class="mt-12 pt-8 border-t border-gray-200">
+    <!-- Series Navigation -->
+    {{ if .Params.series }}
+    <div class="mb-8">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">More from {{ index .Params.series 0 }}</h3>
+      {{ $series := index .Params.series 0 }}
+      {{ $related := where site.RegularPages "Params.series" "intersect" .Params.series }}
+      {{ if gt (len $related) 1 }}
+      <div class="grid gap-4 sm:grid-cols-2">
+        {{ range first 4 $related }}
+          {{ if ne .Title $.Title }}
+          <a href="{{ .RelPermalink }}" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <h4 class="font-medium text-gray-900 mb-2">{{ .Title }}</h4>
+            <p class="text-sm text-gray-600 line-clamp-2">{{ .Summary }}</p>
+          </a>
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Related Posts -->
+    {{ $related := .Site.RegularPages.Related . | first 3 }}
+    {{ if $related }}
+    <div class="mb-8">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Related Articles</h3>
+      <div class="grid gap-4 sm:grid-cols-3">
+        {{ range $related }}
+        <a href="{{ .RelPermalink }}" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+          <h4 class="font-medium text-gray-900 mb-2">{{ .Title }}</h4>
+          <p class="text-sm text-gray-600 line-clamp-2">{{ .Summary }}</p>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </footer>
+</article>
+{{ end }}

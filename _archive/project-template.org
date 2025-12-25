@@ -1,0 +1,83 @@
+#+TITLE: {{PROJECT_NAME}} - Project Documentation
+#+AUTHOR: Praveen Mallappa
+#+DATE: {{{time(%Y-%m-%d)}}}
+#+HTML_HEAD: <link rel="stylesheet" href="/static/css/main.css" />
+#+OPTIONS: toc:t num:nil
+#+TAGS: project development
+
+* Project Overview
+
+** Description
+What the project does, why it exists, and who it's for.
+
+** Key Features
+- Feature 1: Description
+- Feature 2: Description
+- Feature 3: Description
+
+** Technology Stack
+- *Language:* Primary programming language
+- *Framework:* Web framework or libraries used
+- *Database:* Data storage solution
+- *Deployment:* Hosting and CI/CD setup
+
+* Getting Started
+
+** Prerequisites
+List any system requirements or dependencies.
+
+** Installation
+#+BEGIN_SRC bash
+git clone https://github.com/username/project-name
+cd project-name
+# installation commands
+#+END_SRC
+
+** Usage
+Basic usage examples and common commands.
+
+* Architecture
+
+** System Design
+High-level overview of the system architecture.
+
+** Database Schema
+If applicable, describe the data model.
+
+** API Documentation
+Key endpoints and their functionality.
+
+* Development
+
+** Local Development Setup
+How to set up the development environment.
+
+** Testing
+How to run tests and quality checks.
+
+** Contributing
+Guidelines for contributors.
+
+* Features & Roadmap
+
+** Current Features
+Link to [[./features/][detailed features documentation]].
+
+** Known Issues
+Link to [[./bugs/][bug tracking]] section.
+
+** Roadmap
+Planned features and improvements.
+
+* Links
+
+- [[https://github.com/username/project-name][GitHub Repository]]
+- [[https://project-demo.com][Live Demo]] (if available)
+- [[./features/][Feature Documentation]]
+- [[./bugs/][Issue Tracking]]
+
+---
+
+*Status:* Active Development | Stable | Maintenance
+*License:* MIT | GPL-3.0 | Apache-2.0
+*Updated:* {{{time(%Y-%m-%d)}}}

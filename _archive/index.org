@@ -1,0 +1,76 @@
+#+TITLE: Personal Website
+#+AUTHOR: Praveen Mallappa
+#+DATE: 2024-01-15
+#+HTML_HEAD: <link rel="stylesheet" href="/static/css/main.css" />
+#+OPTIONS: toc:nil num:nil
+
+#+ATTR_HTML: :class hero-section
+#+BEGIN_EXPORT html
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">Praveen Mallappa</h1>
+      <p class="hero-subtitle">Systems Engineer & Agricultural Technologist</p>
+      <p class="hero-description">
+        Exploring the intersection of technology and agriculture through 
+        systems programming, distributed architectures, and sustainable farming practices.
+      </p>
+      <div class="hero-links">
+        <a href="/blog/" class="btn-primary">Read Blog</a>
+        <a href="/projects/" class="btn-secondary">View Projects</a>
+        <a href="/resume/" class="btn-outline">Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+#+END_EXPORT
+
+* Welcome
+
+I'm a systems engineer with a passion for both technology and agriculture. This site is where I share insights about:
+
+- **Technology**: Systems programming, kernel development, distributed systems, and performance optimization
+- **Farming**: Precision agriculture, IoT sensors, sustainable practices, and agricultural technology
+
+* Recent Writing
+
+** Technology
+- [[blog:2024/01/15/building-efficient-kernel-modules][Building Efficient Kernel Modules]] - Deep dive into high-performance kernel development
+- [[blog:2024/01/12/distributed-systems-patterns][Distributed Systems Patterns]] - Common patterns for scalable architectures
+- [[blog:2024/01/08/rust-systems-programming][Rust for Systems Programming]] - Memory safety meets performance
+
+** Farming
+- [[blog:2024/01/10/iot-sensors-modern-agriculture][IoT Sensors in Modern Agriculture]] - Technology-driven sustainable farming
+- [[blog:2024/01/05/precision-irrigation-techniques][Precision Irrigation Techniques]] - Water-efficient farming methods
+- [[blog:2024/01/02/soil-health-monitoring][Soil Health Monitoring]] - Data-driven soil management
+
+* Current Projects
+
+** Open Source
+- [[project:kernel-perf-tools][Kernel Performance Tools]] - Linux kernel profiling utilities
+- [[project:farm-iot-platform][Farm IoT Platform]] - Open-source agricultural monitoring system
+- [[project:distributed-config][Distributed Config]] - Configuration management for microservices
+
+** Research
+- Agricultural sensor networks for precision farming
+- High-performance packet processing in kernel space
+- Sustainable technology practices for agriculture
+
+* Connect
+
+- **GitHub**: [[https://github.com/pmallappa][github.com/pmallappa]]
+- **LinkedIn**: [[https://linkedin.com/in/pmallappa][linkedin.com/in/pmallappa]]
+- **Email**: [[mailto:your-email@example.com][your-email@example.com]]
+
+#+BEGIN_callout-info
+#+ATTR_HTML: :title "Site Features"
+This site is built with Emacs Org-mode and features:
+- **Search**: Press Ctrl+K to search all content
+- **Table of Contents**: Press T to see article structure  
+- **Responsive Design**: Optimized for all devices
+- **Performance**: <150KB total bundle size for fast loading
+#+END_callout-info
+
+---
+
+*Last updated*: 2024-01-15 | *Built with*: Emacs Org-mode, GitHub Pages

@@ -1,0 +1,69 @@
+I want a personal website with following features
+- hosted using github pages
+- content management using directory structure
+- I want contents of the category 'technology' and 'farming'
+- contents are written using org-mode in emacs
+- hugo + alpine + tailwind for modern extensible rendering
+   - hugo as static site generator with org-mode content support
+   - alpine.js for lightweight reactive components (replaces heavy JS frameworks)
+   - tailwind css for utility-first styling and rapid development
+   - component-oriented design with hugo partials and shortcodes
+       - reusable components/partials (headers, footers, code blocks, galleries)
+       - org-mode content → hugo markdown conversion pipeline
+       - alpine.js components for interactive elements (modals, search, TOC)
+       - tailwind utilities for consistent responsive design
+       - composition over inheritance (mix and match components)
+   - use modern web technologies
+       - lightweight (< 150KB total bundle with tree-shaking)
+       - minimal node/nodejs dependency (only for build-time)
+       - alpine.js (~15KB), tailwind (purged), hugo (static generation)
+       - accessibility-first (WCAG 2.1 AA compliance)
+       - mobile-responsive with tailwind breakpoints
+- not too picture oriented, at the same time not too text like
+   - content-first approach with strategic visuals
+   - code snippets with syntax highlighting
+   - technical diagrams when needed
+   - callout boxes and info panels
+   - clean typography and reading experience
+- I like 
+    - fasterthanli.me for blog contents
+    - balajis.com/archive for its simplicity and overall design
+    - https://www.armindarvish.com/post/building_an_efficient_blogging_workflow_in_emacs/ for emacs oriented setup
+
+- simple animations & interactions with alpine.js
+    - top navbar appears upon upscroll (x-show directive with scroll detection)
+    - a side contents modal (TOC with x-transition, smooth scroll, progress indicator)
+    - a search popup with fuzzy searching (x-data with fuse.js, Ctrl+K shortcut)
+    - alpine.js reactive components (x-data, x-show, x-transition)
+    - tailwind hover/focus states and transitions
+    - keyboard navigation support with alpine event handlers 
+
+- github workflow
+  - every push triggers hugo build with tailwind CSS purging
+  - org files in content/ directory converted to markdown preprocessing
+  - hugo generates static site with alpine.js components and purged tailwind
+  - the build and rendered site will be pushed to gh-pages branch, keep devel and main branches clean
+  - automated lighthouse performance checks
+  - tailwind bundle size optimization and unused CSS removal
+  - alpine.js component validation and minification
+
+- Contents are of type 
+  - blog - contents/blog/<year>/<month>/<day>/<name>/{*.org,images/}
+  - series - contents/series/<name>/<num>/{*.org,images/} (with navigation)
+  - projects - contents/projects/{<feature>,<pr>,<bug>}/{*.org, images/}
+  - resume  - contents/resume/
+  - technology subcategories: systems/, languages/, architecture/
+  - farming subcategories: techniques/, technology/, sustainability/
+  - cross-linking between related content
+  - tagging system for discoverability
+
+- Component System Examples (Hugo + Alpine + Tailwind)
+  - {{< callout type="info" title="Title" >}} content {{< /callout >}} → styled info boxes with tailwind
+  - {{< code-tabs >}} {{< tab "Python" >}} {{< tab "JavaScript" >}} {{< /code-tabs >}} → alpine.js reactive tabs
+  - {{< gallery >}} image references {{< /gallery >}} → alpine.js lightbox with tailwind animations
+  - {{< series-nav prev="url" next="url" title="Series" >}} → tailwind styled navigation
+  - {{< project-status status="active" version="1.0" >}} → alpine.js status indicators
+  - hugo partials: {{ partial "bio.html" . }} → reusable author bio component
+  - alpine.js components: x-data="searchComponent()" for interactive search
+  - tailwind responsive utilities: sm:, md:, lg:, xl: breakpoints
+  - extensible via hugo shortcodes, alpine.js directives, and tailwind config

@@ -1,0 +1,17 @@
+{{- $status := .Get "status" -}}
+{{- $version := .Get "version" -}}
+{{- $license := .Get "license" -}}
+
+<div class="project-status">
+  {{- if $status -}}
+    <span class="status">Status: {{ $status }}</span>
+  {{- end -}}
+  
+  {{- if $version -}}
+    <span class="version">Version: {{ $version }}</span>
+  {{- end -}}
+  
+  {{- if $license -}}
+    <span class="license">License: {{ $license }}</span>
+  {{- end -}}
+</div>

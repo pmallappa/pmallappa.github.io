@@ -1,0 +1,34 @@
+{{- $prev := .Get "prev" -}}
+{{- $next := .Get "next" -}}
+{{- $title := .Get "title" -}}
+
+<nav class="series-nav">
+  {{- if $prev -}}
+    <a href="{{ $prev }}" class="series-prev">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+      Previous
+    </a>
+  {{- else -}}
+    <div></div>
+  {{- end -}}
+  
+  {{- if $title -}}
+    <div class="text-center">
+      <div class="text-sm text-secondary-600 dark:text-secondary-400">Part of</div>
+      <div class="font-semibold">{{ $title }}</div>
+    </div>
+  {{- end -}}
+  
+  {{- if $next -}}
+    <a href="{{ $next }}" class="series-next">
+      Next
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  {{- else -}}
+    <div></div>
+  {{- end -}}
+</nav>

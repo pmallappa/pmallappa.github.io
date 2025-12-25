@@ -1,0 +1,83 @@
+baseURL = "https://pmallappa.github.io"
+languageCode = "en-us"
+title = "Praveen Mallappa"
+theme = "personal"
+
+# Content configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = false
+    tabWidth = 2
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 20
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 30
+  [[menu.main]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 40
+
+# Site parameters
+[params]
+  description = "Personal website of Praveen Mallappa - Technology and Farming insights"
+  author = "Praveen Mallappa"
+  email = "your-email@example.com"
+  github = "pmallappa"
+  linkedin = "pmallappa"
+  
+  # Features
+  search = true
+  toc = true
+  analytics = false
+  
+  # Content categories
+  [params.categories]
+    technology = ["systems", "languages", "architecture"]
+    farming = ["techniques", "technology", "sustainability"]
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+
+# Build configuration
+[build]
+  writeStats = true
+  
+[[build.cachebusters]]
+  source = "assets/watching/hugo_stats\\.json"
+  target = "styles\\.css"
+
+[[build.cachebusters]]
+  source = "(postcss|tailwind)\\.config\\.js"
+  target = "css"
+
+[[build.cachebusters]]
+  source = "assets/.*\\.(js|ts|jsx|tsx)"
+  target = "js"
+
+[[build.cachebusters]]
+  source = "assets/.*\\.(.*)$"
+  target = "$1"

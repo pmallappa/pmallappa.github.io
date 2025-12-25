@@ -1,0 +1,245 @@
+name: Build and Deploy Website
+
+on:
+  push:
+    branches: [ main, devel ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
+
+    - name: Setup Emacs
+      uses: purcell/setup-emacs@master
+      with:
+        version: 29.1
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: |
+        npm install -g htmlhint csslint uglify-js csso-cli
+        sudo apt-get update
+        sudo apt-get install -y imagemagick optipng jpegoptim
+
+    - name: Configure Emacs and Org-mode
+      run: |
+        mkdir -p ~/.emacs.d
+        cat > ~/.emacs.d/init.el << 'EOF'
+        ;; Minimal init for CI
+        (require 'package)
+        (setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                                ("gnu" . "https://elpa.gnu.org/packages/")))
+        (package-initialize)
+        
+        ;; Install org-mode if needed
+        (unless (package-installed-p 'org)
+          (package-refresh-contents)
+          (package-install 'org))
+        
+        ;; Load website config
+        (load-file "./.emacs.d/pmallappa-website-config.el")
+        EOF
+
+    - name: Validate org files
+      run: |
+        # Check for draft files (should not be published)
+        find content -name "*.org" -exec grep -l "#+DRAFT: true" {} \; > drafts.txt || true
+        if [ -s drafts.txt ]; then
+          echo "Found draft files (will be skipped):"
+          cat drafts.txt
+        fi
+        
+        # Basic org syntax validation
+        find content -name "*.org" -exec emacs --batch --eval "(find-file \"{}\")" --eval "(org-mode)" --eval "(org-export-to-buffer 'html \"*test*\")" --kill \;
+
+    - name: Build website with org-publish
+      run: |
+        emacs --batch --load ~/.emacs.d/init.el \
+              --eval "(setq org-publish-use-timestamps-flag nil)" \
+              --eval "(org-publish-all t)" \
+              --kill
+
+    - name: Optimize static assets
+      run: |
+        # Optimize CSS
+        if [ -f "_site/static/css/main.css" ]; then
+          csso _site/static/css/main.css --output _site/static/css/main.css
+        fi
+        
+        # Optimize JavaScript
+        if [ -f "_site/static/js/main.js" ]; then
+          uglifyjs _site/static/js/main.js --compress --mangle --output _site/static/js/main.js
+        fi
+        
+        # Optimize images
+        find _site/static/images -name "*.png" -exec optipng -o7 {} \;
+        find _site/static/images -name "*.jpg" -exec jpegoptim --max=85 {} \;
+
+    - name: Generate search index
+      run: |
+        node << 'EOF'
+        const fs = require('fs');
+        const path = require('path');
+        
+        // Simple search index generator
+        const searchIndex = [];
+        
+        function extractTextFromHTML(html) {
+          return html.replace(/<[^>]*>/g, ' ')
+                    .replace(/\s+/g, ' ')
+                    .trim()
+                    .substring(0, 200);
+        }
+        
+        function processHTMLFile(filePath) {
+          try {
+            const content = fs.readFileSync(filePath, 'utf8');
+            const titleMatch = content.match(/<title>(.*?)<\/title>/i);
+            const title = titleMatch ? titleMatch[1] : path.basename(filePath, '.html');
+            
+            const bodyMatch = content.match(/<body[^>]*>(.*?)<\/body>/is);
+            const excerpt = bodyMatch ? extractTextFromHTML(bodyMatch[1]) : '';
+            
+            const url = filePath.replace('_site', '').replace(/index\.html$/, '');
+            
+            searchIndex.push({
+              title,
+              excerpt,
+              url,
+              category: filePath.includes('/technology/') ? 'technology' : 
+                       filePath.includes('/farming/') ? 'farming' : 'general'
+            });
+          } catch (error) {
+            console.warn(`Warning: Could not process ${filePath}`);
+          }
+        }
+        
+        // Find all HTML files
+        function walkDir(dir) {
+          const files = fs.readdirSync(dir);
+          files.forEach(file => {
+            const filePath = path.join(dir, file);
+            if (fs.statSync(filePath).isDirectory()) {
+              walkDir(filePath);
+            } else if (file.endsWith('.html')) {
+              processHTMLFile(filePath);
+            }
+          });
+        }
+        
+        if (fs.existsSync('_site')) {
+          walkDir('_site');
+          fs.writeFileSync('_site/search-index.json', JSON.stringify(searchIndex, null, 2));
+          console.log(`Generated search index with ${searchIndex.length} entries`);
+        }
+        EOF
+
+    - name: Quality checks
+      run: |
+        # HTML validation (basic)
+        find _site -name "*.html" -exec htmlhint {} \; || true
+        
+        # CSS validation
+        find _site -name "*.css" -exec csslint --quiet {} \; || true
+        
+        # Check for broken internal links (basic)
+        find _site -name "*.html" -exec grep -H 'href="[^http]' {} \; | \
+        while IFS=':' read -r file link; do
+          linkPath=$(echo "$link" | sed -n 's/.*href="\([^"]*\)".*/\1/p' | head -1)
+          if [[ "$linkPath" =~ ^/ ]]; then
+            fullPath="_site${linkPath}"
+            if [[ "$linkPath" =~ \.html?$ ]] && [ ! -f "$fullPath" ]; then
+              echo "Broken link in $file: $linkPath"
+            fi
+          fi
+        done || true
+
+    - name: Generate performance report
+      run: |
+        # Basic bundle size check
+        totalSize=$(find _site -type f \( -name "*.css" -o -name "*.js" \) -exec wc -c {} + | tail -1 | awk '{print $1}')
+        echo "Total CSS+JS bundle size: $totalSize bytes"
+        
+        # Check if under 150KB limit (154,600 bytes)
+        if [ "$totalSize" -gt 154600 ]; then
+          echo "WARNING: Bundle size exceeds 150KB limit specified in AI_AGENT_RULES.md"
+          echo "Current size: $(echo "scale=1; $totalSize / 1024" | bc)KB"
+        else
+          echo "✓ Bundle size within limits: $(echo "scale=1; $totalSize / 1024" | bc)KB"
+        fi
+
+    - name: Setup Pages
+      if: github.ref == 'refs/heads/main'
+      uses: actions/configure-pages@v4
+
+    - name: Upload artifact
+      if: github.ref == 'refs/heads/main'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '_site'
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+
+  lighthouse:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: deploy
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    
+    - name: Install Lighthouse CI
+      run: npm install -g @lhci/cli@0.12.x
+    
+    - name: Run Lighthouse CI
+      run: |
+        lhci autorun \
+          --collect.url="https://${{ github.repository_owner }}.github.io/" \
+          --collect.numberOfRuns=3 \
+          --assert.preset=lighthouse:no-pwa \
+          --assert.assertions.performance=0.9 \
+          --assert.assertions.accessibility=0.95 \
+          --assert.assertions.best-practices=0.9 \
+          --assert.assertions.seo=0.9 \
+          --upload.target=temporary-public-storage
+      continue-on-error: true

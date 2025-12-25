@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Description | default .Site.Params.description | default .Summary | truncate 160 }}">
+  
+  <!-- Tailwind CSS -->
+  {{ if hugo.IsProduction }}
+    {{ $css := resources.Get "css/styles.css" | postCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ else }}
+    {{ $css := resources.Get "css/styles.css" | postCSS }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ end }}
+  
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+  <header class="bg-white shadow-sm border-b">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+            {{ .Site.Title }}
+          </a>
+        </div>
+        
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            {{ range .Site.Menus.main }}
+              <a href="{{ .URL }}" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+                {{ .Name }}
+              </a>
+            {{ end }}
+          </div>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <div class="md:hidden" x-data="{ open: false }">
+          <button @click="open = !open" class="text-gray-600 hover:text-gray-900">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          
+          <!-- Mobile menu -->
+          <div x-show="open" @click.away="open = false" class="absolute top-16 right-4 bg-white shadow-lg rounded-lg py-2 w-48 z-50">
+            {{ range .Site.Menus.main }}
+              <a href="{{ .URL }}" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                {{ .Name }}
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="bg-white border-t mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center text-gray-600">
+        <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

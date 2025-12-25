@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component styles */
+@layer components {
+  /* Callout components */
+  .callout {
+    @apply my-6 p-4 rounded-lg border-l-4 bg-secondary-50 dark:bg-secondary-800;
+  }
+  
+  .callout-info {
+    @apply border-l-primary-500 bg-primary-50 dark:bg-primary-900/20;
+  }
+  
+  .callout-warning {
+    @apply border-l-accent-500 bg-accent-50 dark:bg-accent-900/20;
+  }
+  
+  .callout-error {
+    @apply border-l-red-500 bg-red-50 dark:bg-red-900/20;
+  }
+  
+  .callout-success {
+    @apply border-l-green-500 bg-green-50 dark:bg-green-900/20;
+  }
+  
+  .callout-title {
+    @apply font-semibold text-secondary-900 dark:text-secondary-100 mb-2;
+  }
+  
+  /* Code block enhancements */
+  .code-block {
+    @apply relative my-6 bg-secondary-900 rounded-lg overflow-hidden;
+  }
+  
+  .code-header {
+    @apply flex justify-between items-center px-4 py-2 bg-secondary-800 border-b border-secondary-700;
+  }
+  
+  .code-language {
+    @apply text-xs text-secondary-400 uppercase tracking-wide;
+  }
+  
+  .code-copy-btn {
+    @apply px-3 py-1 text-xs bg-transparent border border-secondary-600 text-secondary-300 rounded hover:bg-secondary-700 transition-colors;
+  }
+  
+  /* Series navigation */
+  .series-nav {
+    @apply flex justify-between items-center my-8 p-6 bg-secondary-100 dark:bg-secondary-800 rounded-lg;
+  }
+  
+  .series-prev,
+  .series-next {
+    @apply flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded hover:bg-primary-700 transition-colors;
+  }
+  
+  /* Tag styling */
+  .tag-list {
+    @apply flex flex-wrap gap-2 my-4;
+  }
+  
+  .tag-item {
+    @apply px-3 py-1 text-sm bg-secondary-200 dark:bg-secondary-700 text-secondary-700 dark:text-secondary-300 rounded hover:bg-primary-500 hover:text-white transition-colors;
+  }
+  
+  /* Hero section */
+  .hero-section {
+    @apply py-20 bg-gradient-to-br from-primary-50 to-accent-50 dark:from-secondary-900 dark:to-secondary-800;
+  }
+  
+  .hero-title {
+    @apply text-4xl md:text-6xl font-bold text-secondary-900 dark:text-white mb-4;
+  }
+  
+  .hero-subtitle {
+    @apply text-xl md:text-2xl text-primary-600 dark:text-primary-400 mb-6;
+  }
+  
+  .hero-description {
+    @apply text-lg text-secondary-600 dark:text-secondary-300 mb-8 max-w-3xl mx-auto;
+  }
+  
+  .hero-links {
+    @apply flex flex-wrap justify-center gap-4;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary-600 text-white font-medium rounded-lg hover:bg-secondary-700 transition-colors;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-primary-600 text-primary-600 font-medium rounded-lg hover:bg-primary-600 hover:text-white transition-colors;
+  }
+  
+  /* Project status */
+  .project-status {
+    @apply flex flex-wrap gap-4 my-6 p-4 bg-secondary-100 dark:bg-secondary-800 rounded-lg;
+  }
+  
+  .project-status span {
+    @apply px-3 py-1 text-sm bg-white dark:bg-secondary-700 rounded font-medium;
+  }
+  
+  /* Author bio */
+  .author-bio {
+    @apply flex gap-4 p-6 bg-secondary-50 dark:bg-secondary-800 rounded-lg my-8;
+  }
+  
+  .author-avatar img {
+    @apply w-16 h-16 rounded-full object-cover;
+  }
+  
+  .author-name {
+    @apply text-lg font-semibold text-secondary-900 dark:text-white mb-1;
+  }
+  
+  .author-title {
+    @apply text-sm text-primary-600 dark:text-primary-400 mb-2;
+  }
+  
+  .author-description {
+    @apply text-sm text-secondary-600 dark:text-secondary-300 mb-3;
+  }
+  
+  .author-links {
+    @apply flex gap-3;
+  }
+  
+  .author-links a {
+    @apply text-sm text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300;
+  }
+}
+
+/* Alpine.js transition utilities */
+@layer utilities {
+  .transition-slide-down {
+    transition: transform 250ms ease-out, opacity 250ms ease-out;
+  }
+  
+  .slide-down-enter {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  
+  .slide-down-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .slide-down-leave {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .slide-down-leave-active {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}

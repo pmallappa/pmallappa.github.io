@@ -1,0 +1,80 @@
+<!-- Search Modal -->
+<div x-data="search()" 
+     x-show="open"
+     x-transition.opacity
+     @click.away="closeSearch()"
+     class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
+  
+  <div class="flex items-start justify-center min-h-screen px-4 pt-20">
+    <div x-show="open"
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="transform scale-90 opacity-0"
+         x-transition:enter-end="transform scale-100 opacity-1"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="transform scale-100 opacity-1"
+         x-transition:leave-end="transform scale-90 opacity-0"
+         class="w-full max-w-2xl bg-white dark:bg-secondary-800 rounded-lg shadow-xl overflow-hidden">
+      
+      <!-- Search Input -->
+      <div class="p-4 border-b border-secondary-200 dark:border-secondary-700">
+        <input x-ref="searchInput"
+               x-model="query"
+               @input="performSearch()"
+               type="text" 
+               placeholder="Search articles, projects, and content..."
+               class="w-full px-0 py-2 text-lg bg-transparent border-0 focus:outline-none focus:ring-0 text-secondary-900 dark:text-white placeholder-secondary-500 dark:placeholder-secondary-400">
+      </div>
+      
+      <!-- Search Results -->
+      <div class="max-h-96 overflow-y-auto">
+        <template x-if="query.trim() === ''">
+          <div class="p-6 text-center text-secondary-500 dark:text-secondary-400">
+            Start typing to search...
+          </div>
+        </template>
+        
+        <template x-if="query.trim() !== '' && results.length === 0">
+          <div class="p-6 text-center text-secondary-500 dark:text-secondary-400">
+            No results found for "<span x-text="query"></span>"
+          </div>
+        </template>
+        
+        <template x-for="result in results" :key="result.permalink">
+          <a :href="result.permalink" 
+             @click="closeSearch()"
+             class="block p-4 border-b border-secondary-100 dark:border-secondary-700 hover:bg-secondary-50 dark:hover:bg-secondary-700 transition-colors">
+            
+            <div class="font-semibold text-secondary-900 dark:text-white mb-1" 
+                 x-html="highlightMatch(result.title, query)">
+            </div>
+            
+            <div class="text-sm text-secondary-600 dark:text-secondary-300 mb-2" 
+                 x-html="highlightMatch(result.summary || result.content.substring(0, 150) + '...', query)">
+            </div>
+            
+            <div class="flex items-center gap-2 text-xs text-secondary-500 dark:text-secondary-400">
+              <span x-text="result.section || 'Page'"></span>
+              <template x-if="result.date">
+                <span>•</span>
+                <span x-text="new Date(result.date).toLocaleDateString()"></span>
+              </template>
+              <template x-if="result.tags && result.tags.length > 0">
+                <span>•</span>
+                <span x-text="result.tags.slice(0, 3).join(', ')"></span>
+              </template>
+            </div>
+          </a>
+        </template>
+      </div>
+      
+      <!-- Search Footer -->
+      <div class="p-3 bg-secondary-50 dark:bg-secondary-900 text-xs text-secondary-500 dark:text-secondary-400 flex justify-between items-center border-t border-secondary-200 dark:border-secondary-700">
+        <div class="flex items-center gap-4">
+          <span>Press <kbd class="px-2 py-1 bg-white dark:bg-secondary-800 rounded border border-secondary-300 dark:border-secondary-600 font-mono">↑↓</kbd> to navigate</span>
+          <span>Press <kbd class="px-2 py-1 bg-white dark:bg-secondary-800 rounded border border-secondary-300 dark:border-secondary-600 font-mono">↵</kbd> to select</span>
+        </div>
+        <span>Press <kbd class="px-2 py-1 bg-white dark:bg-secondary-800 rounded border border-secondary-300 dark:border-secondary-600 font-mono">ESC</kbd> to close</span>
+      </div>
+    </div>
+  </div>
+</div>

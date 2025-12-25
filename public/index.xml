@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Praveen Mallappa</title><link>https://pmallappa.github.io/</link><description>Recent content on Praveen Mallappa</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pmallappa.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://pmallappa.github.io/about/</link><pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/about/</guid><description>&lt;h1 id="about-praveen-mallappa"&gt;About Praveen Mallappa&lt;/h1&gt;
+
+
+
+
+
+
+
+&lt;div class="callout border-l-4 p-4 rounded-r-lg border-blue-200 bg-blue-50 text-blue-800 my-6"&gt;
+ &lt;div class="flex items-start"&gt;
+ &lt;div class="flex-shrink-0"&gt;
+ 
+ &lt;svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20"&gt;
+ &lt;path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/&gt;
+ &lt;/svg&gt;
+ 
+ &lt;/div&gt;
+ &lt;div class="ml-3 flex-1"&gt;
+ 
+ &lt;h4 class="font-semibold mb-2"&gt;Professional Summary&lt;/h4&gt;
+ 
+ &lt;div class="prose prose-sm max-w-none"&gt;
+ &lt;strong&gt;Experienced technology leader&lt;/strong&gt; with 12+ years in distributed systems, cloud infrastructure, and full-stack development. &lt;strong&gt;Passionate farmer&lt;/strong&gt; exploring sustainable agriculture through precision technology and data-driven practices.
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="professional-experience"&gt;Professional Experience&lt;/h2&gt;
+&lt;h3 id="senior-software-architect--techcorp-2019---present"&gt;Senior Software Architect | TechCorp (2019 - Present)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Leading distributed systems architecture&lt;/strong&gt; for enterprise-scale applications serving 10M+ users daily.&lt;/p&gt;</description></item><item><title>Microservices Patterns and Practices</title><link>https://pmallappa.github.io/series/microservices-patterns-and-practices/</link><pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/series/microservices-patterns-and-practices/</guid><description>Deep dive into microservices architecture patterns, implementation strategies, and operational best practices for building distributed systems at scale.</description></item><item><title>Modern Systems Architecture</title><link>https://pmallappa.github.io/series/modern-systems-architecture/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/series/modern-systems-architecture/</guid><description>Comprehensive guide to designing and building scalable, resilient distributed systems using modern architecture patterns and technologies.</description></item><item><title>Distributed IoT Edge Computing Platform</title><link>https://pmallappa.github.io/projects/iot-edge-computing-platform/</link><pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/projects/iot-edge-computing-platform/</guid><description>High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination.</description></item><item><title>Rust Memory Management Patterns</title><link>https://pmallappa.github.io/blog/rust-memory-patterns/</link><pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/blog/rust-memory-patterns/</guid><description>Advanced memory safety techniques in Rust for systems programming, exploring ownership, lifetimes, and zero-cost abstractions.</description></item><item><title>IoT Sensors in Precision Agriculture</title><link>https://pmallappa.github.io/blog/iot-precision-agriculture/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/blog/iot-precision-agriculture/</guid><description>Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture.</description></item><item><title>Building Efficient Kernel Modules</title><link>https://pmallappa.github.io/blog/kernel-modules-performance/</link><pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/blog/kernel-modules-performance/</guid><description>Deep dive into high-performance Linux kernel development, covering module design, memory management, and optimization techniques.</description></item><item><title>Engineering Soil Microbiomes for Sustainable Agriculture</title><link>https://pmallappa.github.io/blog/soil-microbiome-engineering/</link><pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate><guid>https://pmallappa.github.io/blog/soil-microbiome-engineering/</guid><description>Explore how engineered soil microbiomes can improve crop yields, reduce chemical inputs, and promote sustainable farming practices.</description></item></channel></rss>

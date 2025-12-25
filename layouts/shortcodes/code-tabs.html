@@ -1,0 +1,38 @@
+<div class="code-tabs my-6" x-data="{ activeTab: 0 }">
+  {{ $tabs := split (.Inner | chomp) "```" }}
+  {{ $validTabs := slice }}
+  {{ range $index, $tab := $tabs }}
+    {{ if and $tab (not (eq (mod $index 2) 0)) }}
+      {{ $validTabs = $validTabs | append $tab }}
+    {{ end }}
+  {{ end }}
+  
+  <!-- Tab Headers -->
+  <div class="flex border-b border-gray-200 bg-gray-50 rounded-t-lg overflow-hidden">
+    {{ range $index, $tab := $validTabs }}
+      {{ $lines := split $tab "\n" }}
+      {{ $firstLine := index $lines 0 }}
+      {{ $lang := $firstLine }}
+      <button 
+        @click="activeTab = {{ $index }}" 
+        :class="{ 'bg-white border-b-2 border-blue-500 text-blue-600': activeTab === {{ $index }}, 'text-gray-600 hover:text-gray-900': activeTab !== {{ $index }} }"
+        class="px-4 py-2 text-sm font-medium transition-colors"
+      >
+        {{ $lang | title }}
+      </button>
+    {{ end }}
+  </div>
+  
+  <!-- Tab Content -->
+  <div class="relative">
+    {{ range $index, $tab := $validTabs }}
+      {{ $lines := split $tab "\n" }}
+      {{ $firstLine := index $lines 0 }}
+      {{ $lang := $firstLine }}
+      {{ $content := delimit (after 1 $lines) "\n" }}
+      <div x-show="activeTab === {{ $index }}" class="tab-content">
+        <pre class="language-{{ $lang }} rounded-t-none rounded-b-lg overflow-x-auto"><code class="language-{{ $lang }}">{{ $content }}</code></pre>
+      </div>
+    {{ end }}
+  </div>
+</div>
