@@ -21,16 +21,20 @@
   
   
   
+  <script src="/js/theme-toggle.js"></script>
+  
+  
+  
   
   
   <link rel="icon" href="/favicon.ico">
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed pt-16">
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
   <header class="bg-white shadow-sm border-b fixed top-0 left-0 right-0 z-50">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex-shrink-0">
-          <a href="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+          <a href="/" class="text-xl font-bold text-gray-900 hover:text-nord-frost-2 transition-colors">
             Prem Mallappa
           </a>
         </div>
@@ -38,26 +42,35 @@
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-8">
             
-              <a href="/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Home
               </a>
             
-              <a href="/articles/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/articles/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Articles
               </a>
             
-              <a href="/series/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/series/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Series
               </a>
             
-              <a href="/projects/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/projects/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Projects
               </a>
             
-              <a href="/resume/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/resume/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Resume
               </a>
             
+            
+            <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle theme">
+              <svg id="theme-toggle-dark-icon" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+              <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+              </svg>
+            </button>
           </div>
         </div>
         
@@ -72,23 +85,23 @@
           
           <div x-show="open" @click.away="open = false" class="fixed top-16 right-4 bg-white shadow-lg rounded-lg py-2 w-48 z-50 border border-gray-200">
             
-              <a href="/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Home
               </a>
             
-              <a href="/articles/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/articles/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Articles
               </a>
             
-              <a href="/series/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/series/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Series
               </a>
             
-              <a href="/projects/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/projects/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Projects
               </a>
             
-              <a href="/resume/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/resume/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Resume
               </a>
             
@@ -98,33 +111,42 @@
     </nav>
   </header>
 
-  <main>
+  <main class="pt-16">
     
-<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
+<div class="h-16"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="flex gap-8">
+    
+    <article class="flex-1 min-w-0 max-w-4xl">
+      
+<header class="mb-8">
+  <div class="flex items-center mb-4">
+    
+    
+  </div>
   
-  <header class="mb-8">
-    <div class="flex items-center mb-4">
-      
-    </div>
-    
-    <h1 class="text-4xl font-bold text-gray-900 leading-tight mb-4">About</h1>
-    
-    <div class="flex items-center text-gray-600 text-sm mb-4">
-      <time datetime="2024-01-20">January 20, 2024</time>
-      <span class="mx-3">·</span>
-      <span>4 min read</span>
-      
-    </div>
-    
-    
-    
-    
-    
-  </header>
+  <h1 class="text-4xl font-bold text-gray-900 leading-tight mb-4">About</h1>
+  
+  
+<div class="flex items-center text-gray-600 text-sm mb-4">
+  <time datetime="2024-01-20">January 20, 2024</time>
+  <span class="mx-3">·</span>
+  <span>4 min read</span>
+  
+</div>
 
   
-  <div class="prose prose-lg prose-gray max-w-none">
-    <h1 id="about-prem-mallappa">About Prem Mallappa</h1>
+  
+  
+  
+
+
+</header>
+
+
+      
+      <div class="prose prose-lg prose-gray max-w-none">
+        <h1 id="about-prem-mallappa">About Prem Mallappa</h1>
 
 
 
@@ -339,27 +361,148 @@ Java ██████████████████       Advanced (6 ye
 <hr>
 <p><em>Last Updated: January 2024</em></p>
 
+      </div>
+
+      
+      <footer class="mt-12 pt-8 border-t border-gray-200">
+        
+        
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+    <div class="hidden lg:block w-64 flex-shrink-0">
+      
+        
+
+<aside class="toc-sidebar">
+  <div class="toc-container">
+    <button class="toc-toggle" aria-label="Toggle table of contents">
+      <span class="toc-title">On this page</span>
+      <svg class="toc-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    </button>
+    <nav class="toc-nav">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#professional-experience">Professional Experience</a>
+      <ul>
+        <li><a href="#senior-software-architect--techcorp-2019---present">Senior Software Architect | TechCorp (2019 - Present)</a></li>
+        <li><a href="#principal-engineer--cloudscale-systems-2016---2019">Principal Engineer | CloudScale Systems (2016 - 2019)</a></li>
+        <li><a href="#full-stack-developer--startuptech-2012---2016">Full-Stack Developer | StartupTech (2012 - 2016)</a></li>
+      </ul>
+    </li>
+    <li><a href="#technical-expertise">Technical Expertise</a>
+      <ul>
+        <li><a href="#programming-languages"><strong>Programming Languages</strong></a></li>
+        <li><a href="#architecture--infrastructure"><strong>Architecture &amp; Infrastructure</strong></a></li>
+        <li><a href="#devops--tooling"><strong>DevOps &amp; Tooling</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#farming--agriculture">Farming &amp; Agriculture</a>
+      <ul>
+        <li><a href="#sustainable-farming-practice--personal-farm-2020---present"><strong>Sustainable Farming Practice</strong> | Personal Farm (2020 - Present)</a></li>
+        <li><a href="#agricultural-technology-research"><strong>Agricultural Technology Research</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#education--certifications">Education &amp; Certifications</a>
+      <ul>
+        <li><a href="#education"><strong>Education</strong></a></li>
+        <li><a href="#professional-certifications"><strong>Professional Certifications</strong></a></li>
+        <li><a href="#continuing-education"><strong>Continuing Education</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#publications--speaking">Publications &amp; Speaking</a>
+      <ul>
+        <li><a href="#technical-publications"><strong>Technical Publications</strong></a></li>
+        <li><a href="#conference-speaking"><strong>Conference Speaking</strong></a></li>
+        <li><a href="#open-source-contributions"><strong>Open Source Contributions</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#interests--community">Interests &amp; Community</a>
+      <ul>
+        <li><a href="#technology-community"><strong>Technology Community</strong></a></li>
+        <li><a href="#sustainable-living"><strong>Sustainable Living</strong></a></li>
+        <li><a href="#hobbies"><strong>Hobbies</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#contact-information">Contact Information</a></li>
+  </ul>
+</nav>
+    </nav>
   </div>
+</aside>
 
-  
-  <footer class="mt-12 pt-8 border-t border-gray-200">
-    
-    
 
-    
-    
-    
-  </footer>
-</article>
+      
+    </div>
+  </div>
+</div>
+
+
+<button class="toc-mobile-toggle lg:hidden" aria-label="Toggle table of contents">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</button>
 
   </main>
 
-  <footer class="border-t mt-16" style="background: transparent;">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-white">
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div class="text-center text-gray-600">
         <p>&copy; 2025 Prem Mallappa. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+      const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+      const themeToggleBtn = document.getElementById('theme-toggle');
+
+      if (!themeToggleBtn || !themeToggleDarkIcon || !themeToggleLightIcon) {
+        return;
+      }
+
+      function getTheme() {
+        if (localStorage.getItem('color-theme')) {
+          return localStorage.getItem('color-theme');
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          themeToggleLightIcon.classList.remove('hidden');
+          themeToggleDarkIcon.classList.add('hidden');
+        } else {
+          document.documentElement.classList.remove('dark');
+          themeToggleLightIcon.classList.add('hidden');
+          themeToggleDarkIcon.classList.remove('hidden');
+        }
+        localStorage.setItem('color-theme', theme);
+      }
+
+      const currentTheme = getTheme();
+      setTheme(currentTheme);
+
+      themeToggleBtn.addEventListener('click', function() {
+        const currentTheme = getTheme();
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+    });
+  </script>
 </body>
 </html>

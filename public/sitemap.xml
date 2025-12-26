@@ -2,16 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/series/advent-of-code-2015/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/advent-of-code/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/algorithms/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/problem-solving/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/programming/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/rust/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-12-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/articles/</loc>
     <lastmod>2024-12-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/building-modern-static-sites-with-hugo/</loc>
-    <lastmod>2024-12-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-12-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/articles/hugo-deployment-optimization/</loc>
+    <loc>http://localhost:1313/articles/2024/12/30/hugo-deployment-optimization/</loc>
     <lastmod>2024-12-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/deployment/</loc>
@@ -26,19 +50,13 @@
     <loc>http://localhost:1313/tags/optimization/</loc>
     <lastmod>2024-12-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-12-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-12-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/technology/</loc>
     <lastmod>2024-12-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/advanced/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/hugo-advanced-features/</loc>
+    <loc>http://localhost:1313/articles/2024/12/29/hugo-advanced-features/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/web-development/</loc>
@@ -47,7 +65,7 @@
     <loc>http://localhost:1313/tags/css/</loc>
     <lastmod>2024-12-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/hugo-tailwind-styling/</loc>
+    <loc>http://localhost:1313/articles/2024/12/28/hugo-tailwind-styling/</loc>
     <lastmod>2024-12-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tailwind/</loc>
@@ -56,7 +74,7 @@
     <loc>http://localhost:1313/tags/web-design/</loc>
     <lastmod>2024-12-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/hugo-custom-templates/</loc>
+    <loc>http://localhost:1313/articles/2024/12/27/hugo-custom-templates/</loc>
     <lastmod>2024-12-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/layouts/</loc>
@@ -65,7 +83,7 @@
     <loc>http://localhost:1313/tags/templates/</loc>
     <lastmod>2024-12-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/hugo-content-organization/</loc>
+    <loc>http://localhost:1313/articles/2024/12/26/hugo-content-organization/</loc>
     <lastmod>2024-12-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/content-management/</loc>
@@ -74,7 +92,7 @@
     <loc>http://localhost:1313/series/hugo-static-sites/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/hugo-getting-started/</loc>
+    <loc>http://localhost:1313/articles/2024/12/25/hugo-getting-started/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/jamstack/</loc>
@@ -84,9 +102,6 @@
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/</loc>
-    <lastmod>2024-12-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/series/</loc>
     <lastmod>2024-12-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/static-site/</loc>
@@ -129,9 +144,6 @@
     <lastmod>2024-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/kubernetes/</loc>
-    <lastmod>2024-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/rust/</loc>
     <lastmod>2024-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/memory-safety/</loc>
@@ -190,6 +202,18 @@
   </url><url>
     <loc>http://localhost:1313/tags/sustainable-farming/</loc>
     <lastmod>2024-01-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/articles/2015/12/01/aoc-2015-day-01-not-quite-lisp/</loc>
+    <lastmod>2015-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2015/12/01/aoc-2015-day-01-not-quite-lisp/</loc>
+    <lastmod>2015-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/advent-of-code-2015/</loc>
+    <lastmod>2015-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2015-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/bricks/</loc>
   </url><url>

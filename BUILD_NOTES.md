@@ -56,3 +56,16 @@ Hugo handles everything automatically:
 - ✅ Smart incremental rebuilds
 - ✅ CSS purging in production
 - ✅ Live reload during development
+
+## Emacs (org-mode → ox-hugo) Quick Start
+
+- Launch in writing profile (no GUI):
+	```bash
+	emacs -nw --profile writing
+	```
+- In any org buffer for this site, turn on auto-export to Hugo:
+	```elisp
+	M-x org-hugo-auto-export-mode
+	```
+- To export everything manually: `C-c h e` (from emacs-blog-config.el bindings)
+- To preview: `C-c h s` starts `hugo server --buildDrafts --navigateToChanged`

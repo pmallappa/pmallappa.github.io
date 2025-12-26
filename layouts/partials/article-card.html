@@ -1,0 +1,52 @@
+<!-- Article/Blog Post Card -->
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
+        {{ range .Params.categories }}
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">{{ . }}</span>
+        {{ end }}
+        {{ if .Draft }}
+          <span class="bg-nord-aurora-yellow/20 text-nord-aurora-yellow border border-nord-aurora-yellow/30 text-xs px-2 py-1 rounded-full font-medium">Ongoing</span>
+        {{ end }}
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="{{ .RelPermalink }}" class="hover:text-nord-frost-2">{{ .Title }}</a>
+      </h2>
+      
+      {{ if .Summary }}
+      <p class="text-gray-600 mb-4">{{ .Summary }}</p>
+      {{ end }}
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          <span class="mx-2">•</span>
+          <span>{{ .ReadingTime }} min read</span>
+        </div>
+        {{ if .Params.series }}
+          {{ $series := .Params.series }}
+          {{ if reflect.IsSlice $series }}
+            {{ $series = index $series 0 }}
+          {{ end }}
+          {{ $seriesArticles := where .Site.AllPages "Params.series" $series }}
+          {{ $relatedArticles := where $seriesArticles "Type" "articles" }}
+          {{ $totalParts := len $relatedArticles }}
+          <span class="text-gray-700">
+            <span class="bg-nord-aurora-purple/20 text-nord-aurora-purple border border-nord-aurora-purple/30 text-xs px-2 py-1 rounded-full font-semibold">Part {{ .Params.part }} of {{ $totalParts }}</span>
+            <span class="ml-1">in {{ $series }}</span>
+          </span>
+        {{ end }}
+      </div>
+      
+      {{ if .Params.tags }}
+      <div class="flex flex-wrap gap-2 mt-4">
+        {{ range .Params.tags }}
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</article>

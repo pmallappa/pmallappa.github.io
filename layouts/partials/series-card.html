@@ -1,0 +1,39 @@
+<!-- Series Card -->
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3 flex-wrap gap-2">
+        {{ range .Params.categories }}
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full">{{ . }}</span>
+        {{ end }}
+        {{ $allArticles := where $.Site.AllPages "Params.series" .Title }}
+        {{ $seriesArticles := where $allArticles "Type" "articles" }}
+        {{ $articleCount := len $seriesArticles }}
+        {{ $hasDrafts := false }}
+        {{ range $seriesArticles }}
+          {{ if .Draft }}
+            {{ $hasDrafts = true }}
+          {{ end }}
+        {{ end }}
+        <span class="bg-nord-aurora-purple/20 text-nord-aurora-purple border border-nord-aurora-purple/30 text-xs px-2 py-1 rounded-full font-medium">
+          Series • {{ $articleCount }} article{{ if ne $articleCount 1 }}s{{ end }}
+        </span>
+        {{ if or (eq $articleCount 0) $hasDrafts }}
+          <span class="bg-nord-aurora-yellow/20 text-nord-aurora-yellow border border-nord-aurora-yellow/30 text-xs px-2 py-1 rounded-full font-medium">Ongoing</span>
+        {{ end }}
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="{{ .RelPermalink }}" class="hover:text-nord-frost-2">{{ .Title }}</a>
+      </h2>
+      
+      {{ if .Description }}
+      <p class="text-gray-600 mb-4">{{ .Description }}</p>
+      {{ end }}
+      
+      <div class="text-sm text-gray-500">
+        {{ .Date.Format "Jan 2, 2006" }}
+      </div>
+    </div>
+  </div>
+</article>

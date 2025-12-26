@@ -1,8 +1,9 @@
 {{ define "main" }}
+
 {{ partial "section-header.html" . }}
 
     {{ range .Paginator.Pages }}
-      {{ partial "brick_project_card.html" . }}
+      {{ partial "project-card.html" . }}
     {{ end }}
 
 {{ partial "section-footer.html" . }}

@@ -1,0 +1,243 @@
+{{/* Series Table of Contents - Shows all articles in series + page TOC */}}
+<aside class="toc-sidebar toc-series-sidebar">
+  <!-- In this Series section -->
+  {{ $series := .Title }}
+  {{ if .Params.series }}
+    {{ $seriesParam := .Params.series }}
+    {{ if reflect.IsSlice $seriesParam }}
+      {{ $series = index $seriesParam 0 }}
+    {{ else }}
+      {{ $series = $seriesParam }}
+    {{ end }}
+  {{ end }}
+  {{ $allArticles := where .Site.AllPages "Params.series" $series }}
+  {{ $relatedArticles := where $allArticles "Type" "articles" }}
+  {{ $sortedArticles := sort $relatedArticles "Params.part" "asc" }}
+  
+  {{ if $sortedArticles }}
+  <div class="toc-container">
+    <button class="toc-toggle" aria-label="Toggle series articles">
+      <span class="toc-title">In this Series</span>
+      <svg class="toc-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    </button>
+    <nav class="toc-nav toc-series-nav">
+      <ul>
+        {{ range $sortedArticles }}
+        <li class="{{ if eq .RelPermalink $.RelPermalink }}active{{ end }}">
+          <a href="{{ .RelPermalink }}">
+            {{ if .Params.part }}<span class="part-number">{{ .Params.part }}.</span>{{ end }}
+            {{ .Title }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+  {{ end }}
+  
+  <!-- On this Page section -->
+  {{ if .TableOfContents }}
+  <div class="toc-container">
+    <button class="toc-toggle" aria-label="Toggle table of contents">
+      <span class="toc-title">On this page</span>
+      <svg class="toc-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    </button>
+    <nav class="toc-nav">
+      {{ .TableOfContents }}
+    </nav>
+  </div>
+  {{ end }}
+</aside>
+
+<style>
+/* TOC Sidebar Styles */
+.toc-sidebar {
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding-left: 2rem;
+  z-index: 10;
+}
+
+.toc-container {
+  margin-bottom: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+.toc-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #f9fafb;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1f2937;
+  transition: background-color 0.2s;
+}
+
+.toc-toggle:hover {
+  background: #f3f4f6;
+}
+
+.toc-title {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.toc-icon {
+  transition: transform 0.2s;
+}
+
+.toc-container.collapsed .toc-icon {
+  transform: rotate(-90deg);
+}
+
+.toc-container.collapsed .toc-nav {
+  display: none;
+}
+
+.toc-nav {
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+.toc-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-nav li {
+  margin: 0.5rem 0;
+}
+
+.toc-nav a {
+  color: #4b5563;
+  text-decoration: none;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.toc-nav a:hover {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.toc-nav li.active > a {
+  color: #2563eb;
+  font-weight: 600;
+  background: #eff6ff;
+}
+
+.toc-series-nav .part-number {
+  color: #9ca3af;
+  font-weight: 400;
+  margin-right: 0.25rem;
+}
+
+/* Nested TOC styles */
+.toc-nav ul ul {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+}
+
+.toc-nav ul ul a {
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+
+/* Mobile responsive */
+@media (max-width: 1024px) {
+  .toc-sidebar {
+    position: fixed;
+    top: 64px;
+    right: -320px;
+    width: 300px;
+    height: calc(100vh - 64px);
+    background: white;
+    border-left: 1px solid #e5e7eb;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 40;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .toc-sidebar.open {
+    right: 0;
+  }
+}
+
+/* Toggle button for mobile */
+@media (max-width: 1024px) {
+  .toc-mobile-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+  }
+}
+
+@media (min-width: 1025px) {
+  .toc-mobile-toggle {
+    display: none;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Toggle individual sections
+  const toggleButtons = document.querySelectorAll('.toc-toggle');
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      this.parentElement.classList.toggle('collapsed');
+    });
+  });
+  
+  // Mobile drawer toggle
+  const mobileToggle = document.querySelector('.toc-mobile-toggle');
+  const tocSidebar = document.querySelector('.toc-sidebar');
+  
+  if (mobileToggle && tocSidebar) {
+    mobileToggle.addEventListener('click', function() {
+      tocSidebar.classList.toggle('open');
+    });
+    
+    // Close on outside click
+    document.addEventListener('click', function(e) {
+      if (window.innerWidth <= 1024 && 
+          !tocSidebar.contains(e.target) && 
+          !mobileToggle.contains(e.target) &&
+          tocSidebar.classList.contains('open')) {
+        tocSidebar.classList.remove('open');
+      }
+    });
+  }
+});
+</script>

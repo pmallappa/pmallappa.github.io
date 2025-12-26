@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="flex gap-8">
+    <article class="flex-1 min-w-0 max-w-4xl">
+      {{ partial "series-header.html" . }}
+
+      <!-- Content -->
+      <div class="prose prose-lg prose-gray max-w-none mb-12">
+        {{ .Content }}
+      </div>
+
+      <!-- Articles in this Series -->
+      {{ $series := .Title }}
+      {{ $allArticles := where .Site.AllPages "Params.series" $series }}
+      {{ $relatedArticles := where $allArticles "Type" "articles" }}
+      {{ $sortedArticles := sort $relatedArticles "Params.part" "asc" }}
+      {{ if $sortedArticles }}
+      <section class="mt-12 border-t border-gray-200 pt-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Articles in this Series</h2>
+        <div class="space-y-4">
+          {{ range $sortedArticles }}
+            {{ partial "series-article-card.html" . }}
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+    </article>
+    
+    <!-- TOC Sidebar -->
+    <div class="hidden lg:block w-64 flex-shrink-0">
+      {{ partial "toc-series.html" . }}
+    </div>
+  </div>
+</div>
+
+<!-- Mobile TOC toggle -->
+<button class="toc-mobile-toggle lg:hidden" aria-label="Toggle series navigation">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</button>
+{{ end }}

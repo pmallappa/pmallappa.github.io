@@ -10,51 +10,44 @@
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deploying and Optimizing Hugo Sites for Production</title>
-      <link>http://localhost:1313/articles/hugo-deployment-optimization/</link>
+      <link>http://localhost:1313/articles/2024/12/30/hugo-deployment-optimization/</link>
       <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-deployment-optimization/</guid>
+      <guid>http://localhost:1313/articles/2024/12/30/hugo-deployment-optimization/</guid>
       <description>Deploy your Hugo site to GitHub Pages with optimization, performance tuning, and CI/CD automation.</description>
     </item>
     <item>
       <title>Advanced Hugo Features - Multi-Landing Pages and Custom Types</title>
-      <link>http://localhost:1313/articles/hugo-advanced-features/</link>
+      <link>http://localhost:1313/articles/2024/12/29/hugo-advanced-features/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-advanced-features/</guid>
+      <guid>http://localhost:1313/articles/2024/12/29/hugo-advanced-features/</guid>
       <description>Explore advanced Hugo capabilities including multiple landing pages, custom content types, and complex navigation.</description>
     </item>
     <item>
       <title>Styling Hugo Sites with Tailwind CSS</title>
-      <link>http://localhost:1313/articles/hugo-tailwind-styling/</link>
+      <link>http://localhost:1313/articles/2024/12/28/hugo-tailwind-styling/</link>
       <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-tailwind-styling/</guid>
+      <guid>http://localhost:1313/articles/2024/12/28/hugo-tailwind-styling/</guid>
       <description>Integrate Tailwind CSS with Hugo for modern, utility-first styling and responsive design.</description>
     </item>
     <item>
       <title>Building Custom Templates and Layouts in Hugo</title>
-      <link>http://localhost:1313/articles/hugo-custom-templates/</link>
+      <link>http://localhost:1313/articles/2024/12/27/hugo-custom-templates/</link>
       <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-custom-templates/</guid>
+      <guid>http://localhost:1313/articles/2024/12/27/hugo-custom-templates/</guid>
       <description>Master Hugo&amp;rsquo;s template system to create custom layouts for different content types and sections.</description>
     </item>
     <item>
       <title>Content Organization Strategies for Hugo Sites</title>
-      <link>http://localhost:1313/articles/hugo-content-organization/</link>
+      <link>http://localhost:1313/articles/2024/12/26/hugo-content-organization/</link>
       <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-content-organization/</guid>
+      <guid>http://localhost:1313/articles/2024/12/26/hugo-content-organization/</guid>
       <description>Learn how to organize content effectively in Hugo using sections, taxonomies, and front matter for scalable site architecture.</description>
     </item>
     <item>
-      <title>Building Modern Static Sites with Hugo</title>
-      <link>http://localhost:1313/series/hugo-static-sites/</link>
-      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/series/hugo-static-sites/</guid>
-      <description>Comprehensive guide to building high-performance static websites using Hugo, from setup to deployment, including advanced templating and content organization strategies.</description>
-    </item>
-    <item>
       <title>Getting Started with Hugo - Installation and First Site</title>
-      <link>http://localhost:1313/articles/hugo-getting-started/</link>
+      <link>http://localhost:1313/articles/2024/12/25/hugo-getting-started/</link>
       <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-getting-started/</guid>
+      <guid>http://localhost:1313/articles/2024/12/25/hugo-getting-started/</guid>
       <description>Learn how to install Hugo and create your first static website, understanding the basic project structure and configuration.</description>
     </item>
     <item>
@@ -70,20 +63,6 @@
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
       <description>&lt;h1 id=&#34;about-prem-mallappa&#34;&gt;About Prem Mallappa&lt;/h1&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;div class=&#34;callout border-l-4 p-4 rounded-r-lg border-blue-200 bg-blue-50 text-blue-800 my-6&#34;&gt;&#xA;  &lt;div class=&#34;flex items-start&#34;&gt;&#xA;    &lt;div class=&#34;flex-shrink-0&#34;&gt;&#xA;      &#xA;        &lt;svg class=&#34;w-5 h-5 text-blue-500&#34; fill=&#34;currentColor&#34; viewBox=&#34;0 0 20 20&#34;&gt;&#xA;          &lt;path fill-rule=&#34;evenodd&#34; d=&#34;M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z&#34; clip-rule=&#34;evenodd&#34;/&gt;&#xA;        &lt;/svg&gt;&#xA;      &#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;ml-3 flex-1&#34;&gt;&#xA;      &#xA;        &lt;h4 class=&#34;font-semibold mb-2&#34;&gt;Professional Summary&lt;/h4&gt;&#xA;      &#xA;      &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;        &lt;strong&gt;Experienced technology leader&lt;/strong&gt; with 12+ years in distributed systems, cloud infrastructure, and full-stack development. &lt;strong&gt;Passionate farmer&lt;/strong&gt; exploring sustainable agriculture through precision technology and data-driven practices.&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;professional-experience&#34;&gt;Professional Experience&lt;/h2&gt;&#xA;&lt;h3 id=&#34;senior-software-architect--techcorp-2019---present&#34;&gt;Senior Software Architect | TechCorp (2019 - Present)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Leading distributed systems architecture&lt;/strong&gt; for enterprise-scale applications serving 10M+ users daily.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Microservices Patterns and Practices</title>
-      <link>http://localhost:1313/series/microservices-patterns-and-practices/</link>
-      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/series/microservices-patterns-and-practices/</guid>
-      <description>Deep dive into microservices architecture patterns, implementation strategies, and operational best practices for building distributed systems at scale.</description>
-    </item>
-    <item>
-      <title>Modern Systems Architecture</title>
-      <link>http://localhost:1313/series/modern-systems-architecture/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/series/modern-systems-architecture/</guid>
-      <description>Comprehensive guide to designing and building scalable, resilient distributed systems using modern architecture patterns and technologies.</description>
     </item>
     <item>
       <title>Distributed IoT Edge Computing Platform</title>
@@ -119,6 +98,20 @@
       <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/articles/soil-microbiome-engineering/</guid>
       <description>Explore how engineered soil microbiomes can improve crop yields, reduce chemical inputs, and promote sustainable farming practices.</description>
+    </item>
+    <item>
+      <title>Advent of Code 2015 Day 1: Not Quite Lisp</title>
+      <link>http://localhost:1313/articles/2015/12/01/aoc-2015-day-01-not-quite-lisp/</link>
+      <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/2015/12/01/aoc-2015-day-01-not-quite-lisp/</guid>
+      <description>Solving Advent of Code 2015 Day 1 in Rust: navigating floors with parentheses, character iteration, and finding the basement position.</description>
+    </item>
+    <item>
+      <title>Advent of Code 2015 Day 1: Not Quite Lisp</title>
+      <link>http://localhost:1313/blog/2015/12/01/aoc-2015-day-01-not-quite-lisp/</link>
+      <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/12/01/aoc-2015-day-01-not-quite-lisp/</guid>
+      <description>&lt;h2 id=&#34;advent-of-code-2015-day-1-not-quite-lisp&#34;&gt;Advent of Code 2015 Day 1: Not Quite Lisp&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Part of the Advent of Code 2015 series&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-problem&#34;&gt;The Problem&lt;/h3&gt;&#xA;&lt;p&gt;Santa is trying to deliver presents in a large apartment building. He starts on the ground floor (floor 0) and follows instructions:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;(&lt;/code&gt; means go up one floor&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;)&lt;/code&gt; means go down one floor&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;part-1&#34;&gt;Part 1&lt;/h4&gt;&#xA;&lt;p&gt;Given a string of parentheses, what floor does Santa end up on?&lt;/p&gt;&#xA;&lt;h4 id=&#34;part-2&#34;&gt;Part 2&lt;/h4&gt;&#xA;&lt;p&gt;Find the position of the first character that causes Santa to enter the basement (floor -1).&lt;/p&gt;</description>
     </item>
     <item>
       <title>cta</title>

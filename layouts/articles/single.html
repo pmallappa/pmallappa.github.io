@@ -1,11 +1,17 @@
 {{ define "main" }}
-<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12" style="background: transparent;">
+<div class="{{ .Site.Params.layout.maxWidth }} mx-auto {{ .Site.Params.layout.padding }} {{ .Site.Params.layout.verticalSpacing }}">
+  <div class="flex flex-col lg:flex-row gap-8">
+    <!-- Main Content -->
+    <article class="flex-1 min-w-0">
   
-  <!-- Header -->
-  <header class="mb-8" style="background: transparent;">
+      <!-- Header -->
+      <div class="mb-8 article-header">
     <div class="flex items-center mb-4">
       {{ if .Params.series }}
-        {{ $seriesName := index .Params.series 0 }}
+        {{ $seriesName := .Params.series }}
+        {{ if reflect.IsSlice $seriesName }}
+          {{ $seriesName = index $seriesName 0 }}
+        {{ end }}
         {{ $seriesPages := where .Site.Pages "Type" "series" }}
         {{ $seriesPage := "" }}
         {{ range $seriesPages }}
@@ -28,7 +34,7 @@
       {{ end }}
     </div>
     
-    <h1 class="text-4xl font-bold mb-4" style="color: #4a9eff; background: transparent;">{{ .Title }}</h1>
+    <h1 class="text-4xl font-bold mb-4 text-nord-frost-2">{{ .Title }}</h1>
     
     <!-- Metadata -->
     <div class="flex items-center text-gray-600 text-sm mb-6">
@@ -53,12 +59,7 @@
       {{ end }}
     </div>
     {{ end }}
-  </header>
-
-  <!-- Additional spacer needed due to header overlap issue -->
-  <div class="h-16"></div>
-  <div class="h-16"></div>
-  <div class="h-16"></div>
+  </div>
 
   <!-- Content -->
   <div class="prose prose-lg prose-gray max-w-none mb-12">
@@ -134,5 +135,14 @@
     </div>
   </nav>
   {{ end }}
-</article>
+    </article>
+
+    <!-- TOC Sidebar -->
+    {{ if or .Params.series .TableOfContents }}
+    <aside class="hidden lg:block {{ .Site.Params.layout.sidebarWidth }} flex-shrink-0">
+      {{ partial "toc-series.html" . }}
+    </aside>
+    {{ end }}
+  </div>
+</div>
 {{ end }}

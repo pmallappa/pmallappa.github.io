@@ -13,7 +13,7 @@ theme = "personal"
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    style = "github"
+    style = "nord"
     lineNos = true
     lineNumbersInTable = false
     tabWidth = 2
@@ -54,6 +54,14 @@ theme = "personal"
   github = "pmallappa"
   linkedin = "pmallappa"
   
+  # Layout configuration
+  [params.layout]
+    maxWidth = "max-w-7xl"
+    contentMaxWidth = "max-w-5xl"
+    sidebarWidth = "w-64"
+    padding = "px-4 sm:px-6 lg:px-8"
+    verticalSpacing = "py-12"
+  
   # Features
   search = true
   toc = true
@@ -68,7 +76,6 @@ theme = "personal"
 [taxonomies]
   tag = "tags"
   category = "categories"
-  series = "series"
 
 # Output formats
 [outputs]

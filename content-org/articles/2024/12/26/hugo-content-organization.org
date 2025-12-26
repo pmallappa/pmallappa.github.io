@@ -1,0 +1,22 @@
+#+TITLE: Content Organization Strategies for Hugo Sites
+#+DATE: 2024-12-26
+#+EXPORT_FILE_NAME: hugo-content-organization
+#+HUGO_BASE_DIR: ../../../../..
+#+HUGO_SECTION: articles/2024/12/26
+#+HUGO_TYPE: articles
+#+HUGO_TAGS: hugo content-management web-development
+#+HUGO_CATEGORIES: technology
+#+HUGO_CUSTOM_FRONT_MATTER: :series "Building Modern Static Sites with Hugo" :part 2 :summary "Learn how to organize content effectively in Hugo using sections, taxonomies, and front matter for scalable site architecture."
+#+HUGO_DRAFT: false
+
+* Coming Soon
+
+This article is currently being written. It will cover:
+
+- Sections and content organization
+- Taxonomies (tags, categories, series)
+- Front matter best practices
+- Creating multiple content types
+- Organizing content for scale
+
+Stay tuned!

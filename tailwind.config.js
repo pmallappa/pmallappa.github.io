@@ -19,10 +19,33 @@ module.exports = {
     'hero-links',
     'hero-section'
   ],
-  darkMode: 'media',
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
+        // Nord Color Palette
+        nord: {
+          // Polar Night
+          'polar-0': '#2E3440',
+          'polar-1': '#3B4252',
+          'polar-2': '#434C5E',
+          'polar-3': '#4C566A',
+          // Snow Storm
+          'snow-0': '#D8DEE9',
+          'snow-1': '#E5E9F0',
+          'snow-2': '#ECEFF4',
+          // Frost
+          'frost-0': '#8FBCBB',
+          'frost-1': '#88C0D0',
+          'frost-2': '#81A1C1',
+          'frost-3': '#5E81AC',
+          // Aurora
+          'aurora-red': '#BF616A',
+          'aurora-orange': '#D08770',
+          'aurora-yellow': '#EBCB8B',
+          'aurora-green': '#A3BE8C',
+          'aurora-purple': '#B48EAD',
+        },
         primary: {
           50: '#eff6ff',
           100: '#dbeafe', 

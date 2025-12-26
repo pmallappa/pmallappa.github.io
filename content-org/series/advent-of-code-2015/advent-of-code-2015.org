@@ -1,0 +1,75 @@
+#+TITLE: Advent of Code 2015: Rust Solutions
+#+DATE: 2025-12-26
+#+HUGO_BASE_DIR: ../../../../
+#+HUGO_SECTION: series/advent-of-code-2015
+#+EXPORT_FILE_NAME: _index
+#+OPTIONS: todo:nil
+#+HUGO_DRAFT: true
+#+HUGO_CATEGORIES: programming
+#+HUGO_TAGS: rust advent-of-code algorithms problem-solving
+#+HUGO_CUSTOM_FRONT_MATTER: :series_count 25 :type "series" :layout "_index"
+
+#+begin_description
+A complete walkthrough of solving all 25 days of Advent of Code 2015 using Rust, exploring algorithms, data structures, and idiomatic Rust patterns.
+#+end_description
+
+* Advent of Code 2015: Rust Solutions
+
+Join me as I solve all 25 days of Advent of Code 2015 using Rust! This series documents my journey through the classic 2015 puzzles, showcasing different approaches, optimizations, and Rust idioms.
+
+** What is Advent of Code?
+
+[[https://adventofcode.com/][Advent of Code]] is an annual event featuring daily programming puzzles throughout December. Each day presents a two-part challenge that tests algorithmic thinking and problem-solving skills.
+
+** Why Rust?
+
+Rust is an excellent language for Advent of Code because:
+- Strong type system catches bugs at compile time
+- Pattern matching makes parsing input elegant
+- Iterator chains enable concise solutions
+- Performance for brute-force approaches when needed
+- Great ecosystem with helpful crates
+
+** Series Structure
+
+Each article in this series covers one day's puzzle, including:
+- Problem summary and analysis
+- Solution approach and algorithm choice
+- Rust implementation with explanations
+- Performance considerations
+- Alternative approaches
+- Key takeaways and Rust patterns learned
+
+** Repository
+
+All solutions are available on GitHub: [[https://github.com/Programming-Excercises/adventofcode/tree/main/2015][Advent of Code 2015 Solutions]]
+
+** Articles in This Series
+
+1. Day 1: Not Quite Lisp - Character counting and string traversal
+2. Day 2: I Was Told There Would Be No Math - Parsing and calculations
+3. Day 3: Perfectly Spherical Houses in a Vacuum - Grid navigation
+4. Day 4: The Ideal Stocking Stuffer - MD5 hashing and brute force
+5. Day 5: Doesn't He Have Intern-Elves For This? - String validation
+6. Day 6: Probably a Fire Hazard - Grid manipulation
+7. Day 7: Some Assembly Required - Circuit simulation and memoization
+8. Day 8: Matchsticks - String escaping and encoding
+9. Day 9: All in a Single Night - Traveling salesman problem
+10. Day 10: Elves Look, Elves Say - Look-and-say sequence
+... (more days to be added as articles are published)
+
+** Prerequisites
+
+To follow along:
+- Basic Rust knowledge (variables, functions, iterators)
+- Understanding of common data structures (Vec, HashMap, HashSet)
+- Familiarity with pattern matching and error handling
+
+** Let's Begin!
+
+Start with the first day's article to begin the journey!
+
+** Related Links
+
+- [[https://adventofcode.com/2015][Advent of Code 2015 Official Site]]
+- [[https://github.com/Programming-Excercises/adventofcode/tree/main/2015][GitHub Repository with Solutions]]

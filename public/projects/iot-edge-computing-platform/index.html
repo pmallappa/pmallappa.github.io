@@ -21,16 +21,20 @@
   
   
   
+  <script src="/js/theme-toggle.js"></script>
+  
+  
+  
   
   
   <link rel="icon" href="/favicon.ico">
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed pt-16">
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
   <header class="bg-white shadow-sm border-b fixed top-0 left-0 right-0 z-50">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex-shrink-0">
-          <a href="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+          <a href="/" class="text-xl font-bold text-gray-900 hover:text-nord-frost-2 transition-colors">
             Prem Mallappa
           </a>
         </div>
@@ -38,26 +42,35 @@
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-8">
             
-              <a href="/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Home
               </a>
             
-              <a href="/articles/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/articles/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Articles
               </a>
             
-              <a href="/series/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/series/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Series
               </a>
             
-              <a href="/projects/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/projects/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Projects
               </a>
             
-              <a href="/resume/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/resume/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Resume
               </a>
             
+            
+            <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle theme">
+              <svg id="theme-toggle-dark-icon" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+              <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+              </svg>
+            </button>
           </div>
         </div>
         
@@ -72,23 +85,23 @@
           
           <div x-show="open" @click.away="open = false" class="fixed top-16 right-4 bg-white shadow-lg rounded-lg py-2 w-48 z-50 border border-gray-200">
             
-              <a href="/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Home
               </a>
             
-              <a href="/articles/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/articles/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Articles
               </a>
             
-              <a href="/series/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/series/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Series
               </a>
             
-              <a href="/projects/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/projects/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Projects
               </a>
             
-              <a href="/resume/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/resume/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Resume
               </a>
             
@@ -98,57 +111,72 @@
     </nav>
   </header>
 
-  <main>
+  <main class="pt-16">
     
 <article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
   
-  <header class="mb-12">
-    <div class="flex items-center mb-4">
-      <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full font-medium">
-        open_source
-      </span>
+  
+<header class="mb-12">
+  <div class="flex items-center mb-4">
+    <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full font-medium">Project</span>
+    
+    
+      <span class="ml-3 px-3 py-1 text-sm rounded-full font-medium
+        bg-blue-100 text-blue-800
+        
+        
+      ">Ongoing</span>
+    
+  </div>
+  
+  <h1 class="text-4xl font-bold text-gray-900 mb-4">Distributed IoT Edge Computing Platform</h1>
+  
+  
+  <div class="flex items-center text-gray-600 text-sm mb-6">
+    <time datetime="2024-01-14">January 14, 2024</time>
+    
+      <span class="mx-2">•</span>
+      <span class="capitalize">open_source</span>
+    
+  </div>
+  
+  
+  
+  
+  
+  
+  <div class="mb-6">
+    <h3 class="text-sm font-semibold text-gray-700 mb-2">Tech Stack:</h3>
+    <div class="flex flex-wrap gap-2">
       
-      <span class="ml-3 px-2 py-1 text-sm rounded bg-yellow-100 text-yellow-800">
-        ongoing
-      </span>
+        <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">Rust</span>
+      
+        <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">Kubernetes</span>
+      
+        <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">gRPC</span>
+      
+        <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">Apache Kafka</span>
+      
+        <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">TensorFlow Lite</span>
+      
+        <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">Prometheus</span>
       
     </div>
+  </div>
+  
+  
+  
+  <div class="flex gap-4">
     
-    <h1 class="text-4xl font-bold text-gray-900 mb-4">Distributed IoT Edge Computing Platform</h1>
-    
-    
-    <div class="flex items-center text-gray-600 text-sm mb-6">
-      <time datetime="2024-01-14">January 14, 2024</time>
-      
-        <span class="mx-2">•</span>
-        <a href="https://github.com/pmallappa/iot-edge-platform" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">
-          GitHub →
-        </a>
-      
-    </div>
+      <a href="https://github.com/pmallappa/iot-edge-platform" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        View on GitHub
+      </a>
     
     
-    
-    <div class="mb-6">
-      <h3 class="text-sm font-semibold text-gray-700 mb-2">Tech Stack:</h3>
-      <div class="flex flex-wrap gap-2">
-        
-          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">Rust</span>
-        
-          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">Kubernetes</span>
-        
-          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">gRPC</span>
-        
-          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">Apache Kafka</span>
-        
-          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">TensorFlow Lite</span>
-        
-          <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">Prometheus</span>
-        
-      </div>
-    </div>
-    
-  </header>
+  </div>
+</header>
+
 
   
   <div class="prose prose-lg prose-gray max-w-none mb-12">
@@ -341,12 +369,54 @@
 
   </main>
 
-  <footer class="border-t mt-16" style="background: transparent;">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-white">
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div class="text-center text-gray-600">
         <p>&copy; 2025 Prem Mallappa. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+      const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+      const themeToggleBtn = document.getElementById('theme-toggle');
+
+      if (!themeToggleBtn || !themeToggleDarkIcon || !themeToggleLightIcon) {
+        return;
+      }
+
+      function getTheme() {
+        if (localStorage.getItem('color-theme')) {
+          return localStorage.getItem('color-theme');
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          themeToggleLightIcon.classList.remove('hidden');
+          themeToggleDarkIcon.classList.add('hidden');
+        } else {
+          document.documentElement.classList.remove('dark');
+          themeToggleLightIcon.classList.add('hidden');
+          themeToggleDarkIcon.classList.remove('hidden');
+        }
+        localStorage.setItem('color-theme', theme);
+      }
+
+      const currentTheme = getTheme();
+      setTheme(currentTheme);
+
+      themeToggleBtn.addEventListener('click', function() {
+        const currentTheme = getTheme();
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+    });
+  </script>
 </body>
 </html>

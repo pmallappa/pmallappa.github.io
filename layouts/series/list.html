@@ -1,10 +1,16 @@
 {{ define "main" }}
-{{ partial "section-header.html" . }}
 
-  {{ $seriesPages := where .Site.RegularPages "Type" "series" }}
-    {{ range $seriesPages }}
-      {{ partial "brick_series_card.html" . }}
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold mb-4 text-nord-frost-2">{{ .Title }}</h1>
+  </div>
+
+  <div class="space-y-6">
+    {{ range .Site.Pages }}
+      {{ if and (eq .Type "series") (ne .RelPermalink "/series/") }}
+        {{ partial "series-card.html" . }}
+      {{ end }}
     {{ end }}
-
-{{ partial "section-footer.html" . }}
+  </div>
+</div>
 {{ end }}

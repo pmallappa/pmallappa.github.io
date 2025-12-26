@@ -3,19 +3,16 @@
   Usage: {{ partial "section-header.html" . }}
 */}}
 
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" style="background: transparent;">
-  <header class="mb-16" style="background: transparent;">
-    <h1 class="text-4xl font-bold mb-4" style="color: #4a9eff; background: transparent;">{{ .Title }}</h1>
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="mb-16">
+    <h1 class="text-4xl font-bold mb-4 text-nord-frost-2">{{ .Title }}</h1>
     {{ if .Content }}
-      <div class="prose prose-lg prose-gray mb-8" style="color: #4C566A; background: transparent; max-width: 72ch;">
+      <div class="prose prose-lg prose-gray mb-8" style="color: #4C566A;">
         {{ .Content }}
       </div>
     {{ end }}
-  </header>
+  </div>
 
-  <!-- Bottom spacer for fixed header clearance -->
-  <!-- Content spacers -->
-  <div class="h-16"></div>
   <div class="h-16"></div>
 
   <div class="space-y-8">

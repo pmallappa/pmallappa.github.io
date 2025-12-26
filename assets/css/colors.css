@@ -1,0 +1,54 @@
+/* Nord Color Palette - Modular Theme Colors */
+:root {
+  /* Polar Night - Dark backgrounds and surfaces */
+  --color-bg-dark-primary: #2E3440;    /* nord0 - darkest */
+  --color-bg-dark-secondary: #3B4252;  /* nord1 */
+  --color-bg-dark-tertiary: #434C5E;   /* nord2 */
+  --color-bg-dark-elevated: #4C566A;   /* nord3 - lightest dark */
+  
+  /* Snow Storm - Light backgrounds and text */
+  --color-bg-light-primary: #ECEFF4;   /* nord6 - lightest */
+  --color-bg-light-secondary: #E5E9F0; /* nord5 */
+  --color-bg-light-tertiary: #D8DEE9;  /* nord4 - darkest light */
+  
+  /* Frost - Blue accent colors */
+  --color-frost-cyan: #8FBCBB;         /* nord7 */
+  --color-frost-blue-bright: #88C0D0;  /* nord8 */
+  --color-frost-blue: #81A1C1;         /* nord9 */
+  --color-frost-blue-dark: #5E81AC;    /* nord10 */
+  
+  /* Aurora - Accent colors */
+  --color-aurora-red: #BF616A;         /* nord11 */
+  --color-aurora-orange: #D08770;      /* nord12 */
+  --color-aurora-yellow: #EBCB8B;      /* nord13 */
+  --color-aurora-green: #A3BE8C;       /* nord14 */
+  --color-aurora-purple: #B48EAD;      /* nord15 */
+  
+  /* Semantic mappings - easily change theme by remapping these */
+  --color-primary: var(--color-frost-blue);
+  --color-primary-dark: var(--color-frost-blue-dark);
+  --color-accent: var(--color-aurora-purple);
+  --color-success: var(--color-aurora-green);
+  --color-warning: var(--color-aurora-yellow);
+  --color-error: var(--color-aurora-red);
+  --color-info: var(--color-frost-blue-bright);
+  
+  /* Text colors */
+  --color-text-primary: var(--color-bg-dark-primary);
+  --color-text-secondary: var(--color-bg-dark-elevated);
+  --color-text-muted: #6C7A89;
+  --color-text-inverse: var(--color-bg-light-primary);
+  
+  /* Background colors */
+  --color-bg-page: #FFFFFF;
+  --color-bg-surface: var(--color-bg-light-primary);
+  --color-bg-hover: var(--color-bg-light-secondary);
+  
+  /* Border colors */
+  --color-border: var(--color-bg-light-tertiary);
+  --color-border-hover: var(--color-frost-blue);
+  
+  /* Code blocks */
+  --color-code-bg: var(--color-bg-dark-primary);
+  --color-code-text: var(--color-bg-light-primary);
+}

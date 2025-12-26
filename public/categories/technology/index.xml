@@ -10,37 +10,37 @@
     <atom:link href="http://localhost:1313/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deploying and Optimizing Hugo Sites for Production</title>
-      <link>http://localhost:1313/articles/hugo-deployment-optimization/</link>
+      <link>http://localhost:1313/articles/2024/12/30/hugo-deployment-optimization/</link>
       <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-deployment-optimization/</guid>
+      <guid>http://localhost:1313/articles/2024/12/30/hugo-deployment-optimization/</guid>
       <description>Deploy your Hugo site to GitHub Pages with optimization, performance tuning, and CI/CD automation.</description>
     </item>
     <item>
       <title>Advanced Hugo Features - Multi-Landing Pages and Custom Types</title>
-      <link>http://localhost:1313/articles/hugo-advanced-features/</link>
+      <link>http://localhost:1313/articles/2024/12/29/hugo-advanced-features/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-advanced-features/</guid>
+      <guid>http://localhost:1313/articles/2024/12/29/hugo-advanced-features/</guid>
       <description>Explore advanced Hugo capabilities including multiple landing pages, custom content types, and complex navigation.</description>
     </item>
     <item>
       <title>Styling Hugo Sites with Tailwind CSS</title>
-      <link>http://localhost:1313/articles/hugo-tailwind-styling/</link>
+      <link>http://localhost:1313/articles/2024/12/28/hugo-tailwind-styling/</link>
       <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-tailwind-styling/</guid>
+      <guid>http://localhost:1313/articles/2024/12/28/hugo-tailwind-styling/</guid>
       <description>Integrate Tailwind CSS with Hugo for modern, utility-first styling and responsive design.</description>
     </item>
     <item>
       <title>Building Custom Templates and Layouts in Hugo</title>
-      <link>http://localhost:1313/articles/hugo-custom-templates/</link>
+      <link>http://localhost:1313/articles/2024/12/27/hugo-custom-templates/</link>
       <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-custom-templates/</guid>
+      <guid>http://localhost:1313/articles/2024/12/27/hugo-custom-templates/</guid>
       <description>Master Hugo&amp;rsquo;s template system to create custom layouts for different content types and sections.</description>
     </item>
     <item>
       <title>Content Organization Strategies for Hugo Sites</title>
-      <link>http://localhost:1313/articles/hugo-content-organization/</link>
+      <link>http://localhost:1313/articles/2024/12/26/hugo-content-organization/</link>
       <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-content-organization/</guid>
+      <guid>http://localhost:1313/articles/2024/12/26/hugo-content-organization/</guid>
       <description>Learn how to organize content effectively in Hugo using sections, taxonomies, and front matter for scalable site architecture.</description>
     </item>
     <item>
@@ -52,9 +52,9 @@
     </item>
     <item>
       <title>Getting Started with Hugo - Installation and First Site</title>
-      <link>http://localhost:1313/articles/hugo-getting-started/</link>
+      <link>http://localhost:1313/articles/2024/12/25/hugo-getting-started/</link>
       <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/hugo-getting-started/</guid>
+      <guid>http://localhost:1313/articles/2024/12/25/hugo-getting-started/</guid>
       <description>Learn how to install Hugo and create your first static website, understanding the basic project structure and configuration.</description>
     </item>
     <item>

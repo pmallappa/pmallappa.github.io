@@ -1,0 +1,8 @@
+<!-- Tags -->
+{{ if .Params.tags }}
+<div class="flex flex-wrap gap-2 mt-4">
+  {{ range .Params.tags }}
+    <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">{{ . }}</span>
+  {{ end }}
+</div>
+{{ end }}

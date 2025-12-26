@@ -1,0 +1,22 @@
+<!-- Series Article Card -->
+<div class="bg-white border-l-4 border-l-nord-aurora-purple rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      {{ if .Params.part }}
+      <div class="flex items-center gap-3 mb-3">
+        <span class="bg-nord-aurora-purple text-white text-sm font-bold px-3 py-1 rounded">Part {{ .Params.part }}</span>
+        {{ if .Draft }}
+          <span class="bg-nord-aurora-yellow/20 text-nord-aurora-yellow border border-nord-aurora-yellow/30 text-sm px-3 py-1 rounded-full font-medium">Ongoing</span>
+        {{ end }}
+      </div>
+      {{ end }}
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">
+        <a href="{{ .RelPermalink }}" class="hover:text-nord-frost-2">{{ .Title }}</a>
+      </h3>
+      <p class="text-gray-600 text-sm mb-3">{{ .Summary }}</p>
+      <div class="text-sm text-gray-500">
+        {{ .Date.Format "Jan 2, 2006" }} • {{ .ReadingTime }} min read
+      </div>
+    </div>
+  </div>
+</div>

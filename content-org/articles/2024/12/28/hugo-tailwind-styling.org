@@ -1,0 +1,22 @@
+#+TITLE: Styling Hugo Sites with Tailwind CSS
+#+DATE: 2024-12-28
+#+EXPORT_FILE_NAME: hugo-tailwind-styling
+#+HUGO_BASE_DIR: ../../../../..
+#+HUGO_SECTION: articles/2024/12/28
+#+HUGO_TYPE: articles
+#+HUGO_TAGS: hugo tailwind css web-design
+#+HUGO_CATEGORIES: technology
+#+HUGO_CUSTOM_FRONT_MATTER: :series "Building Modern Static Sites with Hugo" :part 4 :summary "Integrate Tailwind CSS with Hugo for modern, utility-first styling and responsive design."
+#+HUGO_DRAFT: false
+
+* Coming Soon
+
+This article is currently being written. It will cover:
+
+- Installing and configuring Tailwind
+- PostCSS processing pipeline
+- Custom components with @layer
+- Responsive design patterns
+- Dark mode implementation
+
+Stay tuned!

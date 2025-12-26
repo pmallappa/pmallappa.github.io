@@ -200,9 +200,14 @@ a:hover {
 }
 
 /* Article Components */
-.article-header {
+/* Override global header styles for article content headers */
+article header.article-header {
+  position: relative !important;
+  background: transparent !important;
+  width: auto !important;
+  z-index: auto !important;
   margin-bottom: var(--space-2xl);
-  text-align: center;
+  text-align: left;
 }
 
 .article-title {

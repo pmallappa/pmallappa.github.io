@@ -1,0 +1,14 @@
+<!-- Article Metadata -->
+<div class="flex items-center text-gray-600 text-sm mb-4">
+  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+  <span class="mx-3">·</span>
+  <span>{{ .ReadingTime }} min read</span>
+  {{ if .Params.series }}
+    {{ $series := .Params.series }}
+    {{ if reflect.IsSlice $series }}
+      {{ $series = index $series 0 }}
+    {{ end }}
+    <span class="mx-3">·</span>
+    <span>Part of {{ $series }} series</span>
+  {{ end }}
+</div>

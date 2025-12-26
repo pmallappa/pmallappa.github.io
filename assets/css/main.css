@@ -2,22 +2,113 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import color palette */
+@import 'colors.css';
+
+/* Code block styling with Nord theme */
+.highlight {
+  background-color: var(--color-bg-dark-primary) !important;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.highlight pre {
+  background-color: transparent !important;
+  margin: 0;
+  padding: 0;
+  color: var(--color-bg-light-primary);
+}
+
+.highlight code {
+  background-color: transparent !important;
+  color: var(--color-bg-light-primary);
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+/* Inline code */
+:not(pre) > code {
+  background-color: var(--color-bg-light-secondary);
+  color: var(--color-aurora-purple);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
 /* Prevent horizontal scrollbar and ensure proper box-sizing */
 * {
   box-sizing: border-box;
   max-width: 100%;
 }
 
-html {
-  width: 100%;
-  overflow-x: hidden;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
+  background-color: var(--color-bg-light-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+footer {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Dark mode styles */
+.dark body {
+  background-color: var(--color-bg-dark-secondary);
+  color: var(--color-text-inverse);
+}
+
+.dark header {
+  background-color: var(--color-bg-dark-primary) !important;
+  border-color: var(--color-bg-dark-tertiary);
+}
+
+.dark .bg-white {
+  background-color: var(--color-bg-dark-primary);
+}
+
+.dark .text-gray-900 {
+  color: var(--color-text-inverse);
+}
+
+.dark .text-gray-600 {
+  color: var(--color-bg-light-tertiary);
+}
+
+.dark .text-gray-500 {
+  color: var(--color-bg-light-secondary);
+}
+
+.dark .border-gray-200 {
+  border-color: var(--color-bg-dark-tertiary);
+}
+
+.dark .shadow-sm,
+.dark .shadow-md {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: var(--color-bg-dark-tertiary);
+}
+
+.dark .hover\:bg-gray-50:hover {
+  background-color: var(--color-bg-dark-secondary);
+}
   position: relative;
 }
 

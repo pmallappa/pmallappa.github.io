@@ -21,16 +21,20 @@
   
   
   
+  <script src="/js/theme-toggle.js"></script>
+  
+  
+  
   
   
   <link rel="icon" href="/favicon.ico">
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed pt-16">
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
   <header class="bg-white shadow-sm border-b fixed top-0 left-0 right-0 z-50">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex-shrink-0">
-          <a href="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+          <a href="/" class="text-xl font-bold text-gray-900 hover:text-nord-frost-2 transition-colors">
             Prem Mallappa
           </a>
         </div>
@@ -38,26 +42,35 @@
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-8">
             
-              <a href="/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Home
               </a>
             
-              <a href="/articles/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/articles/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Articles
               </a>
             
-              <a href="/series/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/series/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Series
               </a>
             
-              <a href="/projects/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/projects/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Projects
               </a>
             
-              <a href="/resume/" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a href="/resume/" class="text-gray-600 hover:text-nord-frost-2 px-3 py-2 text-sm font-medium transition-colors">
                 Resume
               </a>
             
+            
+            <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle theme">
+              <svg id="theme-toggle-dark-icon" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+              <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+              </svg>
+            </button>
           </div>
         </div>
         
@@ -72,23 +85,23 @@
           
           <div x-show="open" @click.away="open = false" class="fixed top-16 right-4 bg-white shadow-lg rounded-lg py-2 w-48 z-50 border border-gray-200">
             
-              <a href="/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Home
               </a>
             
-              <a href="/articles/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/articles/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Articles
               </a>
             
-              <a href="/series/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/series/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Series
               </a>
             
-              <a href="/projects/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/projects/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Projects
               </a>
             
-              <a href="/resume/" class="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+              <a href="/resume/" class="block px-4 py-2 text-sm text-gray-600 hover:text-nord-frost-2 hover:bg-gray-50">
                 Resume
               </a>
             
@@ -98,566 +111,776 @@
     </nav>
   </header>
 
-  <main>
+  <main class="pt-16">
     
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-20">
   <header class="mb-8">
-    <h1 class="text-4xl font-bold text-gray-900 mb-4">Technology</h1>
+    <h1 class="text-4xl font-bold mb-4 text-nord-frost-2">Technology</h1>
     
   </header>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="h-16"></div>
+  <div class="h-16"></div>
+  <div class="h-16"></div>
+
+  <div class="space-y-6">
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/articles/hugo-deployment-optimization/" class="hover:text-blue-600 transition-colors">Deploying and Optimizing Hugo Sites for Production</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Deploy your Hugo site to GitHub Pages with optimization, performance tuning, and CI/CD automation.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/articles/2024/12/30/hugo-deployment-optimization/" class="hover:text-nord-frost-2">Deploying and Optimizing Hugo Sites for Production</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Deploy your Hugo site to GitHub Pages with optimization, performance tuning, and CI/CD automation.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-12-30">Dec 30, 2024</time>
-          
-            <span>1 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
         </div>
+        
+          
+          
+          
+          
+          
+          <span class="text-gray-700">
+            <span class="bg-nord-aurora-purple/20 text-nord-aurora-purple border border-nord-aurora-purple/30 text-xs px-2 py-1 rounded-full font-semibold">Part 6 of 6</span>
+            <span class="ml-1">in Building Modern Static Sites with Hugo</span>
+          </span>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">hugo</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">deployment</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">optimization</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">github-pages</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/articles/hugo-advanced-features/" class="hover:text-blue-600 transition-colors">Advanced Hugo Features - Multi-Landing Pages and Custom Types</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Explore advanced Hugo capabilities including multiple landing pages, custom content types, and complex navigation.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/articles/2024/12/29/hugo-advanced-features/" class="hover:text-nord-frost-2">Advanced Hugo Features - Multi-Landing Pages and Custom Types</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Explore advanced Hugo capabilities including multiple landing pages, custom content types, and complex navigation.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-12-29">Dec 29, 2024</time>
-          
-            <span>1 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
         </div>
+        
+          
+          
+          
+          
+          
+          <span class="text-gray-700">
+            <span class="bg-nord-aurora-purple/20 text-nord-aurora-purple border border-nord-aurora-purple/30 text-xs px-2 py-1 rounded-full font-semibold">Part 5 of 6</span>
+            <span class="ml-1">in Building Modern Static Sites with Hugo</span>
+          </span>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">hugo</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">advanced</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">web-development</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/articles/hugo-tailwind-styling/" class="hover:text-blue-600 transition-colors">Styling Hugo Sites with Tailwind CSS</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Integrate Tailwind CSS with Hugo for modern, utility-first styling and responsive design.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/articles/2024/12/28/hugo-tailwind-styling/" class="hover:text-nord-frost-2">Styling Hugo Sites with Tailwind CSS</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Integrate Tailwind CSS with Hugo for modern, utility-first styling and responsive design.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-12-28">Dec 28, 2024</time>
-          
-            <span>1 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
         </div>
+        
+          
+          
+          
+          
+          
+          <span class="text-gray-700">
+            <span class="bg-nord-aurora-purple/20 text-nord-aurora-purple border border-nord-aurora-purple/30 text-xs px-2 py-1 rounded-full font-semibold">Part 4 of 6</span>
+            <span class="ml-1">in Building Modern Static Sites with Hugo</span>
+          </span>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">hugo</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">tailwind</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">css</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">web-design</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/articles/hugo-custom-templates/" class="hover:text-blue-600 transition-colors">Building Custom Templates and Layouts in Hugo</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Master Hugo&rsquo;s template system to create custom layouts for different content types and sections.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/articles/2024/12/27/hugo-custom-templates/" class="hover:text-nord-frost-2">Building Custom Templates and Layouts in Hugo</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Master Hugo&rsquo;s template system to create custom layouts for different content types and sections.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-12-27">Dec 27, 2024</time>
-          
-            <span>1 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
         </div>
+        
+          
+          
+          
+          
+          
+          <span class="text-gray-700">
+            <span class="bg-nord-aurora-purple/20 text-nord-aurora-purple border border-nord-aurora-purple/30 text-xs px-2 py-1 rounded-full font-semibold">Part 3 of 6</span>
+            <span class="ml-1">in Building Modern Static Sites with Hugo</span>
+          </span>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">hugo</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">templates</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">layouts</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">web-development</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/articles/hugo-content-organization/" class="hover:text-blue-600 transition-colors">Content Organization Strategies for Hugo Sites</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Learn how to organize content effectively in Hugo using sections, taxonomies, and front matter for scalable site architecture.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/articles/2024/12/26/hugo-content-organization/" class="hover:text-nord-frost-2">Content Organization Strategies for Hugo Sites</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Learn how to organize content effectively in Hugo using sections, taxonomies, and front matter for scalable site architecture.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-12-26">Dec 26, 2024</time>
-          
-            <span>1 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
         </div>
+        
+          
+          
+          
+          
+          
+          <span class="text-gray-700">
+            <span class="bg-nord-aurora-purple/20 text-nord-aurora-purple border border-nord-aurora-purple/30 text-xs px-2 py-1 rounded-full font-semibold">Part 2 of 6</span>
+            <span class="ml-1">in Building Modern Static Sites with Hugo</span>
+          </span>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">hugo</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">content-management</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">web-development</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/series/hugo-static-sites/" class="hover:text-blue-600 transition-colors">Building Modern Static Sites with Hugo</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Comprehensive guide to building high-performance static websites using Hugo, from setup to deployment, including advanced templating and content organization strategies.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/series/hugo-static-sites/" class="hover:text-nord-frost-2">Building Modern Static Sites with Hugo</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Comprehensive guide to building high-performance static websites using Hugo, from setup to deployment, including advanced templating and content organization strategies.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-12-25">Dec 25, 2024</time>
-          
-            <span>4 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>3 min read</span>
         </div>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">hugo</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">static-sites</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">web-development</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">jamstack</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/articles/hugo-getting-started/" class="hover:text-blue-600 transition-colors">Getting Started with Hugo - Installation and First Site</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Learn how to install Hugo and create your first static website, understanding the basic project structure and configuration.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/articles/2024/12/25/hugo-getting-started/" class="hover:text-nord-frost-2">Getting Started with Hugo - Installation and First Site</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Learn how to install Hugo and create your first static website, understanding the basic project structure and configuration.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-12-25">Dec 25, 2024</time>
-          
-            <span>4 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>4 min read</span>
         </div>
+        
+          
+          
+          
+          
+          
+          <span class="text-gray-700">
+            <span class="bg-nord-aurora-purple/20 text-nord-aurora-purple border border-nord-aurora-purple/30 text-xs px-2 py-1 rounded-full font-semibold">Part 1 of 6</span>
+            <span class="ml-1">in Building Modern Static Sites with Hugo</span>
+          </span>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">hugo</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">static-sites</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">web-development</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">tutorial</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/projects/github-site/" class="hover:text-blue-600 transition-colors">Personal Portfolio &amp; Blog - pmallappa.github.io</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Modern static website built with Hugo, featuring dual landing pages for technology portfolio and farming content, with custom layouts and Tailwind CSS styling.</p>
-        
-        
-        
-        <div class="flex flex-wrap gap-1 mb-4">
-          
-            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Hugo</span>
-          
-            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Tailwind CSS</span>
-          
-            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">GitHub Pages</span>
-          
-          
-            <span class="text-gray-500 text-xs">+3 more</span>
-          
-        </div>
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/projects/github-site/" class="hover:text-nord-frost-2">Personal Portfolio &amp; Blog - pmallappa.github.io</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Modern static website built with Hugo, featuring dual landing pages for technology portfolio and farming content, with custom layouts and Tailwind CSS styling.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-12-25">Dec 25, 2024</time>
-          
-            <span>4 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>4 min read</span>
         </div>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">hugo</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">static-site</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">tailwind</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">github-pages</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">web-development</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/series/microservices-patterns-and-practices/" class="hover:text-blue-600 transition-colors">Microservices Patterns and Practices</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Deep dive into microservices architecture patterns, implementation strategies, and operational best practices for building distributed systems at scale.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/series/microservices-patterns-and-practices/" class="hover:text-nord-frost-2">Microservices Patterns and Practices</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Deep dive into microservices architecture patterns, implementation strategies, and operational best practices for building distributed systems at scale.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-01-20">Jan 20, 2024</time>
-          
-            <span>3 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>3 min read</span>
         </div>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">microservices</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">distributed-systems</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">architecture</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">scalability</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/series/modern-systems-architecture/" class="hover:text-blue-600 transition-colors">Modern Systems Architecture</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Comprehensive guide to designing and building scalable, resilient distributed systems using modern architecture patterns and technologies.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/series/modern-systems-architecture/" class="hover:text-nord-frost-2">Modern Systems Architecture</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Comprehensive guide to designing and building scalable, resilient distributed systems using modern architecture patterns and technologies.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-01-15">Jan 15, 2024</time>
-          
-            <span>2 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>2 min read</span>
         </div>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">architecture</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">distributed-systems</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">scalability</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">microservices</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/projects/iot-edge-computing-platform/" class="hover:text-blue-600 transition-colors">Distributed IoT Edge Computing Platform</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination.</p>
-        
-        
-        
-        <div class="flex flex-wrap gap-1 mb-4">
-          
-            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Rust</span>
-          
-            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Kubernetes</span>
-          
-            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">gRPC</span>
-          
-          
-            <span class="text-gray-500 text-xs">+3 more</span>
-          
-        </div>
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/projects/iot-edge-computing-platform/" class="hover:text-nord-frost-2">Distributed IoT Edge Computing Platform</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-01-14">Jan 14, 2024</time>
-          
-            <span>2 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>2 min read</span>
         </div>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">iot</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">edge-computing</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">rust</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">microservices</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">kubernetes</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/articles/rust-memory-patterns/" class="hover:text-blue-600 transition-colors">Rust Memory Management Patterns</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Advanced memory safety techniques in Rust for systems programming, exploring ownership, lifetimes, and zero-cost abstractions.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/articles/rust-memory-patterns/" class="hover:text-nord-frost-2">Rust Memory Management Patterns</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Advanced memory safety techniques in Rust for systems programming, exploring ownership, lifetimes, and zero-cost abstractions.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-01-12">Jan 12, 2024</time>
-          
-            <span>1 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
         </div>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">rust</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">memory-safety</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">systems</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">programming</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">performance</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/articles/iot-precision-agriculture/" class="hover:text-blue-600 transition-colors">IoT Sensors in Precision Agriculture</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/articles/iot-precision-agriculture/" class="hover:text-nord-frost-2">IoT Sensors in Precision Agriculture</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Discover how IoT sensors are revolutionizing farming by providing real-time data about soil conditions, weather patterns, and crop health for sustainable agriculture.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-01-10">Jan 10, 2024</time>
-          
-            <span>3 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>3 min read</span>
         </div>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">farming</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">iot</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">sensors</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">sustainability</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">precision-agriculture</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/articles/kernel-modules-performance/" class="hover:text-blue-600 transition-colors">Building Efficient Kernel Modules</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Deep dive into high-performance Linux kernel development, covering module design, memory management, and optimization techniques.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
+      </div>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/articles/kernel-modules-performance/" class="hover:text-nord-frost-2">Building Efficient Kernel Modules</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Deep dive into high-performance Linux kernel development, covering module design, memory management, and optimization techniques.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
           <time datetime="2024-01-08">Jan 8, 2024</time>
-          
-            <span>1 min read</span>
-          
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
         </div>
+        
       </div>
-    </article>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">linux</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">kernel</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">performance</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">systems</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">c</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
-    <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div class="p-6">
+      
+<article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+  <div class="flex items-start justify-between">
+    <div class="flex-1">
+      <div class="flex items-center mb-3">
         
-        <div class="flex items-center mb-3">
-          
-            
-              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">technology</span>
-            
-          
-        </div>
+          <span class="bg-nord-aurora-green/20 text-nord-aurora-green border border-nord-aurora-green/30 text-xs px-2 py-1 rounded-full mr-2">technology</span>
         
         
-        <h2 class="text-xl font-semibold text-gray-900 mb-3">
-          <a href="/articles/soil-microbiome-engineering/" class="hover:text-blue-600 transition-colors">Engineering Soil Microbiomes for Sustainable Agriculture</a>
-        </h2>
-        
-        
-        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Explore how engineered soil microbiomes can improve crop yields, reduce chemical inputs, and promote sustainable farming practices.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="flex items-center justify-between text-sm text-gray-500">
-          <time datetime="2024-01-06">Jan 6, 2024</time>
-          
-            <span>2 min read</span>
-          
-        </div>
       </div>
-    </article>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">
+        <a href="/articles/soil-microbiome-engineering/" class="hover:text-nord-frost-2">Engineering Soil Microbiomes for Sustainable Agriculture</a>
+      </h2>
+      
+      
+      <p class="text-gray-600 mb-4">Explore how engineered soil microbiomes can improve crop yields, reduce chemical inputs, and promote sustainable farming practices.</p>
+      
+      
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <div class="flex items-center">
+          <time datetime="2024-01-06">Jan 6, 2024</time>
+          <span class="mx-2">•</span>
+          <span>2 min read</span>
+        </div>
+        
+      </div>
+      
+      
+      <div class="flex flex-wrap gap-2 mt-4">
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">soil-health</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">microbiome</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">sustainable-farming</span>
+        
+          <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">biotechnology</span>
+        
+      </div>
+      
+    </div>
+  </div>
+</article>
+
     
   </div>
 
@@ -667,12 +890,54 @@
 
   </main>
 
-  <footer class="border-t mt-16" style="background: transparent;">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-white">
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div class="text-center text-gray-600">
         <p>&copy; 2025 Prem Mallappa. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+      const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+      const themeToggleBtn = document.getElementById('theme-toggle');
+
+      if (!themeToggleBtn || !themeToggleDarkIcon || !themeToggleLightIcon) {
+        return;
+      }
+
+      function getTheme() {
+        if (localStorage.getItem('color-theme')) {
+          return localStorage.getItem('color-theme');
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          themeToggleLightIcon.classList.remove('hidden');
+          themeToggleDarkIcon.classList.add('hidden');
+        } else {
+          document.documentElement.classList.remove('dark');
+          themeToggleLightIcon.classList.add('hidden');
+          themeToggleDarkIcon.classList.remove('hidden');
+        }
+        localStorage.setItem('color-theme', theme);
+      }
+
+      const currentTheme = getTheme();
+      setTheme(currentTheme);
+
+      themeToggleBtn.addEventListener('click', function() {
+        const currentTheme = getTheme();
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+    });
+  </script>
 </body>
 </html>
