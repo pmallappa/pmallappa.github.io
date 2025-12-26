@@ -24,7 +24,9 @@
       </h2>
 
       <!-- Summary -->
-      <p class="mb-4 text-lg" style="color: #4C566A; word-wrap: break-word; overflow-wrap: break-word;">{{ $project.Summary }}</p>
+      <p class="mb-4 text-lg line-clamp-3" style="color: #4C566A; word-wrap: break-word; overflow-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+        {{ $project.Summary }}
+      </p>
 
       <!-- Tech Stack -->
       {{ if $project.Params.tech_stack }}

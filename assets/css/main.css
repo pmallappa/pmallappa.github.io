@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent horizontal scrollbar and ensure proper box-sizing */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Override hugobricks container width to match site width */
+.container {
+  max-width: 72rem !important;
+}
+
 /* Nord Color Palette */
 :root {
   /* Polar Night */

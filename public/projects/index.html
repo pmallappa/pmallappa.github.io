@@ -106,7 +106,7 @@
   <header class="mb-16" style="background: transparent;">
     <h1 class="text-4xl font-bold mb-4" style="color: #4a9eff; background: transparent;">Projects</h1>
     
-      <div class="prose prose-lg prose-gray mb-8" style="color: #4C566A; background: transparent; word-break: break-word; overflow-wrap: anywhere; max-width: 100%;">
+      <div class="prose prose-lg prose-gray mb-8" style="color: #4C566A; background: transparent; max-width: 72ch;">
         <p>Major projects and initiatives, each consisting of multiple series that together form comprehensive explorations of complex systems and implementations.</p>
 
       </div>
@@ -148,7 +148,9 @@
       </h2>
 
       
-      <p class="mb-4 text-lg" style="color: #4C566A; word-wrap: break-word; overflow-wrap: break-word;">Modern static website built with Hugo, featuring dual landing pages for technology portfolio and farming content, with custom layouts and Tailwind CSS styling.</p>
+      <p class="mb-4 text-lg line-clamp-3" style="color: #4C566A; word-wrap: break-word; overflow-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+        Modern static website built with Hugo, featuring dual landing pages for technology portfolio and farming content, with custom layouts and Tailwind CSS styling.
+      </p>
 
       
       
@@ -222,7 +224,9 @@
       </h2>
 
       
-      <p class="mb-4 text-lg" style="color: #4C566A; word-wrap: break-word; overflow-wrap: break-word;">High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination.</p>
+      <p class="mb-4 text-lg line-clamp-3" style="color: #4C566A; word-wrap: break-word; overflow-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+        High-performance distributed platform for IoT edge computing with real-time data processing, ML inference, and autonomous device coordination.
+      </p>
 
       
       
@@ -278,8 +282,8 @@
 
   </main>
 
-  <footer class="bg-white border-t mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <footer class="border-t mt-16" style="background: transparent;">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-white">
       <div class="text-center text-gray-600">
         <p>&copy; 2025 Prem Mallappa. All rights reserved.</p>
       </div>
