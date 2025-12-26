@@ -12,11 +12,11 @@
 
 ;; Define the publishing project
 (setq org-publish-project-alist
-      '(("pmallappa-website-content"
+      `(("pmallappa-website-content"
          ;; Content files (.org → .html)
-         :base-directory "~/Documents/Personal/pmallappa.github.io/content/"
+         :base-directory ,(expand-file-name "content/" default-directory)
          :base-extension "org"
-         :publishing-directory "~/Documents/Personal/pmallappa.github.io/_site/"
+         :publishing-directory ,(expand-file-name "_site/" default-directory)
          :recursive t
          :publishing-function org-html-publish-to-html
          
@@ -43,6 +43,7 @@
          :auto-sitemap t
          :sitemap-filename "sitemap.org"
          :sitemap-title "Site Map"
+         :sitemap-sort-files anti-chronologically
          :sitemap-format-entry (lambda (entry style project)
                                  (format "[[file:%s][%s]] - %s"
                                          entry
@@ -52,9 +53,9 @@
         
         ("pmallappa-website-static"
          ;; Static files (CSS, JS, images)
-         :base-directory "~/Documents/Personal/pmallappa.github.io/static/"
+         :base-directory ,(expand-file-name "static/" default-directory)
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|svg"
-         :publishing-directory "~/Documents/Personal/pmallappa.github.io/_site/static/"
+         :publishing-directory ,(expand-file-name "_site/static/" default-directory)
          :recursive t
          :publishing-function org-publish-attachment)
         
