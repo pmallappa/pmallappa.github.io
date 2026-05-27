@@ -97,11 +97,48 @@
 </head>
 <body class="relative">
   <div id="main" class="relative max-w-screen-xl mx-auto px-2 md:px-5">
-    {% include "partials/navbar.html" %}
+    <header class="my-2 rounded-md border border-gray-200 bg-gray-50 px-4 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="/">
+            <h1 class="text-lg lg:text-xl px-2 lg:px-3 font-medium">{{ config.title }}</h1>
+          </a>
+        </div>
+
+        <div class="hidden lg:block">
+          <ul class="flex items-center">
+            <li class="px-5"><a href="/" class="cursor-pointer font-normal text-base">Home</a></li>
+            <li class="px-5"><a href="/posts/" class="cursor-pointer font-normal text-base">Blog</a></li>
+            <li class="px-5"><a href="/series/" class="cursor-pointer font-normal text-base">Series</a></li>
+            <li class="px-3 flex items-center">
+              <button
+                type="button"
+                aria-label="Toggle theme"
+                class="cursor-pointer p-2 rounded flex items-center justify-center ml-3"
+                onclick="window.__cyclePreferredTheme()">
+                <i class="bx bx-desktop text-xl"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="block lg:hidden mt-2">
+          <button onclick="openMobileMenu()">
+            <i class="bx bx-menu text-3xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
     <main>
       {% block body %}{% endblock body %}
     </main>
-    {% include "partials/footer.html" %}
+
+    <footer class="py-5 text-center text-lg font-light">
+      <div class="pb-5 text-center text-lg font-light">
+        &copy; {{ now(format="%Y") }} {{ config.title }}
+      </div>
+    </footer>
   </div>
 
   {# Mobile menu overlay (Alpine.js-free, pure CSS toggle via checkbox hack) #}
@@ -112,7 +149,7 @@
       </button>
       <ul class="mt-12 flex flex-col">
         <li class="py-2"><a href="/" class="cursor-pointer font-normal">Home</a></li>
-        <li class="py-2"><a href="/posts/" class="cursor-pointer font-normal">Posts</a></li>
+        <li class="py-2"><a href="/posts/" class="cursor-pointer font-normal">Blog</a></li>
         <li class="py-2"><a href="/series/" class="cursor-pointer font-normal">Series</a></li>
       </ul>
     </div>
