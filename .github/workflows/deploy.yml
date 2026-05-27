@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DODECA_VERSION: v0.2.13
+  DODECA_VERSION: v0.14.2
 
 jobs:
   build:
