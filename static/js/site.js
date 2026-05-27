@@ -30,13 +30,18 @@ document.querySelectorAll('[data-typing]').forEach(function(el){
           nodes.push({ ch: n.textContent[c], tag: null });
       } else if (n.nodeType === 1) {
         var tag = n.tagName.toLowerCase();
-        if (tag === 'p') {
-          if (nodes.length > 0) nodes.push({ ch: ' ', tag: null });
+        if (tag === 'br') {
+          nodes.push({ ch: null, tag: 'br' });
+        } else if (tag === 'p') {
+          if (nodes.length > 0) nodes.push({ ch: null, tag: 'br' });
           walk(n);
         } else {
+          walk(n);
           var kids = n.textContent;
-          for (var c = 0; c < kids.length; c++)
-            nodes.push({ ch: kids[c], tag: tag });
+          // re-tag leaf text with the inline element
+          var start = nodes.length - kids.length;
+          for (var c = start; c < nodes.length; c++)
+            nodes[c].tag = tag;
         }
       }
     });
@@ -49,17 +54,23 @@ document.querySelectorAll('[data-typing]').forEach(function(el){
   function type(){
     if (i < nodes.length) {
       var n = nodes[i];
-      if (n.tag && n.tag !== currentTag) {
-        currentEl = document.createElement(n.tag);
-        el.insertBefore(currentEl, cursor);
-        currentTag = n.tag;
-      } else if (!n.tag && currentTag) {
+      if (n.tag === 'br') {
+        el.insertBefore(document.createElement('br'), cursor);
         currentEl = null;
         currentTag = null;
+      } else {
+        if (n.tag && n.tag !== currentTag) {
+          currentEl = document.createElement(n.tag);
+          el.insertBefore(currentEl, cursor);
+          currentTag = n.tag;
+        } else if (!n.tag && currentTag) {
+          currentEl = null;
+          currentTag = null;
+        }
+        var txt = document.createTextNode(n.ch);
+        if (currentEl) currentEl.appendChild(txt);
+        else el.insertBefore(txt, cursor);
       }
-      var txt = document.createTextNode(n.ch);
-      if (currentEl) currentEl.appendChild(txt);
-      else el.insertBefore(txt, cursor);
       i++;
       setTimeout(type, 30 + Math.random() * 35);
     }
