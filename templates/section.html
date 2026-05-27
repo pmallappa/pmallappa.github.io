@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} - {{ config.title }}{% endblock title %}
+
+{% block body %}
+<section class="py-5 md:py-10">
+  <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">{{ section.title }}</h1>
+
+  {% if section.content %}
+    <div class="post-content mb-8">{{ section.content | safe }}</div>
+  {% endif %}
+
+  <div class="grid grid-cols-1 gap-6">
+    {% for sub in section.subsections %}
+      <div class="bg-gray-50 p-7 rounded-lg border border-gray-200 post-card">
+        <a href="{{ sub.permalink }}">
+          <h2>{{ sub.title }}</h2>
+        </a>
+        {% if sub.extra.description %}
+          <p>{{ sub.extra.description }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    {% for page in section.pages %}
+      <div class="bg-gray-50 p-7 rounded-lg border border-gray-200 post-card">
+        <a href="{{ page.permalink }}">
+          <h2>{{ page.title }}</h2>
+        </a>
+        {% if page.extra.description %}
+          <p>{{ page.extra.description }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock body %}

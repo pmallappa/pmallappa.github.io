@@ -1,0 +1,59 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  DODECA_VERSION: v0.2.13
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Bun (for home-drawio)
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install home-drawio
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf \
+            https://github.com/bearcove/home-drawio/releases/latest/download/home-drawio-installer.sh | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Install dodeca ${{ env.DODECA_VERSION }}
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf \
+            https://github.com/bearcove/dodeca/releases/download/${{ env.DODECA_VERSION }}/dodeca-installer.sh | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Convert drawio diagrams to SVG
+        run: ./scripts/build-drawio.sh
+
+      - name: Build site
+        run: ddc build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

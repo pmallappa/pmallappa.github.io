@@ -1,0 +1,32 @@
+<div class="flex items-center justify-between py-5">
+  <div class="flex items-center">
+    <a href="/">
+      <h1 class="text-lg lg:text-xl px-2 lg:px-3 font-medium">{{ config.title }}</h1>
+    </a>
+  </div>
+
+  {# Desktop nav #}
+  <div class="hidden lg:block">
+    <ul class="flex items-center">
+      <li class="px-5"><a href="/" class="cursor-pointer font-normal text-base">Home</a></li>
+      <li class="px-5"><a href="/posts/" class="cursor-pointer font-normal text-base">Posts</a></li>
+      <li class="px-5"><a href="/series/" class="cursor-pointer font-normal text-base">Series</a></li>
+      <li class="px-3 flex items-center">
+        <button
+          type="button"
+          aria-label="Toggle theme"
+          class="cursor-pointer p-2 rounded flex items-center justify-center ml-3"
+          onclick="window.__cyclePreferredTheme()">
+          <i class="bx bx-desktop text-xl"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  {# Mobile hamburger #}
+  <div class="block lg:hidden mt-2">
+    <button onclick="openMobileMenu()">
+      <i class="bx bx-menu text-3xl"></i>
+    </button>
+  </div>
+</div>
