@@ -3,10 +3,10 @@
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock title %}
 
 {% block body %}
-<section class="py-5 md:py-10">
-  <div class="bg-gray-50 px-8 py-10 rounded-md post-content">
-    <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5 font-poppins">{{ page.title }}</h1>
+<div class="content-wrap" style="padding-top:6rem;padding-bottom:3rem;">
+  <div class="post-content">
+    <h1 class="text-3xl md:text-4xl mb-5">{{ page.title }}</h1>
     {{ page.content | safe }}
   </div>
-</section>
+</div>
 {% endblock body %}
