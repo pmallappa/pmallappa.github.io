@@ -3,6 +3,10 @@
 Personal blog built with [dodeca](https://github.com/bearcove/dodeca), deployed
 to GitHub Pages on every push to `main`.
 
+The visual shell is adapted from the
+[hugo-porto](https://hugo-porto.netlify.app/) demo layout, using its
+Roboto/Poppins typography pairing and large three-line hero treatment.
+
 ## Local development
 
 Install dodeca once:

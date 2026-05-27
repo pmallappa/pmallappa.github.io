@@ -4,7 +4,7 @@
 
 {% block body %}
 {# Hero section - mirrors hugo-porto's three-panel layout #}
-<section class="py-5 md:py-10">
+<section id="hero" class="py-5 md:py-10">
   <div class="w-full flex items-center justify-center">
     <div class="w-full">
       <div class="md:flex lg:space-x-5 xl:space-x-10 items-center py-2">
@@ -39,7 +39,7 @@
   {% for sub in section.subsections %}
     {% if sub.path == "/posts/" %}
       <section class="py-5 md:py-10">
-        <h2 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Recent Posts</h2>
+        <h2 class="font-medium font-poppins text-gray-400 text-4xl md:text-5xl lg:text-7xl text-center mb-5">Recent Posts</h2>
         <div class="grid grid-cols-1 gap-6">
           {% for page in sub.pages %}
             <div class="bg-gray-50 p-7 rounded-lg border border-gray-200 post-card">

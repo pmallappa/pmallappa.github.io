@@ -6,6 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal blog (pmallppa.github.io) built with [dodeca](https://github.com/bearcove/dodeca), deployed to GitHub Pages on every push to `main`.
 
+The visual shell is adapted from the Hugo Porto demo at https://hugo-porto.netlify.app/.
+Keep the Roboto/Poppins typography pairing and three-line hero treatment aligned with that source unless intentionally redesigning.
+
 ## Commands
 
 ```bash
