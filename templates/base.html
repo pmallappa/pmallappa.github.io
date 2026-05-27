@@ -59,6 +59,18 @@
     .bg-gray-300 { background-color: var(--divider)!important; }
     .font-outline-2 { -webkit-text-fill-color:transparent!important; color:transparent!important; -webkit-text-stroke:2px oklch(44.6% .03 256.802)!important; }
     .font-outline-3 { -webkit-text-fill-color:transparent!important; color:transparent!important; -webkit-text-stroke:3px oklch(44.6% .03 256.802)!important; }
+    .hero-word { position:absolute; font-family:Poppins,sans-serif; font-weight:600; text-transform:uppercase; line-height:1; opacity:.72; white-space:nowrap; }
+    .hero-word.light { color:var(--divider); }
+    .hero-word.soft { color:oklch(92.8% .006 264.531); }
+    html[data-theme="dark"] .hero-word.soft, html.dark .hero-word.soft { color:rgba(255,255,255,0.08); }
+    html[data-theme="dark"] .hero-word.light, html.dark .hero-word.light { color:rgba(255,255,255,0.04); }
+    .hero-word-1 { top:0; left:0; }
+    .hero-word-2 { top:6%; right:0; }
+    .hero-word-3 { top:24%; left:18%; }
+    .hero-word-4 { top:34%; right:-2rem; }
+    .hero-word-5 { top:52%; left:-1rem; }
+    .hero-word-6 { top:68%; right:0; }
+    .hero-word-7 { bottom:0; left:24%; }
     [x-cloak] { display:none!important; }
     html.dark .hover\:bg-gray-600:hover, html[data-theme="dark"] .hover\:bg-gray-600:hover { background-color:rgba(255,255,255,0.06)!important; }
     html.dark .hover\:text-white:hover, html[data-theme="dark"] .hover\:text-white:hover { color:var(--site-text)!important; }
