@@ -8,9 +8,7 @@
 
   <div class="hero-center">
     <h1 class="hero-name">{{ config.title }}</h1>
-    <div class="mono text-muted" style="max-width:48rem;font-size:1rem;line-height:1.8;margin-top:1.5rem;">
-      {{ section.content | safe }}
-    </div>
+    <div class="mono text-muted" data-typing style="max-width:48rem;font-size:1rem;line-height:1.8;margin-top:1.5rem;">{{ section.content | safe }}</div>
   </div>
 </section>
 
@@ -31,8 +29,7 @@
     el.textContent = words[i];
     el.style.fontSize = sizes[Math.floor(Math.random() * sizes.length)] + 'rem';
     var x = Math.random() * 90, y = Math.random() * 90;
-    el.style.left = x + '%';
-    el.style.top = y + '%';
+    el.style.left = x + '%'; el.style.top = y + '%';
     container.appendChild(el);
     var speed = 0.3 + Math.random() * 0.7;
     var angle = Math.random() * 2 * Math.PI;
@@ -42,8 +39,7 @@
   var last = 0;
   function tick(ts) {
     if (!last) { last = ts; requestAnimationFrame(tick); return; }
-    var dt = (ts - last) / 1000;
-    last = ts;
+    var dt = (ts - last) / 1000; last = ts;
     for (var i = 0; i < items.length; i++) {
       var it = items[i];
       it.x += it.vx * dt; it.y += it.vy * dt;
@@ -61,13 +57,33 @@
 <div class="content-wrap" style="padding-top:3rem;padding-bottom:3rem;">
   {% for sub in section.subsections %}
     {% if sub.path == "/posts/" %}
-      <h2 class="section-heading text-4xl md:text-5xl lg:text-6xl mb-8">Recent Posts</h2>
-      <div class="grid grid-cols-1 gap-6">
+      <h2 class="section-heading reveal text-4xl md:text-5xl lg:text-6xl mb-8">
+        <span class="section-num">01.</span>Recent Posts
+      </h2>
+      <div class="grid grid-cols-1 gap-4">
         {% for page in sub.pages %}
-          <a href="{{ page.permalink }}" class="card">
+          <a href="{{ page.permalink }}" class="card" data-delay="{{ loop.index0 * 100 }}">
             <h2>{{ page.title }}</h2>
             {% if page.extra.description %}
               <p>{{ page.extra.description }}</p>
+            {% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  {% for sub in section.subsections %}
+    {% if sub.path == "/series/" %}
+      <h2 class="section-heading reveal text-4xl md:text-5xl lg:text-6xl mb-8 mt-16">
+        <span class="section-num">02.</span>Series
+      </h2>
+      <div class="grid grid-cols-1 gap-4">
+        {% for series in sub.subsections %}
+          <a href="{{ series.permalink }}" class="card" data-delay="{{ loop.index0 * 100 }}">
+            <h2>{{ series.title }}</h2>
+            {% if series.extra.description %}
+              <p>{{ series.extra.description }}</p>
             {% endif %}
           </a>
         {% endfor %}

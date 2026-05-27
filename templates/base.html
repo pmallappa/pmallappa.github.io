@@ -62,7 +62,7 @@
     @media (min-width:1280px) { .hero-name { -webkit-text-stroke-width: 5px; } }
     .hero-word { position: absolute; font-family: var(--mono); font-weight: 500; text-transform: uppercase; line-height: 1; white-space: nowrap; pointer-events: none; user-select: none; will-change: transform; opacity: .18; color: #1d3a5c; }
     .bg-words { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
-    .bg-word { position: absolute; font-family: var(--mono); font-weight: 500; text-transform: uppercase; line-height: 1; white-space: nowrap; pointer-events: none; user-select: none; will-change: transform; opacity: .06; color: #1d3a5c; }
+    .bg-word { position: absolute; font-family: var(--mono); font-weight: 500; text-transform: uppercase; line-height: 1; white-space: nowrap; pointer-events: none; user-select: none; will-change: transform; opacity: .14; color: #1d3a5c; }
 
     /* --- Utility --- */
     .mono { font-family: var(--mono); }
@@ -104,11 +104,34 @@
     .mobile-panel ul { list-style: none; padding: 0; margin: 3rem 0 0; display: flex; flex-direction: column; gap: .75rem; }
     .mobile-panel a { color: var(--text); font-family: var(--mono); font-size: 1rem; }
 
+    /* --- Scroll progress bar --- */
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: 100; width: 0%; transition: width .1s linear; }
+
+    /* --- Fade-in on scroll --- */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+    /* --- Staggered card animation --- */
+    .card { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease, border-color .2s; }
+    .card.visible { opacity: 1; transform: translateY(0); }
+    .card:hover { transform: translateX(8px); }
+
+    /* --- Typing effect --- */
+    .typing-cursor { display: inline-block; width: 2px; height: 1.1em; background: var(--accent); margin-left: 3px; vertical-align: text-bottom; animation: blink .7s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* --- Numbered section heading --- */
+    .section-num { color: var(--accent); font-family: var(--mono); font-size: .9rem; display: block; margin-bottom: .5rem; }
+
     /* --- Hide sidebars on small screens --- */
     @media (max-width:1023px) { .sidebar { display: none; } }
   </style>
 </head>
 <body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
   {# --- Navbar --- #}
   <header class="nav-bar">
     <nav class="nav-inner">
@@ -176,6 +199,46 @@
     function openMobileMenu(){ document.getElementById('mobile-overlay').style.display='block'; document.body.style.overflow='hidden'; }
     function closeMobileMenu(){ document.getElementById('mobile-overlay').style.display='none'; document.body.style.overflow=''; }
 
+    // Scroll progress bar
+    window.addEventListener('scroll', function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+      document.getElementById('scroll-progress').style.width = pct + '%';
+    });
+
+    // Reveal on scroll (IntersectionObserver)
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          var delay = e.target.dataset.delay || 0;
+          setTimeout(function(){ e.target.classList.add('visible'); }, delay);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal, .reveal-left, .card').forEach(function(el){ observer.observe(el); });
+
+    // Typing effect
+    document.querySelectorAll('[data-typing]').forEach(function(el){
+      var text = el.textContent;
+      el.textContent = '';
+      var cursor = document.createElement('span');
+      cursor.className = 'typing-cursor';
+      el.appendChild(cursor);
+      var i = 0;
+      function type(){
+        if (i < text.length) {
+          el.insertBefore(document.createTextNode(text[i]), cursor);
+          i++;
+          setTimeout(type, 40 + Math.random() * 40);
+        }
+      }
+      var tObs = new IntersectionObserver(function(entries){
+        if (entries[0].isIntersecting) { type(); tObs.disconnect(); }
+      }, { threshold: 0.5 });
+      tObs.observe(el);
+    });
+
+    // Floating background words
     (function(){
       var words = ['C','Python','Linux','QEMU','KVM','ARM','RISC-V','Go','Xen','gem5','Simics','FreeBSD','QNX','Plan 9','Git','Emacs','Rust','Shell','Docker','x86'];
       var sizes = [2,3,4,5,6];
