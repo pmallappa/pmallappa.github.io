@@ -17,135 +17,64 @@
   <link rel="stylesheet" href="/css/tailwind.css" />
 
   <style>
-    /* Light / dark CSS custom properties */
+    /* Color palette inspired by yashitanamdeo.github.io */
     :root {
-      --site-bg: oklch(96.7% .003 264.542);
-      --site-text: oklch(37.3% .034 259.733);
-      --site-muted: oklch(55.1% .027 264.364);
-      --card-bg: #ffffff;
-      --link-color: #3b82f6;
-      --overlay-bg: rgba(0,0,0,0.6);
-      --divider: rgba(0,0,0,0.08);
+      --site-bg: #0a192f;
+      --site-text: #ccd6f6;
+      --site-muted: #8892b0;
+      --card-bg: #112240;
+      --link-color: #64ffda;
+      --accent: #64ffda;
+      --overlay-bg: rgba(2,12,27,0.7);
+      --divider: rgba(204,214,246,0.1);
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --site-bg: #0b1220;
-        --site-text: #c9d6e3;
-        --site-muted: #98a7b5;
-        --card-bg: #07101a;
-        --link-color: #60a5fa;
-        --overlay-bg: rgba(255,255,255,0.03);
-        --divider: rgba(255,255,255,0.12);
-      }
-    }
-    .dark {
-      --site-bg: #0b1220; --site-text: #c9d6e3; --site-muted: #98a7b5;
-      --card-bg: #07101a; --link-color: #60a5fa;
-      --overlay-bg: rgba(255,255,255,0.03); --divider: rgba(255,255,255,0.12);
-    }
-    html[data-theme="dark"]  { --site-bg:#0b1220!important; --site-text:#c9d6e3!important; --site-muted:#98a7b5!important; --card-bg:#07101a!important; --link-color:#60a5fa!important; --overlay-bg:rgba(255,255,255,0.03)!important; --divider:rgba(255,255,255,0.12)!important; }
-    html[data-theme="light"] { --site-bg:oklch(96.7% .003 264.542)!important; --site-text:oklch(37.3% .034 259.733)!important; --site-muted:oklch(55.1% .027 264.364)!important; --card-bg:#ffffff!important; --link-color:#3b82f6!important; --overlay-bg:rgba(0,0,0,0.6)!important; --divider:rgba(0,0,0,0.08)!important; }
 
     html, body { background-color: var(--site-bg); color: var(--site-text); }
-    html.dark body, html[data-theme="dark"] body { background-color: var(--site-bg)!important; color: var(--site-text)!important; }
-    html.dark .bg-white, html[data-theme="dark"] .bg-white { background-color: var(--card-bg)!important; }
+    .bg-white, .bg-gray-50, .bg-gray-200 { background-color: var(--card-bg)!important; }
     .text-gray-700 { color: var(--site-text)!important; }
     .text-gray-500 { color: var(--site-muted)!important; }
-    .text-blue-500 { color: var(--link-color)!important; }
-    .bg-gray-50, .bg-gray-200 { background-color: var(--card-bg)!important; }
+    .text-blue-500, a { color: var(--link-color)!important; }
+    a:hover { color: var(--accent)!important; opacity:.85; }
     .border-gray-300, .border-gray-200 { border-color: var(--divider)!important; }
     .border-b-2 { border-bottom-width: 1px!important; }
     .border-2 { border-width: 1px!important; }
     .bg-gray-300 { background-color: var(--divider)!important; }
-    .font-outline-2 { -webkit-text-fill-color:transparent!important; color:transparent!important; -webkit-text-stroke:2px oklch(44.6% .03 256.802)!important; }
-    .font-outline-3 { -webkit-text-fill-color:transparent!important; color:transparent!important; -webkit-text-stroke:3px oklch(44.6% .03 256.802)!important; }
-    .hero-word { position:absolute; font-family:Poppins,sans-serif; font-weight:600; text-transform:uppercase; line-height:1; opacity:.72; white-space:nowrap; }
-    .hero-word.light { color:var(--divider); }
-    .hero-word.soft { color:oklch(92.8% .006 264.531); }
-    html[data-theme="dark"] .hero-word.soft, html.dark .hero-word.soft { color:rgba(255,255,255,0.08); }
-    html[data-theme="dark"] .hero-word.light, html.dark .hero-word.light { color:rgba(255,255,255,0.04); }
-    .hero-word-1 { top:0; left:0; }
-    .hero-word-2 { top:6%; right:0; }
-    .hero-word-3 { top:24%; left:18%; }
-    .hero-word-4 { top:34%; right:-2rem; }
-    .hero-word-5 { top:52%; left:-1rem; }
-    .hero-word-6 { top:68%; right:0; }
-    .hero-word-7 { bottom:0; left:24%; }
+    .hero-word { position:absolute; font-family:'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace; font-weight:500; text-transform:uppercase; line-height:1; white-space:nowrap; pointer-events:none; user-select:none; will-change:transform; opacity:.18; color:#1d3a5c; }
+    .hero-name { font-family:Poppins,sans-serif; font-weight:700; -webkit-text-fill-color:transparent; color:transparent; -webkit-text-stroke:3px var(--accent); text-transform:uppercase; letter-spacing:.05em; }
+    @media (min-width:768px) { .hero-name { -webkit-text-stroke-width:4px; } }
+    @media (min-width:1280px) { .hero-name { -webkit-text-stroke-width:5px; } }
     [x-cloak] { display:none!important; }
-    html.dark .hover\:bg-gray-600:hover, html[data-theme="dark"] .hover\:bg-gray-600:hover { background-color:rgba(255,255,255,0.06)!important; }
-    html.dark .hover\:text-white:hover, html[data-theme="dark"] .hover\:text-white:hover { color:var(--site-text)!important; }
+    html { overflow-x: hidden; scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
   </style>
 
-  {# Inline theme script - runs before paint to avoid flash #}
-  <script>
-    (function(){
-      var KEY="theme";
-      function sys(){ return window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light"; }
-      function apply(m){
-        if(m==="dark"){ document.documentElement.classList.add("dark"); document.documentElement.setAttribute("data-theme","dark"); }
-        else if(m==="light"){ document.documentElement.classList.remove("dark"); document.documentElement.setAttribute("data-theme","light"); }
-        else { document.documentElement.classList.remove("dark"); document.documentElement.removeAttribute("data-theme"); }
-      }
-      function get(){ try{ return localStorage.getItem(KEY); }catch(e){ return null; } }
-      function set(v){ try{ localStorage.setItem(KEY,v); }catch(e){} }
-      var stored=get(), initial=stored||"system";
-      apply(initial==="system"?sys():initial);
-      window.__theme=initial;
-      window.__getPreferredTheme=function(){ return window.__theme||"system"; };
-      window.__setPreferredTheme=function(m){
-        if(!m||!["light","dark","system"].includes(m)) return;
-        set(m); window.__theme=m;
-        apply(m==="system"?sys():m);
-        window.dispatchEvent(new Event("theme-changed"));
-      };
-      window.__cyclePreferredTheme=function(){
-        var cur=window.__theme||get()||"system";
-        var next=cur==="system"?"dark":cur==="dark"?"light":"system";
-        window.__setPreferredTheme(next); return next;
-      };
-      if(window.matchMedia) window.matchMedia("(prefers-color-scheme:dark)").addEventListener("change",function(){ if((window.__theme||get()||"system")==="system") apply(sys()); });
-    })();
-  </script>
 </head>
 <body class="relative">
-  <div id="main" class="relative max-w-screen-xl mx-auto px-2 md:px-5">
-    <header class="my-2 rounded-md border border-gray-200 bg-gray-50 px-4 py-4">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center">
-          <a href="/">
-            <h1 class="text-lg lg:text-xl px-2 lg:px-3 font-medium">{{ config.title }}</h1>
-          </a>
-        </div>
+  <header style="position:fixed;top:0;left:0;right:0;z-index:50;padding:1.25rem 2rem;">
+    <nav class="flex items-center justify-between max-w-screen-xl mx-auto">
+      <a href="/" style="color:#ccd6f6;font-family:Poppins,sans-serif;font-weight:600;font-size:1.1rem;letter-spacing:.05em;">{{ config.title }}</a>
 
-        <div class="hidden lg:block">
-          <ul class="flex items-center">
-            <li class="px-5"><a href="/" class="cursor-pointer font-normal text-base">Home</a></li>
-            <li class="px-5"><a href="/posts/" class="cursor-pointer font-normal text-base">Blog</a></li>
-            <li class="px-5"><a href="/series/" class="cursor-pointer font-normal text-base">Series</a></li>
-            <li class="px-3 flex items-center">
-              <button
-                type="button"
-                aria-label="Toggle theme"
-                class="cursor-pointer p-2 rounded flex items-center justify-center ml-3"
-                onclick="window.__cyclePreferredTheme()">
-                <i class="bx bx-desktop text-xl"></i>
-              </button>
-            </li>
-          </ul>
-        </div>
-
-        <div class="block lg:hidden mt-2">
-          <button onclick="openMobileMenu()">
-            <i class="bx bx-menu text-3xl"></i>
-          </button>
-        </div>
+      <div class="hidden lg:block">
+        <ul class="flex items-center" style="gap:2rem;">
+          <li><a href="/" style="color:#8892b0;font-size:.9rem;font-family:'SF Mono','Fira Code',monospace;letter-spacing:.05em;">Home</a></li>
+          <li><a href="/posts/" style="color:#8892b0;font-size:.9rem;font-family:'SF Mono','Fira Code',monospace;letter-spacing:.05em;">Blog</a></li>
+          <li><a href="/series/" style="color:#8892b0;font-size:.9rem;font-family:'SF Mono','Fira Code',monospace;letter-spacing:.05em;">Series</a></li>
+        </ul>
       </div>
-    </header>
 
-    <main>
-      {% block body %}{% endblock body %}
-    </main>
+      <div class="block lg:hidden">
+        <button onclick="openMobileMenu()" style="color:#64ffda;">
+          <i class="bx bx-menu text-3xl"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
 
+  <main>
+    {% block body %}{% endblock body %}
+  </main>
+
+  <div class="relative max-w-screen-xl mx-auto px-2 md:px-5">
     <footer class="py-5 text-center text-lg font-light">
       <div class="pb-5 text-center text-lg font-light">
         &copy; {{ now(format="%Y") }} {{ config.title }}
@@ -154,8 +83,8 @@
   </div>
 
   {# Mobile menu overlay (Alpine.js-free, pure CSS toggle via checkbox hack) #}
-  <div id="mobile-overlay" class="fixed inset-0 min-h-screen bg-black" style="z-index:99999;display:none;">
-    <div class="absolute right-0 min-h-screen bg-gray-200 py-5 px-10 w-2/3 sm:w-1/3 z-50">
+  <div id="mobile-overlay" class="fixed inset-0 min-h-screen" style="z-index:99999;display:none;background:rgba(2,12,27,0.85);">
+    <div class="absolute right-0 min-h-screen py-5 px-10 w-2/3 sm:w-1/3 z-50" style="background:#112240;">
       <button class="absolute top-0 right-0 mt-9 mr-4" onclick="closeMobileMenu()">
         <i class="bx bx-x text-4xl"></i>
       </button>

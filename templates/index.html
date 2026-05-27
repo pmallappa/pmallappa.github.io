@@ -3,47 +3,87 @@
 {% block title %}{{ config.title }}{% endblock title %}
 
 {% block body %}
-{# Hero section adapted from hugo-porto's oversized word treatment #}
-<section id="hero" class="py-5 md:py-10">
-  <div class="relative overflow-hidden min-h-screen flex items-center justify-center">
-    <div class="absolute inset-0 pointer-events-none font-poppins font-semibold uppercase leading-none">
-      <div class="hero-word hero-word-1 light text-5xl sm:text-7xl lg:text-8xl xl:text-9xl">Systems</div>
-      <div class="hero-word hero-word-2 soft text-4xl sm:text-7xl lg:text-8xl xl:text-9xl">Virtualization</div>
-      <div class="hero-word hero-word-3 light text-5xl sm:text-7xl lg:text-8xl xl:text-9xl">Architecture</div>
-      <div class="hero-word hero-word-4 soft text-4xl sm:text-7xl lg:text-8xl xl:text-9xl">Simulators</div>
-      <div class="hero-word hero-word-5 soft text-5xl sm:text-7xl lg:text-8xl xl:text-9xl">Operating</div>
-      <div class="hero-word hero-word-6 light text-5xl sm:text-7xl lg:text-8xl xl:text-9xl">Developer</div>
-      <div class="hero-word hero-word-7 soft text-5xl sm:text-7xl lg:text-8xl xl:text-9xl">Tools</div>
-    </div>
+{# Hero section - floating tech words + outlined name #}
+<section id="hero" style="width:100%;height:100vh;position:relative;overflow:hidden;">
+  <div id="hero-words" style="position:absolute;inset:0;overflow:hidden;"></div>
 
-    <div class="relative z-10 w-full max-w-screen-xl text-center">
-      <h1 class="font-poppins font-semibold text-gray-700 text-5xl sm:text-7xl lg:text-8xl xl:text-9xl py-5">
-        {{ config.title }}
-      </h1>
-      <div class="text-lg xl:text-xl font-light p-2 md:p-10">
-        {{ section.content | safe }}
-      </div>
-      <div class="text-lg xl:text-xl font-light p-2 md:p-10">
-        {{ config.description }}
-      </div>
+  <div style="position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;width:100%;text-align:center;padding:1rem;">
+    <h1 id="hero-name" class="hero-name leading-none">
+      {{ config.title }}
+    </h1>
+    <div class="text-lg xl:text-xl font-light mt-6" style="color:#8892b0;max-width:48rem;">
+      {{ section.content | safe }}
     </div>
   </div>
 </section>
+<style>
+  #hero-name { font-size: clamp(2.5rem, 11vw, 15rem); }
+</style>
+
+<script>
+(function(){
+  var words = [
+    'C','Python','Linux','QEMU','KVM','ARM','RISC-V','Go','Xen',
+    'gem5','Simics','FreeBSD','QNX','Plan 9','Git','Emacs','Rust',
+    'Shell','Docker','x86'
+  ];
+  var sizes = [3,4,5,6,7,8];
+  var container = document.getElementById('hero-words');
+  var items = [];
+
+  for (var i = 0; i < words.length; i++) {
+    var el = document.createElement('div');
+    el.className = 'hero-word';
+    el.textContent = words[i];
+    var sz = sizes[Math.floor(Math.random() * sizes.length)];
+    el.style.fontSize = sz + 'rem';
+    var x = Math.random() * 90;
+    var y = Math.random() * 90;
+    el.style.left = x + '%';
+    el.style.top = y + '%';
+    container.appendChild(el);
+    var speed = 0.3 + Math.random() * 0.7;
+    var angle = Math.random() * 2 * Math.PI;
+    items.push({ el:el, x:x, y:y, vx:Math.cos(angle)*speed, vy:Math.sin(angle)*speed });
+  }
+
+  var last = 0;
+  function tick(ts) {
+    if (!last) { last = ts; requestAnimationFrame(tick); return; }
+    var dt = (ts - last) / 1000;
+    last = ts;
+    for (var i = 0; i < items.length; i++) {
+      var it = items[i];
+      it.x += it.vx * dt;
+      it.y += it.vy * dt;
+      if (it.x < -10) it.x = 100;
+      if (it.x > 100) it.x = -10;
+      if (it.y < -5) it.y = 100;
+      if (it.y > 100) it.y = -5;
+      it.el.style.left = it.x + '%';
+      it.el.style.top = it.y + '%';
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
 
 {# Recent posts #}
 {% if section.subsections %}
+<div class="max-w-screen-xl mx-auto px-2 md:px-5">
   {% for sub in section.subsections %}
     {% if sub.path == "/posts/" %}
       <section class="py-5 md:py-10">
-        <h2 class="font-medium font-poppins text-gray-400 text-4xl md:text-5xl lg:text-7xl text-center mb-5">Recent Posts</h2>
+        <h2 class="font-medium font-poppins text-4xl md:text-5xl lg:text-7xl text-center mb-5" style="color:#8892b0;">Recent Posts</h2>
         <div class="grid grid-cols-1 gap-6">
           {% for page in sub.pages %}
-            <div class="bg-gray-50 p-7 rounded-lg border border-gray-200 post-card">
+            <div class="p-7 rounded-lg post-card" style="background:#112240;border:1px solid rgba(204,214,246,0.1);">
               <a href="{{ page.permalink }}">
                 <h2>{{ page.title }}</h2>
               </a>
               {% if page.extra.description %}
-                <p>{{ page.extra.description }}</p>
+                <p style="color:#8892b0;">{{ page.extra.description }}</p>
               {% endif %}
             </div>
           {% endfor %}
@@ -51,5 +91,6 @@
       </section>
     {% endif %}
   {% endfor %}
+</div>
 {% endif %}
 {% endblock body %}

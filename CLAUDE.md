@@ -44,6 +44,36 @@ Validate content changes with `ddc build` before committing; use `ddc serve` to 
 
 Push to `main`. The workflow at `.github/workflows/deploy.yml` installs the pinned `DODECA_VERSION`, converts diagrams, runs `ddc build`, and publishes `public/` to GitHub Pages. To upgrade dodeca, bump `DODECA_VERSION` in that workflow.
 
+## Template architecture
+
+Templates use [Tera](https://keats.github.io/tera/) (Jinja2-like). All templates extend `templates/base.html` via `{% extends "base.html" %}` and fill `{% block body %}`.
+
+| Template | Used for |
+|---|---|
+| `base.html` | Site shell: fonts, CSS vars, dark-mode script, navbar, footer |
+| `index.html` | Homepage — hero word cloud + recent posts from `/posts/` subsection |
+| `section.html` | List pages (`/posts/`, `/series/`, series landing pages) |
+| `page.html` | Individual post or series part |
+
+Theme toggle cycles `system → dark → light` via `window.__cyclePreferredTheme()` (stored in `localStorage`). CSS custom properties live in `base.html`; Tailwind utility classes in `static/css/tailwind.css`.
+
+The hero background words in `templates/index.html` are hardcoded. Update them there when changing the homepage tagline keywords.
+
+## Frontmatter conventions
+
+Posts and series parts use TOML frontmatter (`+++ … +++`). Required fields:
+
+```toml
+title = "…"
+
+[extra]
+description = "…"   # shown in card previews
+date = "YYYY-MM-DD"
+draft = false
+```
+
+Series parts additionally need `weight = N` (integer) for prev/next navigation ordering.
+
 ## Shell scripts
 
 Scripts in `scripts/` use `set -euo pipefail`, quoted variables, and degrade gracefully when optional tools or directories are absent.
