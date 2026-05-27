@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DODECA_VERSION: v0.2.13
+  DODECA_VERSION: v0.14.2
 
 jobs:
   build:
@@ -42,7 +42,7 @@ jobs:
         run: ./scripts/build-drawio.sh
 
       - name: Build site
-        run: ddc build
+        run: ddc build --content content --output public
 
       - uses: actions/upload-pages-artifact@v3
         with:
