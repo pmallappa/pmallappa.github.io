@@ -41,11 +41,14 @@ jobs:
       - name: Convert drawio diagrams to SVG
         run: ./scripts/build-drawio.sh
 
+      - name: Install Xvfb
+        run: sudo apt-get install -y xvfb
+
       - name: Build site
         timeout-minutes: 2
         env:
-          RUST_LOG: trace
-        run: ddc build --link-check internal --no-tui
+          RUST_LOG: info,ddc=debug
+        run: xvfb-run ddc build --link-check internal --no-tui
 
       - uses: actions/upload-pages-artifact@v3
         with:
