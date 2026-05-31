@@ -42,8 +42,9 @@ jobs:
         run: ./scripts/build-drawio.sh
 
       - name: Build site
+        timeout-minutes: 2
         env:
-          RUST_LOG: info,ddc=debug
+          RUST_LOG: trace
         run: ddc build --link-check internal --no-tui
 
       - uses: actions/upload-pages-artifact@v3
