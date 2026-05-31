@@ -42,7 +42,7 @@ jobs:
         run: ./scripts/build-drawio.sh
 
       - name: Build site
-        run: ddc build
+        run: ddc build --link-check internal
 
       - uses: actions/upload-pages-artifact@v3
         with:
