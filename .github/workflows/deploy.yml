@@ -42,7 +42,9 @@ jobs:
         run: ./scripts/build-drawio.sh
 
       - name: Build site
-        run: ddc build --link-check internal
+        env:
+          RUST_LOG: info,ddc=debug
+        run: ddc build --link-check internal --no-tui
 
       - uses: actions/upload-pages-artifact@v3
         with:
