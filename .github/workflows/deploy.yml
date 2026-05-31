@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DODECA_VERSION: v0.14.2
+  DODECA_VERSION: v0.2.13
 
 jobs:
   build:
@@ -41,14 +41,8 @@ jobs:
       - name: Convert drawio diagrams to SVG
         run: ./scripts/build-drawio.sh
 
-      - name: Install Xvfb
-        run: sudo apt-get install -y xvfb
-
       - name: Build site
-        timeout-minutes: 2
-        env:
-          RUST_LOG: info,ddc=debug
-        run: xvfb-run ddc build --link-check internal --no-tui
+        run: ddc build --content content --output public
 
       - uses: actions/upload-pages-artifact@v3
         with:
