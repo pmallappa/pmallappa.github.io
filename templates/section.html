@@ -15,7 +15,7 @@
 
   <div class="project-grid mt-4">
     {% for sub in section.subsections %}
-      <a href="{{ sub.permalink }}" class="project-row">
+      <a href="{{ sub.path }}" class="project-row">
         <span class="project-name">{{ sub.title }}/</span>
         <span class="project-desc">{{ sub.extra.description | default(value="") }}</span>
       </a>
