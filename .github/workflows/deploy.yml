@@ -34,8 +34,10 @@ jobs:
 
       - name: Install dodeca ${{ env.DODECA_VERSION }}
         run: |
-          curl --proto '=https' --tlsv1.2 -LsSf \
-            https://github.com/bearcove/dodeca/releases/download/${{ env.DODECA_VERSION }}/dodeca-installer.sh | sh
+          mkdir -p $HOME/.local/bin
+          curl -fsSL https://github.com/bearcove/dodeca/releases/download/${{ env.DODECA_VERSION }}/dodeca-x86_64-unknown-linux-gnu.tar.xz -o dodeca.tar.xz
+          tar -xJf dodeca.tar.xz -C $HOME/.local/bin
+          chmod +x $HOME/.local/bin/ddc
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Convert drawio diagrams to SVG
