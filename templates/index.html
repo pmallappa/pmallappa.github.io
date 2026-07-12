@@ -3,93 +3,39 @@
 {% block title %}{{ config.title }}{% endblock title %}
 
 {% block body %}
-<section class="hero">
-  <div id="hero-words"></div>
-
-  <div class="hero-center">
-    <h1 class="hero-name">{{ config.title }}</h1>
-    <div class="hero-desc mono text-muted" data-typing style="max-width:48rem;font-size:1rem;line-height:1.8;margin-top:1.5rem;">{{ section.content | safe }}</div>
+<!-- HERO SECTION -->
+<div class="mb-6 mt-2">
+  {% raw %}
+<pre class="ascii-logo">
+██████╗ ██████╗ ███████╗███╗   ███╗    ███╗   ███╗ █████╗ ██╗     ██╗      █████╗ ██████╗ ██████╗  █████╗ 
+██╔══██╗██╔══██╗██╔════╝████╗ ████║    ████╗ ████║██╔══██╗██║     ██║     ██╔══██╗██╔══██╗██╔══██╗██╔══██╗
+██████╔╝██████╔╝█████╗  ██╔████╔██║    ██╔████╔██║███████║██║     ██║     ███████║██████╔╝██████╔╝███████║
+██╔═══╝ ██╔══██╗██╔══╝  ██║╚██╔╝██║    ██║╚██╔╝██║██╔══██║██║     ██║     ██╔══██║██╔═══╝ ██╔═══╝ ██╔══██║
+██║     ██║  ██║███████╗██║ ╚═╝ ██║    ██║ ╚═╝ ██║██║  ██║███████╗███████╗██║  ██║██║     ██║     ██║  ██║
+╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚═╝  ╚═╝
+</pre>
+{% endraw %}
+  
+  <div class="mt-6">
+    <div class="prompt-line">$ <span>whoami</span></div>
+    <div class="bio-text" data-typing>{{ section.content | safe }}</div>
+    
+    <div class="prompt-line">$ <span>cat status.txt</span></div>
+    <div class="status-block flex flex-col gap-1 text-sm">
+      <div class="flex"><span style="color:var(--dim);width:120px;">LOCATION:</span><span style="color:var(--fg);">Bengaluru, India</span></div>
+      <div class="flex"><span style="color:var(--dim);width:120px;">FOCUS:</span><span style="color:var(--fg);">Systems Simulators &bull; Virtualization &bull; OS Kernels</span></div>
+      <div class="flex"><span style="color:var(--dim);width:120px;">CONTACT:</span><span><a href="mailto:prem.mallappa@gmail.com" style="color:var(--accent);">prem.mallappa@gmail.com</a></span></div>
+    </div>
   </div>
-</section>
-
-<script>
-(function(){
-  var words = [
-    'C','Python','Linux','QEMU','KVM','ARM','RISC-V','Go','Xen',
-    'gem5','Simics','FreeBSD','QNX','Plan 9','Git','Emacs','Rust',
-    'Shell','Docker','x86'
-  ];
-  var sizes = [3,4,5,6,7,8];
-  var container = document.getElementById('hero-words');
-  var items = [];
-
-  for (var i = 0; i < words.length; i++) {
-    var el = document.createElement('div');
-    el.className = 'hero-word';
-    el.textContent = words[i];
-    el.style.fontSize = sizes[Math.floor(Math.random() * sizes.length)] + 'rem';
-    var x = Math.random() * 90, y = Math.random() * 90;
-    el.style.left = x + '%'; el.style.top = y + '%';
-    container.appendChild(el);
-    var speed = 0.3 + Math.random() * 0.7;
-    var angle = Math.random() * 2 * Math.PI;
-    items.push({ el:el, x:x, y:y, vx:Math.cos(angle)*speed, vy:Math.sin(angle)*speed });
-  }
-
-  var last = 0;
-  function tick(ts) {
-    if (!last) { last = ts; requestAnimationFrame(tick); return; }
-    var dt = (ts - last) / 1000; last = ts;
-    for (var i = 0; i < items.length; i++) {
-      var it = items[i];
-      it.x += it.vx * dt; it.y += it.vy * dt;
-      if (it.x < -10) it.x = 100; if (it.x > 100) it.x = -10;
-      if (it.y < -5) it.y = 100;  if (it.y > 100) it.y = -5;
-      it.el.style.left = it.x + '%'; it.el.style.top = it.y + '%';
-    }
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-})();
-</script>
+</div>
 
 {% if section.subsections %}
-<div class="content-wrap" style="padding-top:3rem;padding-bottom:3rem;">
-  {% for sub in section.subsections %}
-    {% if sub.permalink is containing("/posts") %}
-      <h2 class="section-heading reveal text-4xl md:text-5xl lg:text-6xl mb-8">
-        <span class="section-num">01.</span>Recent Posts
-      </h2>
-      <div class="grid grid-cols-1 gap-4">
-        {% for page in sub.pages %}
-          <a href="{{ page.permalink }}" class="card" data-delay="{{ loop.index0 * 100 }}">
-            <h2>{{ page.title }}</h2>
-            {% if page.extra.description %}
-              <p>{{ page.extra.description }}</p>
-            {% endif %}
-          </a>
-        {% endfor %}
-      </div>
-    {% endif %}
-  {% endfor %}
 
-  {% for sub in section.subsections %}
-    {% if sub.permalink is containing("/series") %}
-      <h2 class="section-heading reveal text-4xl md:text-5xl lg:text-6xl mb-8 mt-16">
-        <span class="section-num">02.</span>Series
-      </h2>
-      <div class="grid grid-cols-1 gap-4">
-        {% for series in sub.subsections %}
-          <a href="{{ series.permalink }}" class="card" data-delay="{{ loop.index0 * 100 }}">
-            <h2>{{ series.title }}</h2>
-            {% if series.extra.description %}
-              <p>{{ series.extra.description }}</p>
-            {% endif %}
-          </a>
-        {% endfor %}
-      </div>
-    {% endif %}
-  {% endfor %}
-</div>
+
+
 {% endif %}
+
+<div class="tip-text">
+  TIP: Use the bottom shell to query this node (type <span>help</span> for options)
+</div>
 {% endblock body %}

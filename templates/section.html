@@ -3,29 +3,28 @@
 {% block title %}{{ section.title }} - {{ config.title }}{% endblock title %}
 
 {% block body %}
-<div class="content-wrap" style="padding-top:6rem;padding-bottom:3rem;">
-  <h1 class="section-heading reveal text-3xl md:text-4xl mb-8">{{ section.title }}</h1>
+<div class="content-wrap" style="padding-top:2rem;padding-bottom:3rem;">
+  <div class="prompt-line mb-3" style="color:var(--dim);">$ <span style="color:var(--fg);">cat /var/log/sections/{{ section.title | lower }}.log</span></div>
+  <h1 class="section-header" style="color:var(--accent);font-weight:700;font-size:1.5rem;border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:16px;">
+    {{ section.title | upper }}
+  </h1>
 
   {% if section.content %}
-    <div class="post-content reveal mb-8">{{ section.content | safe }}</div>
+    <div class="post-content reveal mb-8" style="color:var(--fg);">{{ section.content | safe }}</div>
   {% endif %}
 
-  <div class="grid grid-cols-1 gap-4">
+  <div class="project-grid mt-4">
     {% for sub in section.subsections %}
-      <a href="{{ sub.permalink }}" class="card" data-delay="{{ loop.index0 * 100 }}">
-        <h2>{{ sub.title }}</h2>
-        {% if sub.extra.description %}
-          <p>{{ sub.extra.description }}</p>
-        {% endif %}
+      <a href="{{ sub.path }}" class="project-row">
+        <span class="project-name">{{ sub.title }}/</span>
+        <span class="project-desc">{{ sub.extra.description | default(value="") }}</span>
       </a>
     {% endfor %}
 
     {% for page in section.pages %}
-      <a href="{{ page.permalink }}" class="card" data-delay="{{ loop.index0 * 100 }}">
-        <h2>{{ page.title }}</h2>
-        {% if page.extra.description %}
-          <p>{{ page.extra.description }}</p>
-        {% endif %}
+      <a href="{{ page.path }}" class="project-row">
+        <span class="project-name">{{ page.title }}</span>
+        <span class="project-desc">{{ page.extra.description | default(value="") }}</span>
       </a>
     {% endfor %}
   </div>
