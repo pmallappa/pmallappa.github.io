@@ -606,7 +606,7 @@
   <script>
     window.blogPosts = [
       {% for sub in root.subsections %}
-        {% if sub.path is containing("/posts") %}
+        {% if sub.permalink is containing("/posts") %}
           {% for page in sub.pages %}
             { path: "{{ page.path }}", title: "{{ page.title }}", desc: "{{ page.extra.description | default(value='') }}" },
           {% endfor %}
@@ -616,8 +616,8 @@
 
     window.blogSeries = [
       {% for sub in root.subsections %}
-        {% if sub.path is containing("/series") %}
-          {% set full_series = get_section(path=sub.path) %}
+        {% if sub.permalink is containing("/series") %}
+          {% set full_series = get_section(path="series/_index.md") %}
           {% for series in full_series.subsections %}
             { path: "{{ series.path }}", title: "{{ series.title }}", desc: "{{ series.extra.description | default(value='') }}" },
           {% endfor %}
@@ -627,7 +627,7 @@
 
     window.blogProjects = [
       {% for sub in root.subsections %}
-        {% if sub.path is containing("/projects") %}
+        {% if sub.permalink is containing("/projects") %}
           {% for page in sub.pages %}
             { path: "{{ page.path }}", title: "{{ page.title }}", desc: "{{ page.extra.description | default(value='') }}" },
           {% endfor %}
