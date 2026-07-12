@@ -1,3 +1,5 @@
-base_url https://pmallappa.github.io
-content content
-output public
+@schema {id crate:dodeca-config@1, cli ddc}
+
+source {content content, impls (), skip_domains ()}
+
+site {output public, base_url https://pmallappa.github.io}

@@ -44,7 +44,7 @@ jobs:
         run: ./scripts/build-drawio.sh
 
       - name: Build site
-        run: ddc build --content content --output public
+        run: ddc build
 
       - uses: actions/upload-pages-artifact@v3
         with:
